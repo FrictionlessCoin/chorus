@@ -71,7 +71,7 @@ chorus.pages.Base = chorus.pages.Bare.extend({
         "#sub_nav": "subNav"
     },
 
-    //Load a workspace for a page into page.workspace.  fetch and set as a requiredResource based on options.
+    // Load a workspace for a page into page.workspace, fetch and set as a requiredResource based on options
     loadWorkspace: function(workspaceId, options) {
         var optionsWithDefaults = _.extend({
             fetch: true,
@@ -96,6 +96,9 @@ chorus.pages.Base = chorus.pages.Bare.extend({
     },
 
     hasSubHeader: function() {
+//         console.log ("pages.js>hasSubHeader - > " + !!this.workspaceId + " | " + this.workspaceId);
+        // currently this hack allows for the page subheader only on places where workspaceId has a value
+        // so wont work on people page, etc.
         return !!this.workspaceId;
     },
 
