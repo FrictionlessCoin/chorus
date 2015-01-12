@@ -10,10 +10,6 @@ $header-margin-right: $page-margin-right;
 $expanded-search-width: 450px;
 $notification-token-width: $header-margin * 2;
 
-.oi[data-glyph=data-source]:before {
-  content: url(../images/data-source-glyph.svg);
-}
-
 @mixin full-item-link($height) {
     &:hover, &.selected {
         background-color: $list-hover-color;
@@ -68,8 +64,9 @@ $notification-token-width: $header-margin * 2;
 
                 span {
                     display: inline-block;
-                    i {
-                        margin-left: 5px;
+
+                    .caret {
+                        margin-left: $caret-margin;
                         color: $caret-color;
                     }
                 }
@@ -78,8 +75,18 @@ $notification-token-width: $header-margin * 2;
 
         .left {
             float: left;
-            i { font-size: 16px; }
-            
+            #primary-menu {
+            	position: relative;
+            	top: 1px;
+            	width: 16px;
+            	height: 16px;
+            	opacity: 0.94;
+            	
+            	svg {
+            	    fill: #FFF;
+            	}
+			}
+
             .token {
                 float: left;
                 &.logo {
@@ -93,7 +100,6 @@ $notification-token-width: $header-margin * 2;
                     img {
                         max-height: 25px;
                     }
-
                 }
 
                 &.drawer {
@@ -122,16 +128,13 @@ $notification-token-width: $header-margin * 2;
                 float: right;
 
                 .caret {
-                    font-size: 10px;
+                    font-size: 14px;
                 }
 
                 &.active .caret::before {
-                
-                    /* rotate when expanding the menu */
-                    /* & translate the caret's origin (centerpoint) for rotation so that it displays correctly */
-                    /* dimensions are unique to the OI caret glyph */
-                    @include rotateX(180deg);
-                    @include transform-origin (50%, 40%);
+
+                    /* when activating the menu, switch thecaret */
+                    content:  "\f0d8";  // =  fa-caret-up
                 }
 
                 &.username {
@@ -148,7 +151,7 @@ $notification-token-width: $header-margin * 2;
                         &.empty { background: $brand-dark; }
                         background: $notification;
 
-                        @include lozenge(2px, 30px, $header-height/3);
+                        @include lozenge(2px, 30px, $header-height/3 );
                     }
                 }
 
@@ -170,19 +173,30 @@ $notification-token-width: $header-margin * 2;
             margin-top: 10px;
             height: 30px;
 
-            i {
+            span {
                 color: $brand-light;
                 z-index: 1;
 
-                &.search_clear { font-size: 10px; }
+                &.search_clear {
+                    font-size: 14px;
+                    position: relative;
+                    top: 2px;
+                }
                 &.magnifying_glass {
                     position: absolute;
                     left: 168px;
                     top: 16px;
-                    font-size: 15px;
+                    font-size: 16px;
                 }
-            }
 
+            }
+            .search_magnifying_glass:before {
+                z-index: 1;
+                color: $brand-light;
+                font-size: 15px;
+                top: 2px;
+            }
+            
             input {
                 @include placeholder {
                     color: $brand-tint;
@@ -266,6 +280,38 @@ $notification-token-width: $header-margin * 2;
                 text-align: center;
                 &.remainder { height: 100vh; }
             }
+            
+            /*  color for svg glyphs in the primary nav bar */
+            #primary {
+                svg {
+                    fill: #FFF;
+                }
+            }
+            
+            /* individual sections of the primary nav */
+            #primary-home { 
+                @extend #primary;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            #primary-workspaces {
+                font-size: 18px;
+            }
+            #primary-data {
+                font-size: 18px;
+            }
+            #primary-users {
+                @extend #primary;
+                svg {
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+            #primary-tags {
+                font-size: 18px;
+            }
         }
 
         .menu.popup_username {
@@ -336,4 +382,3 @@ $notification-token-width: $header-margin * 2;
         }
     }
 }
-
