@@ -298,7 +298,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
         });
     });
 
-    context('when the data source has individual accounts', function() {
+    context('> when the data source has individual accounts', function() {
         beforeEach(function() {
             spyOn(chorus.collections.UserSet.prototype, 'fetchAll').andCallThrough();
             this.owner = backboneFixtures.user({firstName: 'EDC', lastName: 'Admin'});
@@ -325,11 +325,11 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
             $('#jasmine_content').append(this.dialog.el);
         });
 
-        it("does not autocomplete password inputs", function(){
+        it("> does not autocomplete password inputs", function(){
             expect(this.dialog.$("input[type=password]")).toHaveAttr("autocomplete", "off");
         });
 
-        it("only shows 'owner' in the row corresponding to the owner", function() {
+        it("> only shows 'owner' in the row corresponding to the owner", function() {
             expect(this.ownerLi).toContain("span.owner");
             expect(this.otherLis).not.toContain("span.owner");
         });
@@ -547,7 +547,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
             });
         });
 
-        describe("when the chorus users are fetched", function() {
+        describe("> when the chorus users are fetched", function() {
             beforeEach(function() {
                 this.dialog.users.reset([
                     backboneFixtures.user({ firstName: "jim", lastName: "aardvark", id: '222' }),
@@ -569,7 +569,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                 itLaunchesTheConfirmChangeOwnerDialog();
             });
 
-            describe("when the 'add account' button is clicked", function() {
+            describe("> when the 'add account' button is clicked", function() {
                 beforeEach(function() {
                     this.dialog.$("button.add_account").click();
                     this.newLi = this.dialog.$("li:last");
@@ -624,7 +624,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                     });
                 });
 
-                describe("cancelling the new account", function() {
+                describe("> cancelling the new account", function() {
                     beforeEach(function() {
                         this.dialog.$("li.new a.cancel").click();
                     });
