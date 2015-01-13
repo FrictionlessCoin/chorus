@@ -2,6 +2,8 @@
 // --------------------------
 
 $fa-font-path:        "../fonts/fontawesome" !default;
+//$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+
 $fa-css-prefix:       fa !default;
 $fa-version:          "4.2.0" !default;
 $fa-border-color:     #eee !default;
@@ -90,13 +92,13 @@ $fa-var-camera: "\f030";
 $fa-var-camera-retro: "\f083";
 $fa-var-car: "\f1b9";
 $fa-var-caret-down: "\f0d7";
+$fa-var-caret-up: "\f0d8";
 $fa-var-caret-left: "\f0d9";
 $fa-var-caret-right: "\f0da";
 $fa-var-caret-square-o-down: "\f150";
 $fa-var-caret-square-o-left: "\f191";
 $fa-var-caret-square-o-right: "\f152";
 $fa-var-caret-square-o-up: "\f151";
-$fa-var-caret-up: "\f0d8";
 $fa-var-cc: "\f20a";
 $fa-var-cc-amex: "\f1f3";
 $fa-var-cc-discover: "\f1f2";
