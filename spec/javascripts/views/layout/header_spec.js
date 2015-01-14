@@ -106,7 +106,7 @@ describe("chorus.views.Header", function() {
 
     describe("#render", function() {
         beforeEach(function() {
-            spyOn(chorus, 'addClearButton');
+            spyOn(chorus, 'addSearchFieldModifications');
 
             this.view.session.loaded = true;
             this.view.session.trigger("loaded");
@@ -157,7 +157,7 @@ describe("chorus.views.Header", function() {
         });
 
         it("adds a clear button to the search field", function() {
-            expect(chorus.addClearButton).toHaveBeenCalledWith(this.view.$(".search input"));
+            expect(chorus.addSearchFieldModifications).toHaveBeenCalledWith(this.view.$(".search input"));
         });
 
         describe("typing in the search bar", function() {
@@ -442,8 +442,8 @@ describe("chorus.views.Header", function() {
         });
 
         describe("the drawer menu", function() {
-            it("has a visible button", function() {
-                expect(this.view.$(".drawer i")).toHaveAttr("data-glyph", "menu");
+            it("> has a visible button", function() {
+                expect(this.view.$(".drawer span")).toHaveId("primary-menu");
             });
 
             it("has a hidden popup menu", function() {
