@@ -1,13 +1,16 @@
 <div class="left">
-  <div class="token drawer">
-      <a class="label" href="#">
-      <i class='oi' data-glyph="menu"></i>
-    </a>
-  </div>
-    <div class="menu hidden popup_drawer">
+	<div class="token drawer">
+	<a class="label" href="#">
+	    <span id="primary-menu">
+            <!--  embedded content of "menu" svg glyph -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 27 8 8" enable-background="new -25 27 8 8"><path fill="#fff" d="M-25 28v1h8v-1h-8zm0 3v1h8v-1h-8zm0 3v1h8v-1h-8z"/></svg>
+	    </span>
+	    </a>
+	</div>
+	<div class="menu hidden popup_drawer">
     {{> drawerMenu}}
-  </div>
-  <div class="token logo">
-      <a class="label" href="#/"><img src="/images/light-{{brandingLogo}}"/></a>
-  </div>
+	</div>
+	<div class="token logo">
+      <a class="label" href="#/"><img src="/images/light-{{brandingLogo}}" alt=""/></a>
+	</div>
 </div>
