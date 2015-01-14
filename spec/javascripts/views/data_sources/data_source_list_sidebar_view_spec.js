@@ -135,8 +135,8 @@ jasmine.sharedExamples.aSidebarWithAGreenplumPostgresOrOracleDataSourceSelected 
     context('when the data source does not have a shared account', function() {
         context('when the current user is NOT an admin or owner of the data source', function() {
             context('when the user does not have an account for the data source', function() {
-                it("shows the 'no access' text and image", function() {
-                    expect(this.view.$(".account_info img").attr("src")).toBe("/images/data_sources/no_access.png");
+                it("shows the 'no access' text and icon", function() {
+                    expect(this.view.$(".account_info .fa-lock").toExist());
                     expect(this.view.$(".account_info").text().trim()).toMatchTranslation("data_sources.sidebar.no_access");
                 });
 
@@ -166,8 +166,8 @@ jasmine.sharedExamples.aSidebarWithAGreenplumPostgresOrOracleDataSourceSelected 
                     this.view.render();
                 });
 
-                it("shows the 'access' text and image", function() {
-                    expect(this.view.$(".account_info img").attr("src")).toBe("/images/data_sources/access.png");
+                it("shows the 'access' text and icon", function() {
+                    expect(this.view.$(".account_info .fa-unlock").toExist());
                     expect(this.view.$(".account_info").text().trim()).toMatchTranslation("data_sources.sidebar.access");
                 });
 
