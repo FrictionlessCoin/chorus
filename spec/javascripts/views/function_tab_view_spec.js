@@ -14,7 +14,7 @@ describe("chorus.views.FunctionTab", function () {
         expect(this.view.resource).toBe(this.schema.functions());
     });
 
-    describe("render", function () {
+    describe("> render", function () {
         context("when there's no schema associated", function () {
             beforeEach(function () {
                 this.view = new chorus.views.FunctionTab({schema:null});
@@ -30,7 +30,7 @@ describe("chorus.views.FunctionTab", function () {
             });
         });
 
-        context("when schema is associated", function () {
+        context("> when schema is associated", function () {
             beforeEach(function () {
                 this.menu = stubQtip(".context a");
                 this.functionQtip = stubQtip(".list li .name");
@@ -50,7 +50,7 @@ describe("chorus.views.FunctionTab", function () {
                 expect(this.server.lastFetchFor(this.schema.database().schemas())).toBeTruthy();
             });
 
-            context("after functions and schemas have loaded", function () {
+            context("> after functions and schemas have loaded", function () {
                 beforeEach(function () {
                     this.server.completeFetchFor(this.schema.database().schemas(), [
                         this.schema,
@@ -155,7 +155,7 @@ describe("chorus.views.FunctionTab", function () {
                     });
                 });
 
-                describe("selecting a schema", function () {
+                describe("> selecting a schema", function () {
                     beforeEach(function () {
                         this.view.$(".context a").click();
                     });
