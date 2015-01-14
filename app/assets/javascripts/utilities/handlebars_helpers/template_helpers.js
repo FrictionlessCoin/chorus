@@ -21,6 +21,10 @@ chorus.handlebarsHelpers.template = {
         return Handlebars.helpers.renderTemplate("components/info_block", {info: infoTranslation});
     },
 
+    formInfoBlock: function(text) {
+        return Handlebars.helpers.renderTemplate("components/form_info_block", {text: text});
+    },
+
     renderTemplateIf: function(conditional, templateName, context) {
         if (conditional) {
             return Handlebars.helpers.renderTemplate(templateName, context);

@@ -12,6 +12,7 @@ Handlebars.registerPartial("activity", window.HandlebarsTemplates["activity"]);
 Handlebars.registerPartial("adminBadge", window.HandlebarsTemplates["components/admin_badge"]);
 Handlebars.registerPartial("developerBadge", window.HandlebarsTemplates["components/developer_badge"]);
 
+Handlebars.registerPartial("datasourceIcon", window.HandlebarsTemplates["datasource_icon"]);
 
 Handlebars.registerPartial("drawerMenu", window.HandlebarsTemplates["components/drawer_menu"]);
 Handlebars.registerPartial("usernameMenu", window.HandlebarsTemplates["components/username_menu"]);
@@ -20,3 +21,5 @@ Handlebars.registerPartial("notificationsMenu", window.HandlebarsTemplates["comp
 Handlebars.registerPartial("headerLeft", window.HandlebarsTemplates["components/header_left"]);
 Handlebars.registerPartial("headerSearchbar", window.HandlebarsTemplates["components/header_searchbar"]);
 Handlebars.registerPartial("headerRight", window.HandlebarsTemplates["components/header_right"]);
+
+Handlebars.registerPartial("legendRequired", window.HandlebarsTemplates["components/legend_for_required"]);
