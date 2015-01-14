@@ -54,7 +54,7 @@
             {{/if}}
             <span class="timestamp">{{timestamp}}</span>
             {{#if isNotification}}
-                <a class="delete_link alert delete_notification" href="#"><i class='oi' data-glyph="trash"></i><span>{{t "actions.delete"}}</span> </a>
+                <a class="delete_link alert delete_notification" href="#"><span class="fa fa-trash"></span><span> {{t "actions.delete"}}</span></a>
             {{else}}
                 {{#if isNote}}
                     {{#unless isReadOnly}}
@@ -62,7 +62,7 @@
                             <a class="edit_link dialog edit_note" href="#">{{t "actions.edit"}}</a>
                         {{/if}}
                         {{#if canDelete}}
-                            <a class="delete_link alert delete_note" href="#"><i class='oi' data-glyph="trash"></i> {{t "actions.delete"}} </a>
+                            <a class="delete_link alert delete_note" href="#"><span class="fa fa-trash"></span> {{t "actions.delete"}}</a>
                         {{/if}}
                     {{/unless}}
                 {{/if}}

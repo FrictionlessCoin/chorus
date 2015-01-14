@@ -373,10 +373,6 @@ describe("chorus.views.ListContentDetails", function() {
             this.view.render();
         });
 
-        it("has a default label of 'explore'", function() {
-            expect(this.view.$(".explore")).toContainTranslation("actions.explore");
-        });
-
         it("calls chorus.search on the input field", function() {
             expect(chorus.search).toHaveBeenCalledWith(_.extend({
                     input: this.view.$("input.search:text"),
