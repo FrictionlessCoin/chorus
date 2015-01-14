@@ -1,7 +1,7 @@
 <div class="job action_bar {{actionBarClass}}">
     {{#if canUpdate}}
         {{#unless runsOnDemand}}<button class="toggle_enabled button_action">{{t enabledButtonLabel}}</button>{{/unless}}
-        <button class="create_task button_action">{{t "actions.create_task"}}<span class="down_arrow"></span></button>
+        <button class="create_task button_action">{{t "actions.create_task"}}<span class="down_caret"></span></button>
         <button class="edit_schedule button_action">{{t "job.actions.edit_job"}}</button>
         <button class="run_job button_action" {{#unless ableToRun}}disabled{{/unless}}>{{t "job.actions.run_job"}}</button>
     {{/if}}
