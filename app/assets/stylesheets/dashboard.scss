@@ -1,9 +1,9 @@
 $debug-browser-support: true;
 
-@import "compass/css3/border-radius";
 @import "_browser_support";
 @import "_common";
-@import "_button_common";
+@import "components/_button";
+@import "compass/css3/border-radius";
 
 
 $padding-side-canon: 10px;
@@ -56,8 +56,9 @@ div[data-page="Dashboard"], div[data-page="UserDashboardEdit"] {
         background-color: $shaded-background-color;
         display: inline-block;
         cursor: pointer;
+
+        /* covers the glyphs used, such as the cog */
         i {
-            /* covers the FA and OI glyphs used, such as the cog */
             color: $color-text3;
             font-size: 13px;
             line-height: $height-button-widgetshell;
@@ -84,8 +85,7 @@ div[data-page="Dashboard"], div[data-page="UserDashboardEdit"] {
 /* A dashboard_module             */
 /* widget: recent activity stream */
 
-
-    /*  note: there is additional css for activity list dashboard widget in _activity_list.scss */
+    /* note: there is additional css for activity list dashboard widget in _activity_list.scss */
     
     .dashboard_activity_list {        
         .activity_wrapper {
@@ -104,19 +104,6 @@ div[data-page="Dashboard"], div[data-page="UserDashboardEdit"] {
         a[href=''], a:not([href]) {
             color: $color-text3;
             text-decoration: none;
-        }
-
-        .more_items {
-            font-size: 12px;
-            padding: $padding-top-canon 0 $padding-bottom-canon 0;
-            text-align: center;
-
-            a {
-                display: inline-block;
-                max-width: 50%;
-                width: 100%;
-                @include panel-button(30px);
-            }
         }
     }
 
@@ -331,7 +318,7 @@ div[data-page="Dashboard"], div[data-page="UserDashboardEdit"] {
         margin-right: 3px;
         cursor: pointer;
         
-        /* covers the FA and OI glyphs used; i.e the cog */
+        /* covers the glyphs used; i.e the cog */
         i {
             color: $color-text3;
             font-size: 12px;

@@ -3,11 +3,13 @@
     fieldset {
         margin-bottom: $dialog-padding;
 
-        input[name=schemaName], input[name=databaseName] {
+        input[name=schemaName],
+        input[name=databaseName] {
           width: 260px;
         }
 
-        select, .ui-selectmenu-button .ui-button {
+        select,
+        .ui-selectmenu-button .ui-button {
             width: 275px;
         }
     }

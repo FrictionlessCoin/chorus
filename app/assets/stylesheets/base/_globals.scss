@@ -43,20 +43,24 @@ textarea {
     resize: none;
 }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
     display: inline;
     width: auto;
 }
 
 input[type=checkbox] {
-    margin: 5px 4px;
+/*     margin: 5px 4px; */ /* to be deleted when final */
+    margin: 5px 4px 5px 0;
 }
 
-.required:after {
+/* form: red asterisk for required fields */
+.required::after {
     content: "*";
-    color: $error-background-color;
-    vertical-align: middle;
-    margin-left: 5px;
+    color: $required-marker-color;
+/*     vertical-align: middle; */ /* to be deleted when final */
+    margin-left: 2.5px;
+    font-size: 1.04em;
 }
 
 .hidden {

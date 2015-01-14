@@ -1,4 +1,4 @@
-$list-item-height: 39px;
+$shuttle-list-item-height: 40px;
 
 .shuttle_widget {
     background-color: $body-background-color;
@@ -6,35 +6,32 @@ $list-item-height: 39px;
     .shuttle_header {
         border-bottom: $border-canon;
         position: relative;
-        height: 33px;
+        height: 35px;
 
         .search_container {
             left: 0;
             border-right: $border-canon;
-
-            .chorus_search_container {
-                width: 70%;
-            }
         }
 
         .summary {
             left: 50%;
         }
 
-         .search_container, .summary {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            vertical-align: middle;
-            line-height: 25px;
+        .search_container {
+            padding-right: 15px;
+        }
+        .summary {
+            padding-left: 15px;
+        }
 
-            > div {
-                padding: 4px 8px;
-            }
+        a {
+            float: right;
+            font-weight: $semibold;
+        }            
 
-            a {
-               float: right;
-            }
+        .chorus_search_container {
+            display:inline-block;
+            width: 70%;
         }
 
         .object_name {
@@ -45,14 +42,11 @@ $list-item-height: 39px;
             padding-left: 5px;
         }
 
-        a {
-            font-weight: $semibold;
-        }
     }
 
     .shuttle_body {
         position: relative;
-        height: (($list-item-height + $default-border-width) * 8);
+        height: (($shuttle-list-item-height + $default-border-width) * 8);
     }
 
     a {
@@ -78,8 +72,8 @@ $list-item-height: 39px;
     div.image {
         position: relative;
         display: inline-block;
-        width: $list-item-height - 6px;
-        height: $list-item-height - 10px;
+        width: $shuttle-list-item-height - 6px;
+        height: $shuttle-list-item-height - 10px;
     }
 
     ul {
@@ -89,12 +83,14 @@ $list-item-height: 39px;
         bottom: 0;
         vertical-align: top;
         overflow-y: auto;
+        overflow-x: hidden;
 
         li {
-            height: $list-item-height;
+            height: $shuttle-list-item-height;
             border-bottom: $border-canon;
-            padding: 0 8px;
-            line-height: $list-item-height - 3px;
+            /* padding: 0 8px; */
+            padding: 0;
+            line-height: $shuttle-list-item-height - 3px;
 
             .name {
                 @include font-normal-alpha;
@@ -102,45 +98,48 @@ $list-item-height: 39px;
                 @include ellipsis;
                 padding-left: 10px;
                 display: inline-block;
-                max-width: 60%;
+                max-width: 65%;
             }
         }
 
+/* available = left-side of the 2column list */
         &.available {
             left: 0;
             border-right: $border-canon;
 
             li {
-                img.checkmark {
-                    position: absolute;
-                    bottom: 0px;
-                    right: 0px;
+                .checkmark {
                     display: none;
+                    position: absolute;
+                    top: 17px;
+                    right: -2px;
+                    font-size: 10px;
+                    color: #77CC33;
                 }
 
                 &.added {
-                    img.checkmark {
+                    .checkmark {
                         display: inherit;
                     }
                     a {
-                        display : none;
+                        display: none;
                     }
-
                     .was_added {
-                        display : inline;
+                        display: inline;
                     }
                 }
 
                 a {
-                    display : inline;
+                    display: inline;
                 }
 
                 .was_added {
-                    display : none;
+                    display: none;
                 }
             }
         }
-
+        
+/* selected = right-side of the 2column list */
         &.selected {
             left: 50%;
 
@@ -154,7 +153,6 @@ $list-item-height: 39px;
     }
 }
 
-.dialog.workspace_edit_members .dialog_content .form_controls {
-     margin-top: 0px;
-}
-
+/* .dialog.workspace_edit_members .dialog_content .form_controls { */
+/*      margin-top: 0px; */
+/* } */

@@ -11,6 +11,30 @@
             vertical-align: middle;
             padding-right: 4px;
         }
+        
+        .datasource_access_panel {
+            margin: 10px 0px 10px 0px;
+            width: 250px;
+            
+            .panelcontent {
+                margin: 5px;
+            }
+            
+            .fa {
+                margin-right: 5px;
+            }
+            
+            &.has_access {
+                border: 1px solid #bbccaa;
+                border-radius: 3px;
+                background-color: #DDEEDD;
+            }
+            &.no_access {
+                border: 1px solid #eecc99;
+                border-radius: 3px;
+                background-color: #ffeecc;
+            }
+        }
     }
 
     .data_source_name {
@@ -43,7 +67,7 @@
         }
     }
 
-    .tabbed_area .selected {
+    .tabbed_content_area .selected {
         display: block;
     }
 }

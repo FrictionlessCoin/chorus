@@ -135,7 +135,9 @@ $cell-width: 150px;
             position: absolute;
             right: 10px;
             top: 5px;
-            @include triangle(down, white, 8px, 8px);
+/*             @include triangle-css(down, white, 8px, 8px); */
+            @include triangle-glyph(down);
+            color: $core-white;
         }
 
         &.integer, &.double_precision {
@@ -151,7 +153,7 @@ $cell-width: 150px;
         }
 
         .popup_filter {
-          z-index: 9999999;
+          z-index: $popup_filter-z-index;
         }
       }
 
@@ -168,7 +170,9 @@ $cell-width: 150px;
             color: #cc0000;
 
             .arrow {
-              @include triangle(down, #cc0000, 6px, 6px);
+/*               @include triangle-css(down, #cc0000, 6px, 6px); */
+              @include triangle-glyph(down);
+              color: #CC0000;
             }
           }
 
@@ -178,15 +182,17 @@ $cell-width: 150px;
 
           .arrow {
             display: inline-block;
-            @include triangle(down, $link-color, 6px, 6px);
+		    @include triangle-glyph(down);
+		    color: $link-color;
           }
         }
       }
     }
 
-    .form_controls {
-        margin-top: 0px;
-    }
+/* to be deleted when final */
+/*     .form_controls { */
+/*         margin-top: 0px; */
+/*     } */
 }
 
 .existing_table_import_csv.table_import_csv {
@@ -233,11 +239,25 @@ $cell-width: 150px;
         height: 10px;
         margin: 0 3px;
 
+/* to be deleted when final */
+/*         .check { */
+/*             background-image: url("/images/check.png"); */
+/*             display: inline-block; */
+/*             width: 10px; */
+/*             height: 10px; */
+/*         } */
         .check {
-            background-image: url("/images/check.png");
             display: inline-block;
-            width: 10px;
-            height: 10px;
+    
+            position: absolute;
+            top: 10px;
+            left: -12px;
+
+            &::after {
+                font-family: FontAwesome;
+                 /* glyph: check */
+                content: "\f00c";
+            }
         }
     }
 

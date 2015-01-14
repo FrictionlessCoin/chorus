@@ -22,7 +22,7 @@ $alice-blue:        rgb(240, 247, 254);
 $greyish-blue:      rgb(221, 236, 250);
 $greyish-blue-v2:   rgb(248, 251, 253);
 $light-sky-blue:    rgb(148, 215, 244);
-$bluer-lavender:    rgb(225,237,250);
+$bluer-lavender:    rgb(222,234,249);
 
 $bright-grey:       rgb(88, 89, 95);
 $greyish-yellow:    rgb(204, 204, 200);
@@ -30,6 +30,8 @@ $light-grey-yellow: rgb(243, 243, 241);
 $light-gray:        rgb(234, 238, 241);
 $shadow-gray:		darken($light-gray, 11%);
 $charcoal:          #464646;
+$black:             #000000;
+$core-white:		#FFFFFF;
 
 //transparent variants
 $shadow-color:		rgba($shadow-gray, .7);
@@ -50,8 +52,9 @@ $accent-tint: rgb(250, 252, 253);
 $accent-shade: rgb(227, 241, 252);  /* #E3F1FC */
 //$accent-dark: unused;
 
-// Semantic Colors
+// Semantic colors AKA Messaging
 $ok: $fiji-green;
+$error: $fire-engine-red;
 $alert: $fire-engine-red;
 $needs-attention: $pumpkin;
 
@@ -60,7 +63,7 @@ $needs-attention: $pumpkin;
 $list-hover-color: $accent;
 $list-checked-color: $accent-shade;
 $list-striping-color: $accent-tint;
-$body-background-color: white;
+$body-background-color: #FFFFFF;
 $shaded-background-color: $light-gray;
 $subheader-background-color: $pattens-blue;
 $dialog-header-background: $greyish-blue;
@@ -80,36 +83,42 @@ $link-color: $brand;
 $disabled-text: rgb(147, 154, 159);
 $caret-color: $light-sky-blue;
 
-// Font weights
-$semibold: 600;
-$light: 300;
-// "normal" defaults to 400
 
-//Dimensions
+// ********************
+// LAYOUT
 $header-height: 50px;
 $subheader-height: 60px;
 $subnav-height: 45px;
 $workspace-header-height: $subnav-height + $subheader-height + $header-height;
+
+
+// GLOBAL margin for left and right page margins
+$page-margin-left: 25px;
+$page-margin-right: 25px;
+
+// GLOBAL margin for bottom of pages
+// = distance between bottom of content and bottom of browser window
+$page-margin-bottom: 60px;
+
+// dimensions
 $summary-line-height: 19px;
+
+
+// GLOBAL BORDERs
 $default-border-width: 1px;
 $default-border-radius: 3px;
 
-/* global margin for left and right sides of all pages */
-$page-margin-left: 25px;
-$page-margin-right: 25px;
-/* global margin for bottom of all pages */
-$page-margin-bottom: 60px;
-
-//Specials
 $border-canon: $default-border-width solid $border-color;
 $dark-border-canon: $default-border-width solid $border-color-dark;
-$strong-border-canon: 5px solid $color-text3;
+$login-card-border-canon: 5px solid $color-text3;
 
 $shadow-canon: 2px 2px 3px 0px $shadow-color;
 
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/* applied color rules - USE these in component files! */
+// applied color rules - USE these in component files!
 // Background colors
 $data-grid-background-color: #EAEEF2;
 $progress-bar-background-color : #D8DEE6;
@@ -118,7 +127,9 @@ $ie-header-color: #c7c7c7;
 $tab-gradient-color : #D5E0EB;
 $activity-stream-comment-background-color: #DFE5EB;
 $progress-bar-full-background-color : #AE0020;
-$error-background-color: #B61B1D;
+
+
+
 $search-highlight-color: #FFFF00;
 $content-details-create-background-color: #49A942;
 $content-details-chart-icon-selected-background-color: #42AA3D;
@@ -138,14 +149,27 @@ $results-console-border-color: #88A8D3;
 $type-ahead-result-border-color: #A5A6A8;
 
 // Text colors
-$error-text-color: white;
-$error-color: white;
+
 $content-header-link-color: $color-text4;
 
-// Notification colors
+$required-marker-color: $error;
+
+
+// Notification colors 
+// AKA Messaging
+$error-background-color: $fire-engine-red;
+$error-color: #FFFFFF;
+$error-text-color: #FFFFFF;
+
 $notification-error-dark: #d43a0b;
 $notification-error-light: #ffd6d6;
 $notification: $bright-turquoise;
+
+$alert-color: $needs-attention;
+$alert-background-color: $needs-attention;
+$alert-marker-color: #B24E11;
+$alert-text-color: $core-white;
+
 
 // Dimensions
 $sidebar-width : 266px;
@@ -167,13 +191,25 @@ $icon-image-height : 35px;
 $large-image-width : 45px;
 $large-image-height : 45px;
 $activity-gutter: 15px;
-$dialog-padding : 15px;
+
 $breadcrumbs-height: 32px;
 $help-pill-width: 34px;
 $texteditor-min-height: 300px;
+
 $default-dialog-width: 500px;
+/* $dialog-padding= interior padding from edge for dialog content */
+$dialog-padding : 15px;
+
+$separator-space: 4px;
+
+$caret-margin: 5px;		// space between the text and the caret glyph
+
 
 // z-indices
+
+$header-z-index: 15000;
+$menu-z-index: $header-z-index + 10;
+
 $guts-z-index: 0;
 $link-menu-z-index: $guts-z-index + 1;
 $editor-top-z-index: 10;
@@ -182,8 +218,6 @@ $data-grid-column-header-z-index: 2;
 $data-grid-body-z-index: 20;
 $data-grid-head-z-index: $data-grid-body-z-index + 1;
 
-$header-z-index: 15000;
-$menu-z-index: $header-z-index + 1;
 
 $dialog-overlay-z-index: $menu-z-index + 1;
 $dialog-z-index: $dialog-overlay-z-index + 1;
@@ -192,27 +226,46 @@ $tooltip-z-index: $dialog-z-index + 1;
 
 $toast-closing-z-index: $tooltip-z-index + 1;
 $toast-z-index: $toast-closing-z-index + 1;
+
 $hidden-z-index: -100;
 $select-menu-z-index: 1000000;
 $drag-z-index: 9999;
+
+$popup_filter-z-index: 9999999; //from dataset_table import
+
+$import-date-picker-z-index: 20001; // from import_now
+
+
+$ridiculously-large-z-index: 9999999999999;
+
+
+///////////////////////////////////////////////////////
+// TODO: Reconcile these with above values
+// Typography
+
+$font-family: "Source Sans Pro",Helvetica,Arial,Verdana,sans-serif;
+
+// Font weights
+$light: 300;
+// "normal" defaults to 400
+$semibold: 600;
+$bold: 700;
+
 
 // Font size
 $medium-font: 14px;
 $small-font: 12px;
 $smallest-font: 10px;
 
-// fontsize for the page header element. eg. name of item
+// fontsize for the page (sub) header element. eg. name of item
 $page_header-fontsize: 20.5px;
+
 // fontsize for the primary item name in lists. e.g. workspace, workfile, datasource, etc.
 $listitem_name-fontsize: 16px;
 
-///////////////////////////////////////////////////////
-// TODO: Reconcile these with above values
-/* Typography */
 
 $default-font-color: $color-text3;
 $default-font-size: 14px;
-$font-family: "Source Sans Pro",Helvetica,Arial,Verdana,sans-serif;
 $low-light-type: $gray;
 $mid-light-type: #5f5f5f;
 
@@ -228,12 +281,15 @@ $low-light-link-color: $gray;
 $list-horizontal-divider: 1px solid $border-color;
 $list-vertical-divider: 1px solid $border-color;
 $list-selectable-hover-color: rgba(0,0,0,0.1);
-$list-selectable-selected-color: white;
-$list-breadcrumb-divider: "\e02f";
-$list-breadcrumb-spacing: 5px;
-$list-breadcrumb-size: 10px;
+$list-selectable-selected-color: #FFFFFF;
 $list-border-color-highlighted: $green;
 
+/* breadcrumb specs */
+$list-breadcrumb-fontfamily: "FontAwesome";
+$list-breadcrumb-divider: "\f0da";
+$list-breadcrumb-spacingleft: 1px;
+$list-breadcrumb-spacingright: 5px;
+$list-breadcrumb-size: 13px;
 
 /* whitespace */
 
@@ -252,10 +308,10 @@ $guttersH: 15px;
 $guttersV: $baseLineHeight/2em*1rem; // set top and bottom margins to half the base line height so that the total takes up one row of vertical rhythm.
 $spacingHelpers: ($emRatio*$baseLineHeight/3, $emRatio*$baseLineHeight/2, $emRatio*$baseLineHeight); //TODO: convert to px;
 
-/* buttons */
+// BUTTONS
 $button-height : 26px;
 $button-border-color: $border-color;
-$button-background-color : white;
+$button-background-color : #FFFFFF;
 
 $button-border-color-highlighted: $green;
 
@@ -268,8 +324,20 @@ $action-bar-highlighted-background-color: $light-green;
 $action-bar-hovered-item-background-color: #C3ECA0;
 $action-bar-secondary-background-color: $light-blue;
 
-///////////////////////////////////////////////////////
 
+// LOZENGES aka pill
+$default-lozenge-height: 21px;
+
+$lozenge-color-normal: #F1F5F8;
+$lozenge-color-hover: #DDE6F3;
+$lozenge-color-selected: $brand-dark;
+
+$lozenge-color-normal-dark: darken($lozenge-color-normal, 7%);
+$lozenge-color-hover-dark: darken($lozenge-color-hover, 7%);
+$lozenge-color-selected-dark: $brand-dark;
+
+
+///////////////////////////////////////////////////////
 // Mixins
 
 
@@ -292,7 +360,7 @@ $action-bar-secondary-background-color: $light-blue;
     @include debugging-mixin;
     font-size: 24px;
     font-weight: $semibold;
-    color: $color-text1;
+    /* color: $color-text1; */
 }
 
 @mixin subheading-normal {
@@ -352,7 +420,6 @@ $action-bar-secondary-background-color: $light-blue;
 	color: $color-text1;
 }
 
-
 @mixin font-secondary-content {
     @include debugging-mixin;
     font-size: 12px;
@@ -364,10 +431,14 @@ $action-bar-secondary-background-color: $light-blue;
 /* used for the name of items in list */
 /* workspaces, files, etc. */
 
-@mixin font-primary-link {
-    color: $brand;
+@mixin font-primary {
     font-size: 18px;
     font-weight: normal;
+}
+
+@mixin font-primary-link {
+    color: $brand;
+    @include font-primary;
 }
 
 @mixin font-action-link {
@@ -400,6 +471,7 @@ $action-bar-secondary-background-color: $light-blue;
 @mixin uppercase {
     text-transform: uppercase;
     letter-spacing: 1px;
+    word-spacing: 0.135em;
 }
 
 @mixin list-section-heading {
@@ -416,11 +488,21 @@ $action-bar-secondary-background-color: $light-blue;
     color: $color-text3;
 }
 
+@mixin insight-ribbon {
+    @include debugging-mixin;
+
+    font-size: 12px;
+    font-weight: $bold;
+	color: $core-white;
+}
+
+
 @mixin database-column-type {
     @include debugging-mixin;
-    font-size: 11px;
-    font-weight: $semibold;
-    color: white;
+
+    font-size: 12px;
+    font-weight: normal;
+	color: $color-text2;
 }
 
 @mixin secondary-text-normal {
@@ -493,13 +575,13 @@ $action-bar-secondary-background-color: $light-blue;
 
 @mixin after-clearfix($which: both) {
     &:after {
-            content: ".";
-            display: block;
-            height: 0;
-            font-size: 0;
-            clear: $which;
-            visibility: hidden;
-        }
+        content: ".";
+        display: block;
+        height: 0;
+        font-size: 0;
+        clear: $which;
+        visibility: hidden;
+    }
 }
 
 @mixin borderbox {
@@ -521,12 +603,67 @@ $action-bar-secondary-background-color: $light-blue;
 }
 
 @mixin menu-triangle {
-    padding-right: 10px;
-    background-image: url("/images/blue-menu-triangle.png");
-    background-position: right;
-    background-repeat: no-repeat;
+/*     padding-right: 10px; */
+/*     background-image: url("/images/blue-menu-triangle.png"); */
+/*     background-position: right; */
+/*     background-repeat: no-repeat; */
 }
 
+/* caret for menus */
+/* pointing: DOWN  */
+@mixin menu-triangle-glyph {
+	&:hover::after {
+    	text-decoration: none !important;	
+	}
+	&::after {
+		display: inline-block;
+		position: relative;
+		left: $caret-margin;
+		font-family: FontAwesome;
+		content: "\f0d7";
+	}
+}
+
+/* generates caret with FA */
+@mixin triangle-glyph($pointing_direction) {
+	
+	&::after {
+		display: inline-block;
+		position: relative;
+		font-family: FontAwesome;
+		left: $caret-margin;
+		
+		@include caret-glyph($pointing_direction);
+		
+/* 		@if $pointing_direction == up { */
+/* 			content: "\f0d8"; */
+/* 		} @else if $pointing_direction == down { */
+/* 			content: "\f0d7"; */
+/* 		} @else if $pointing_direction == right { */
+/* 			content: "\f0da"; */
+/* 		} @else if $pointing_direction == left { */
+/* 			content: "\f0d9"; */
+/* 		} */
+
+	}
+}
+
+/* outputs the FA glyph content for the 'caret' */
+@mixin caret-glyph($pointing_direction) {
+
+	@if $pointing_direction == up {
+		content: "\f0d8";
+	} @else if $pointing_direction == down {
+		content: "\f0d7";
+	} @else if $pointing_direction == right {
+		content: "\f0da";
+	} @else if $pointing_direction == left {
+		content: "\f0d9";
+	}
+}
+
+
+/* generates a caret with css */
 @mixin triangle($pointing_direction, $color, $width, $height) {
     width: 0;
    	height: 0;
@@ -549,21 +686,49 @@ $action-bar-secondary-background-color: $light-blue;
 	}
 }
 
-@mixin pill-tab($min-width) {
-    &:hover .lozenge { background: $shaded-background-color; }
+/* ********* */
+/* used to generate the pill shapes used in sub nav and right-side nav tabs */
+/* call with: */
+/* min-width: min width of the pill */
+/* height: height of the pill. if none provided, defaults to 21px */
+
+@mixin pill-tab($min-width, $height: $default-lozenge-height) {
+    &:hover .lozenge {
+        //background: $lozenge-color-hover;
+        text-decoration: none;
+    }
     .lozenge {
-        @include lozenge(0, $min-width, 21px);
+        @include lozenge(0, $min-width, $height);
         font-size: 12px;
         color: $color-text2;
         padding: 0 10px;
     }
 
     &.selected {
-        &:hover .lozenge { background: $brand-dark; }
+        &:hover .lozenge {
+            //background: $lozenge-color-selected;
+        }
 
         .lozenge {
-            background: $brand-dark;
-            color: white;
+            //background: $lozenge-color-selected;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@mixin pill-tab-colors ($normal, $hover, $selected) {
+    .lozenge {
+        background-color: $normal;
+    }
+    &:hover .lozenge {
+        background: $hover;
+    }
+    &.selected {
+        &:hover .lozenge {
+            background: $selected;
+        }
+        .lozenge {
+            background: $selected;
         }
     }
 }
@@ -577,9 +742,10 @@ $action-bar-secondary-background-color: $light-blue;
     padding: $padding;
     text-align: center;
 
-    @include border-radius($height);
+    @include border-radius($height - 2);
     min-width: $min-width;
 }
+
 
 @mixin grab_cursor {
     cursor: -moz-grab;
@@ -590,7 +756,6 @@ $action-bar-secondary-background-color: $light-blue;
 }
 
 @mixin sidebar-panel {
-
     $border-radius: $default-border-radius;
     margin-top: $sidebar-padding-top;
 
@@ -619,8 +784,8 @@ $action-bar-secondary-background-color: $light-blue;
     ul {
         padding-bottom: 10px;
     }
-
 }
+
 @mixin dark-sidebar-panel {
     @include sidebar-panel;
 
@@ -639,13 +804,13 @@ $action-bar-secondary-background-color: $light-blue;
 
         a {
             &.active {
-                color: black;
+                color: $black;
                 border-bottom: none;
             }
         }
 
         .separator {
-            padding: 0 5px;
+            padding: 0 $separator-space;
             position: relative;
             top: 2px;
             color: $link-color;

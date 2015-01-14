@@ -1,4 +1,7 @@
-.errors, .sql_errors, .dataset_errors, .warning {
+.errors,
+.sql_errors,
+.dataset_errors,
+.warning {
     @include after-clearfix;
     background-color: $error-background-color;
     vertical-align: middle;
@@ -33,7 +36,10 @@
     background-color: $needs-attention;
 }
 
-input.has_error, textarea.has_error, .text-core .text-wrap textarea.has_error, .text-core .text-wrap input.has_error {
+input.has_error,
+textarea.has_error,
+.text-core .text-wrap textarea.has_error,
+.text-core .text-wrap input.has_error {
     border: 2px solid $error-background-color;
     background-image: url("/images/error-exclamation.png");
     background-repeat: no-repeat;

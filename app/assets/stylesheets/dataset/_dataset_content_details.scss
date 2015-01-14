@@ -23,11 +23,13 @@ $action-bar-height: 32px;
     position: relative;
 
     .triangle {
-      display: inline-block;
+/*       display: inline-block; */
       position: absolute;
       left: 17px;
       bottom: -10px;
-      @include triangle(down, $content-details-chart-icon-selected-background-color, 16px, 10px);
+/*       @include triangle-css(down, $content-details-chart-icon-selected-background-color, 16px, 10px); */
+      	@include triangle-glyph(down);
+      	color: $content-details-chart-icon-selected-background-color;
     }
   }
 }
@@ -39,9 +41,9 @@ $action-bar-height: 32px;
 
 .dataset_content_details {
     .chorus_search_container {
-        display: inline-block;
+/*         display: inline-block; */
         width: 50%;
-        margin-top: 3px;
+/*         margin-top: 3px; */
     }
     .chorus_search {
       display: inline-block;
@@ -64,7 +66,7 @@ $action-bar-height: 32px;
   }
 
   .action_bar_pennant {
-    color: white;
+    color: $core-white;
     background-color: $content-details-create-background-color;
     display: inline-block;
     min-width: 65px;
@@ -73,11 +75,12 @@ $action-bar-height: 32px;
     line-height: $action-bar-height;
   }
   .triangle_right {
-    @include triangle(right, $content-details-create-background-color, 12px, $action-bar-height);
-    display: inline-block;
+/*     @include triangle-css(right, $content-details-create-background-color, 12px, $action-bar-height); */
+	@include triangle-glyph(right);
+	color: $content-details-create-background-color;
+/*     display: inline-block; */
     vertical-align: top;
   }
-
 
   .info_bar {
     padding: 7px 10px;
@@ -92,5 +95,5 @@ $action-bar-height: 32px;
 }
 
 .select_all_or_none {
-  display: inline-block;
+	display: inline-block;
 }

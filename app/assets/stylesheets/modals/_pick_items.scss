@@ -1,7 +1,11 @@
 .pick_items {
-    .sub_header .chorus_search_container {
-        padding: 5px 0;
-    }
+
+$picklist_image_rightMargin: 5px;
+
+
+/*     .sub_header .chorus_search_container { */
+/*         padding: 5px 0; */
+/*     } */
 
     .list_content_details {
         width: auto;
@@ -19,12 +23,12 @@
                 &.selected {
                     background-color: $picklist-selected-background-color;
 
-                  a {
-                    color: white;
-                  }
+                    a {
+                        color: #FFFFFF;
+                    }
 
-                  .name {
-                        color: white;
+                    .name {
+                        color: #FFFFFF;
                     }
                 }
 
@@ -46,6 +50,7 @@
                 .image {
                     width: $icon-image-width;
                     display: inline-block;
+                    margin-right: $picklist_image_rightMargin;
                 }
             }
         }

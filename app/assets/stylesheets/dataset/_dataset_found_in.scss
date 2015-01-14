@@ -1,10 +1,10 @@
 .workspace_association {
-  display: inline-block;
-  margin-right: 25px;
+	display: inline-block;
+	margin-right: 25px;
 }
 
 .item_metadata {
-  line-height: 21px;
+  line-height: 20px;
   
   @include font-secondary-content;
 
@@ -15,7 +15,9 @@
   }
 
   .open_other_menu {
-    @include menu-triangle;
+
+    @include menu-triangle-glyph;
+	color: $brand-dark;
   }
 
   .other_menu {

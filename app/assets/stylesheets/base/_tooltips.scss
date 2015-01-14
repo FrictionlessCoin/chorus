@@ -1,8 +1,16 @@
+@import "_browser_support";
+@import "_common";
+
+/* grey color for the (?) glyph on forms that provide more info */
+$more-info-color: #888888;
+
+
 @mixin tooltip($text, $bg, $border){
     .ui-tooltip-content {
         color: $text;
         background-color: $bg;
         border-color: $border;
+        border-radius: $default-border-radius;
     }
     .ui-tooltip-titlebar {
         background-color: $bg;
@@ -21,33 +29,32 @@
 }
 
 .tooltip-normal {
-    // qTip's author explicitly recommends !important for overriding z-index
-    // https://github.com/Craga89/qTip2/issues/274
-    /*z-index: $body-tooltip-z-index !important;*/
-    
+/*     qTip's author explicitly recommends !important for overriding z-index */
+/*     https://github.com/Craga89/qTip2/issues/274 */
+/*     z-index: $body-tooltip-z-index !important; */
+
     box-shadow: $shadow-canon;
 }
 
 .ui-tooltip {
-    // qTip's author explicitly recommends !important for overriding z-index
-    // https://github.com/Craga89/qTip2/issues/274
+/*     qTip's author explicitly recommends !important for overriding z-index */
+/*     https://github.com/Craga89/qTip2/issues/274 */
     z-index: $tooltip-z-index !important;
-
 }
 
 .tooltip-white {
     /* @include tooltip($color-text1, #FFFFFF, #CCCCCC); */
     @include tooltip($color-text1, #FFFFFF, $border-color);
-    
+
     box-shadow: $shadow-canon;
 }
 
 .tooltip-error {
     @include tooltip($error-text-color, #B61B1D, #B61B1D);
-    box-shadow: $shadow-canon;
-        
+    /* box-shadow: $shadow-canon; */
+
     .ui-tooltip-content {
-        font-size: 16px;
+        font-size: $medium-font;
         line-height: 16px;
         max-width: 350px;
     }
@@ -57,7 +64,8 @@
     @include tooltip($error-text-color, #282828, #282828);
 
     .ui-tooltip-content {
-        font-size: 13px;
+        font-size: $small-font;
+        line-height: normal;
         max-width: 350px;
     }
 }
@@ -66,11 +74,10 @@
     @include tooltip($error-text-color, #282828, #282828);
 
     .ui-tooltip-content {
-        font-size: 12px;
+        font-size: $small-font;
         min-width: 250px;
         max-width: 350px;
         line-height: 1.2;
-
 
         .content-bold {
             font-size: 13px;
@@ -109,10 +116,23 @@
 }
 
 .more-info {
-  background-image: url('/images/more-info.png');
-  display: inline-block;
-  height: 12px;
-  width: 12px;
+    /* 	background-image: url('/images/more-info.png'); */
+    /* 	display: inline-block; */
+    /* 	height: 12px; */
+    /* 	width: 12px; */
+    color: $more-info-color;
+    
+	&:hover::after {
+    	text-decoration: none !important;	
+	}
+
+	&::after {
+		display: inline-block;
+		position: relative;
+		left: $caret-margin;
+		font-family: FontAwesome;
+		content: "\f059";  /* question-circle */
+	}
 }
 
 .tooltip-tips {
@@ -138,4 +158,15 @@
     font-size: 14px;
     width: 450px;
   }
+}
+
+/* specific color for the (?) glyph */
+.fa-question-circle {
+	color: $more-info-color;
+}
+
+a.more {
+    /* when the 'show more' link is used, adjust to reflect font size of context */
+    font-size: inherit;
+    
 }

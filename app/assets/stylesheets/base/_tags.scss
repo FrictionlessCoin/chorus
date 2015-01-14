@@ -1,10 +1,10 @@
 .tag.administrator, .tag.import_frequency, .tag.developer {
-    line-height: 12px;
-    vertical-align: top;
     display: inline-block;
+    vertical-align: top;
+    line-height: 12px;
 
     .tag_name {
-        color: white;
+        color: #FFFFFF;
         font-size: 12px;
         line-height: 12px;
         font-weight: $semibold;
@@ -15,14 +15,14 @@
 
     .arrow_left {
         display: inline-block;
-        width:0px;
-        height:0px;
+        width: 0px;
+        height: 0px;
         border-bottom:10px solid transparent;  /* left arrow slant */
         border-top:10px solid transparent; /* right arrow slant */
         border-right-width: 10px;
         border-right-style: solid;
-        font-size:0px;
-        line-height:0px;
+        font-size: 0px;
+        line-height: 0px;
         vertical-align: top;
     }
 

@@ -13,16 +13,20 @@ $link-padding: 6px;
     }
 
     .sub_header {
+        img {
+            vertical-align: text-bottom;
+        }
+
         .individual_accounts_count {
-            background : url("/images/data_sources/individual.png") no-repeat left 8px;
+            /* background : url("/images/data_sources/individual.png") no-repeat left 8px; */ /* to be deleted when final */
             display: inline-block;
             padding-left: 23px;
         }
 
-        .details_text {
-            background : url("/images/data_sources/shared_icon.png") no-repeat left 6px;
+        .shared_accounts {
+/*             background : url("/images/data_sources/shared.png") no-repeat left 6px; */ /* to be deleted when final */
             display: inline-block;
-            padding-left: 23px;
+            padding-left: 5px;
         }
     }
 
@@ -159,5 +163,5 @@ $link-padding: 6px;
         }
     }
 
-    .form_controls { margin: 0; }
+/*     .form_controls { margin: 0; } */ /* to be deleted when final */
 }

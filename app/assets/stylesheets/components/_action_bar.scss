@@ -27,7 +27,6 @@
 .action_bar_primary {
   padding: 3px 10px;
   @include button-theme($button-border-color, $default-font-color);
-
 }
 
 .action_bar_secondary {
@@ -35,14 +34,11 @@
   border-top: $border-canon;
   background-color: $action-bar-secondary-background-color;
   @include button-theme($button-border-color-secondary, $default-font-color);
-
 }
 
 .action_bar_limited {
   padding: 3px 10px;
   line-height: 2;
-  background-image: url("/images/binary_workfile_action_bar_tile.png");
-
+  background-image: url("/images/general/binary_workfile_action_bar_tile.png");
   @include button-theme($button-border-color-limited, $default-font-color);
-
 }

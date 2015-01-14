@@ -1,3 +1,20 @@
+@mixin checkmark {
+
+    /*      background-repeat: no-repeat; */
+    /*      background-image: url("/images/check.png"); */
+    display: inline-block;
+    
+    position: absolute;
+    top: 10px;
+    left: -12px;
+
+    &::after {
+        font-family: FontAwesome;
+        content: "\f00c";
+    }
+}
+
+
 .components_menu {
     li {
         padding: 5px 0;
@@ -26,15 +43,7 @@
     }
 
     .check {
-        background-repeat: no-repeat;
-        background-image: url("/images/check.png");
-        display: inline-block;
-        visibility: hidden;
-        width: 10px;
-        height: 10px;
-/*         margin-left: -14px; */
-        position: relative;
-        top: 1px;
+        @include checkmark;    
     }
 }
 
@@ -42,7 +51,6 @@
     display: inline;
     position: absolute;
     background: #FFFFFF;
-/*     border: $border-canon; */
     border:1px solid #B0B0B0;
     text-align: left;
     z-index: $menu-z-index;
@@ -50,7 +58,7 @@
     .pointer {
         width: 21px;
         height: 13px;
-        background-image : url("/images/menu-triangle.png");
+        background-image : url("/images/general/menu-triangle.png");
         background-repeat: no-repeat;
         position: absolute;
         top: -13px;
@@ -70,6 +78,11 @@
     }
 }
 
+
+a .chosen {
+	@include menu-triangle-glyph;
+}
+
 .link_menu {
     position: relative;
     z-index : $link-menu-z-index;
@@ -77,9 +90,9 @@
     padding-left: 20px;
 
     a {
-        img {
-           margin: 2px;
-        }
+/*         img { */
+/*            margin: 2px; */
+/*         } */
     }
 
     .popup_filter {
@@ -88,7 +101,6 @@
         top: 28px;
         padding: 5px 5px 9px 2px;
         z-index : $link-menu-z-index;
-/*         line-height: 14px; */
 
         .pointer {
             left: 100px;
@@ -98,15 +110,9 @@
             margin: 0px 4px 0px 18px;
 
             .check {
-                background-repeat: no-repeat;
-                background-image: url("/images/check.png");
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                margin-left: -14px;
-                position: relative;
-                top: 1px;
 
+                @include checkmark;
+	
                 &.hidden {
                     visibility: hidden;
                 }

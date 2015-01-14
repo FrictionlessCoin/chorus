@@ -1,9 +1,5 @@
 .dataset_download {
 
-    .dialog_header h1 {
-        @include ellipsis;
-    }
-
     input[name=rowLimit] {
         display: inline-block;
         width: 50px;

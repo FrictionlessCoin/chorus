@@ -36,14 +36,14 @@ ul li {
 .list_breadcrumb {
     >li {
         display: inline-block;
-        margin-right: $list-breadcrumb-spacing;
+        margin-right: $list-breadcrumb-spacingright;
 
         &:after {
-            font-family: Icons;
+            font-family: $list-breadcrumb-fontfamily;
             content: $list-breadcrumb-divider;
-            margin-left: $list-breadcrumb-spacing;
+            margin-left: $list-breadcrumb-spacingleft;
             font-size: $list-breadcrumb-size;
-            vertical-align: middle;
+            color: $gray;
         }
 
         &:last-child {

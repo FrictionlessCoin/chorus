@@ -1,11 +1,12 @@
 .sql_preview {
     min-height: 120px;
 
-    .dialog_content {
-        .form_controls {
-            margin-top: 0px;
-        }
-    }
+/* to be deleted when final */
+/*     .dialog_content { */
+/*         .form_controls { */
+/*             margin-top: 0px; */
+/*         } */
+/*     } */
 
     .sql {
         min-height: $texteditor-min-height;
