@@ -31,7 +31,7 @@ describe("chorus.views.TagsInput", function() {
         });
 
         it("shows placeholder text", function() {
-            expect(view.$("input").attr("placeholder")).toContainTranslation("tags.add_tags");
+            expect(view.$("input").attr("placeholder")).toContainTranslation("tags.input.placeholder");
         });
     });
 

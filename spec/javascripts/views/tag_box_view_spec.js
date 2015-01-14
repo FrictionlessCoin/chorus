@@ -21,7 +21,7 @@ describe("chorus.views.TagBox", function() {
 
         it('shows the add tags textarea with ghost text', function() {
             expect(this.view.$('input.tag_editor')).toExist();
-            expect(this.view.$('input').attr("placeholder")).toContainTranslation('tags.add_tags');
+            expect(this.view.$('input').attr("placeholder")).toContainTranslation('tags.input.placeholder');
         });
 
         it('shows the tag names', function() {
