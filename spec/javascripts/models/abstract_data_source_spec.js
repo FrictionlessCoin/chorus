@@ -19,13 +19,13 @@ describe("chorus.models.AbstractDataSource", function() {
     describe("#stateIconUrl and #stateText", function() {
         it('works for offline data sources', function() {
             this.dataSource.set({ online: false });
-            expect(this.dataSource.stateIconUrl()).toBe("/images/data_sources/yellow.png");
+            expect(this.dataSource.stateIconUrl()).toBe("/images/data_sources/yellow.svg");
             expect(this.dataSource.stateText()).toMatchTranslation("data_sources.state.offline");
         });
 
         it('works for online data sources', function() {
             this.dataSource.set({ online: true });
-            expect(this.dataSource.stateIconUrl()).toBe("/images/data_sources/green.png");
+            expect(this.dataSource.stateIconUrl()).toBe("/images/data_sources/green.svg");
             expect(this.dataSource.stateText()).toMatchTranslation("data_sources.state.online");
         });
     });

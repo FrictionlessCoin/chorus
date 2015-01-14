@@ -20,11 +20,11 @@ describe("chorus.views.DataSourceItem", function() {
         });
 
         it("displays the state icon", function() {
-            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/green.png");
+            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/green.svg");
             expect(this.view.$("img.state").attr("title")).toContainTranslation("data_sources.state.online");
             this.model.set("online", false);
             this.view.render();
-            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/yellow.png");
+            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/yellow.svg");
             expect(this.view.$("img.state").attr("title")).toContainTranslation("data_sources.state.offline");
         });
 
@@ -65,7 +65,7 @@ describe("chorus.views.DataSourceItem", function() {
         });
 
         it("displays the state icon", function() {
-            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/green.png");
+            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/green.svg");
             expect(this.view.$("img.state").attr("title")).toContainTranslation("data_sources.state.online");
         });
     });
@@ -82,7 +82,7 @@ describe("chorus.views.DataSourceItem", function() {
         });
 
         it("displays the state icon", function() {
-            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/green.png");
+            expect(this.view.$("img.state").attr("src")).toBe("/images/data_sources/green.svg");
             expect(this.view.$("img.state").attr("title")).toContainTranslation("data_sources.state.online");
         });
     });

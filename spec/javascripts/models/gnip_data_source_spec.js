@@ -69,7 +69,7 @@ describe("chorus.models.GnipDataSource", function() {
 
     describe("#stateIconUrl", function() {
         it("returns the online icon url", function() {
-            expect(this.model.stateIconUrl()).toEqual("/images/data_sources/green.png");
+            expect(this.model.stateIconUrl()).toEqual("/images/data_sources/green.svg");
         });
     });
 });
