@@ -167,7 +167,8 @@ jasmine.sharedExamples.aSidebarWithAGreenplumPostgresOrOracleDataSourceSelected 
                 });
 
                 it("shows the 'access' text and icon", function() {
-                    expect(this.view.$(".fa-unlock").toExist());
+                    //var lockElement = this.view.$(".fa-unlock");
+                    expect(this.view.$(".fa-unlock")).toExist();
                     expect(this.view.$(".account_info").text().trim()).toMatchTranslation("data_sources.sidebar.access");
                 });
 
