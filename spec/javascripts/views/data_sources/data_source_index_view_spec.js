@@ -89,7 +89,7 @@ describe("chorus.views.DataSourceIndex", function() {
             });
 
             it("should display the unknown state icon", function() {
-                expect(this.view.$(".data_source li:eq(0) img.state")).toHaveAttr("src", "/images/data_sources/yellow.png");
+                expect(this.view.$(".data_source li:eq(0) img.state")).toHaveAttr("src", "/images/data_sources/yellow.svg");
             });
 
             it("should display the name as a link", function() {
