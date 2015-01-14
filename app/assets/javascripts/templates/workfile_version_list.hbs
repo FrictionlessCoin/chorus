@@ -1,7 +1,6 @@
 {{#each models}}
     <li>
         <a class="version_link" data-version-id="{{versionId}}">
-            <img src="/images/version.png" />
             <div class="version_info">
                 <div class="version_title">{{t "workfile.version_title" versionNum=versionInfo.versionNum}}</div>
                 <div class="version_details">{{t "workfile.version_saved_by" authorName=authorName formattedDate=formattedDate}}</div>
@@ -9,7 +8,7 @@
             <div class="spacer"></div>
         </a>
         {{#if canDelete}}
-            <a class="delete_link alert" data-alert="WorkfileVersionDelete" data-version-id="{{versionId}}" data-version-number="{{versionNumber}}" href="#">{{t "actions.delete"}} <img src="images/trashcan.png"/></a>
+            <a class="delete_link alert" data-alert="WorkfileVersionDelete" data-version-id="{{versionId}}" data-version-number="{{versionNumber}}" href="#"><span class='fa fa-trash' title='{{t "actions.delete"}}'></span> {{t "actions.delete"}}</a>
         {{/if}}
     </li>
 {{/each}}

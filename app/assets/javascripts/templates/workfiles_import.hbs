@@ -1,17 +1,19 @@
 <form action="/workspaces/{{workspace.id}}/workfiles" enctype="multipart/form-data" method="post">
     <div class="girdle">
+    
         {{ uploadWidgetFor "workfile[versions_attributes][0][contents]" }}
         <div class="comment hidden">
-            <input type="text" name="workfile[description]" placeholder='{{t "workfiles.import_placeholder"}}'
-                   tabindex="1" maxlength="256"/>
+            <input type="text" name="workfile[description]" placeholder='{{t "workfiles.import_placeholder"}}' tabindex="1" maxlength="256"/>
         </div>
         <div class="work_flow_detail hidden">
-            {{infoBlock "work_flows.new_dialog.info"}}
+            {{formInfoBlock "work_flows.new_dialog.info"}}
             <div class="location_picker"></div>
-            <input type="hidden" id='entity_subtype' name="workfile[entity_subtype]"/>
+            <input type="hidden" id="entity_subtype" name="workfile[entity_subtype]"/>
 
-            <div class='execution_locations'/>
+            <div class="execution_locations"/>
         </div>
     </div>
+    <!-- END girdle -->
+    
     {{formControlsWithDisabledSubmit "workfiles.button.import"}}
 </form>
