@@ -21,15 +21,18 @@
             </div>
         {{/if}}
         <label class="required mtm">{{t "create_hdfs_dataset_dialog.file_mask"}}</label>
-        <input class="file_mask mbm" maxlength="4096" value="{{fileMask}}"
-               placeholder="{{t "create_hdfs_dataset_dialog.placeholder"}}">
+        <input class="file_mask mbm" maxlength="4096" value="{{fileMask}}" placeholder="{{t "create_hdfs_dataset_dialog.placeholder"}}">
 
         {{#if needsWorkspace}}
             <label class="required">{{t "associate_hdfs_dataset_from_entry.workspace"}}</label><br/>
             <a class='workspace_picked'>{{t "associate_hdfs_dataset_from_entry.select_workspace"}}</a>
         {{/if}}
+        
+        {{> legendRequired}}
 
     </div>
+    <!-- END girdle -->
+
     {{#if datasetPersisted}}
         {{formControls "edit_hdfs_dataset.submit"}}
     {{else}}
