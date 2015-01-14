@@ -375,13 +375,13 @@ describe("chorus global", function() {
             });
         });
 
-        context("when called multiple times on the same element", function() {
+        context("> when called multiple times on the same element", function() {
             beforeEach(function() {
                 chorus.search({ input: this.input1, list: this.list});
                 chorus.search({ input: this.input1, list: this.list});
             });
 
-            it("doesn't change the dom more than once", function() {
+            it("> doesn't change the dom more than once", function() {
                 var wrapper = this.container.find(".chorus_search_container");
                 expect(wrapper).not.toContain(".chorus_search_container");
             });
@@ -503,7 +503,8 @@ describe("chorus global", function() {
 
     });
 
-    describe("#addClearButton", function() {
+//     describe("#addClearButton", function() {
+    describe("#addSearchFieldModifications", function() {
         beforeEach(function() {
             this.input1 = $("<input></input>");
             this.container = $("<div></div>").append(this.input1);
@@ -515,7 +516,7 @@ describe("chorus global", function() {
         it("> adds a little 'x' to the right of the search input", function() {
             this.input1.val("nit").trigger("textchange");
             expect(this.clearLink).toExist();
-            expect(this.clearLink.find("span").attr("class")).toBe("search_clear");
+            expect(this.clearLink.find("span").attr("class")).toBe("fa fa-times search_clear");
         });
 
         it("> hides the 'x' when the input is blank", function() {

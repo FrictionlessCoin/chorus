@@ -230,7 +230,7 @@ window.Chorus = function chorus$Global() {
 // - clear element at end of field
 
     self.addSearchFieldModifications = function(input) {
-        if ($(input).parent().is(".chorus_search_container")) return;
+        if ($(input).parent().parent().is(".chorus_search_container")) return;
 
         var $input = $(input);
         var clearLink = $("<a href='#'/>")
