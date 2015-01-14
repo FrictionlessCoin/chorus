@@ -248,10 +248,33 @@ window.Chorus = function chorus$Global() {
         var magnifyGlassWrap = $("<span class='search_magnifying_glass'></span>");
         var container = $("<div class='chorus_search_container'></div>");
 
-        magnifyGlassWrap.insertAfter($input);
-        magnifyGlassWrap.append($input).append(clearLink);
-        magnifyGlassWrap.wrapAll(container);
+         magnifyGlassWrap.insertAfter($input);
+         magnifyGlassWrap.append($input).append(clearLink);
+         magnifyGlassWrap.wrapAll(container);
     };
+
+    self.addClearButton = function(input) {
+//         if ($(input).parent().is(".chorus_search_container")) return;
+// 
+//         var $input = $(input);
+//         var clearLink = $("<a href='#'/>")
+//             .append("<i class='oi search_clear' data-glyph='x'></i>")
+//             .addClass("chorus_search_clear hidden")
+//             .bind('click', function(e) {
+//                 e.preventDefault();
+//                 $input.val("").trigger('textchange').blur();
+//             });
+// 
+//         $input.unbind("textchange.clear_link").bind("textchange.clear_link", function() {
+//             clearLink.toggleClass("hidden", $input.val().length === 0);
+//         });
+//         var container = $("<div class='chorus_search_container'></div>");
+//         container.css({ display: $input.css("display") });
+//         container.insertAfter($input);
+//         container.append($input).append(clearLink);
+    };
+
+
 
     self.hotKeyMeta = BrowserDetect.OS === "Mac" ? "ctrl" : "alt";
 

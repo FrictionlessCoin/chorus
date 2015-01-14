@@ -49,7 +49,7 @@ chorus.dialogs.PickItems = chorus.dialogs.Base.extend({
     },
 
     postRender: function() {
-        chorus.addClearButton(this.$('.sub_header input:text'));
+        chorus.addSearchFieldModifications(this.$('.sub_header input:text'));
         this.enableOrDisableSubmitButton();
     },
 
