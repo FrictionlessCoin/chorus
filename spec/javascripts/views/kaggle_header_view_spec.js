@@ -11,7 +11,7 @@ describe("chorus.views.KaggleHeader", function() {
             expect(this.view.$(".summary").text()).toContainTranslation("kaggle.summary", {kaggleLink: 'Kaggle'});
         });
         it("shows the kaggle logo", function() {
-            expect(this.view.$("img").attr("src")).toBe("/images/kaggle.png");
+            expect(this.view.$("img").attr("src")).toBe("/images/kaggle/kaggle.png");
         });
     });
 });
