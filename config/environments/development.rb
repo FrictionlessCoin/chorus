@@ -15,7 +15,7 @@ Chorus::Application.configure do
 
   # Show full error reports and disable caching
   config.consider_all_requests_local = false
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -29,10 +29,10 @@ Chorus::Application.configure do
 
   # Do not compress assets
 #  config.assets.compress = false
-  config.assets.compress = true
+  config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = false 
+  config.assets.debug = true 
 
   # Give paperclip path to ImageMagick tools
   Paperclip.options[:command_path] = "/usr/local/bin/"
