@@ -4,6 +4,16 @@
 
 $tag-border-radius: 2px;
 
+.tag_item {
+
+    .tag_icon {
+        position: relative;
+        top: 11px;
+        font-size: 28px;
+    }
+}
+
+
 .tags_input {
     border: 1px solid $border-color;
     background-color: #FFFFFF;
