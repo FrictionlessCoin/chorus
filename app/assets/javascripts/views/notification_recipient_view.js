@@ -51,7 +51,8 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
 
     updateAvailableUserList: function() {
         this.$("select").empty();
-        this.$("select").append($("<option value=''>Select a user</option>"));
+        var $tipOption = $("<option class='name'></option>").text(t('notification_recipient.members.option'));
+        this.$("select").append($tipOption);
 
         this.collection && this.collection.models.sort(function(a, b) {
             return naturalSort(a.get("firstName").toLowerCase(), b.get("firstName").toLowerCase());
@@ -75,7 +76,8 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
         _.each(this.selectedUsers.models, function(user) {
             var id = user.get("id");
             var $span = $("<span class='name'></span>").text(user.displayName());
-            var $remove = $('<a href="#" class="remove"/>').text(t("notification_recipient.remove"));
+            var $remove = $('<a href="#" class="remove"/>').append('<span class="fa fa-times-circle" title="{{t "actions.remove"}}"></span>');
+
             var $li = $("<li></li>").append($span).append($remove).attr("data-id", id.toString());
 
             this.$(".picked_users").append($li);

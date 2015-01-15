@@ -10,9 +10,9 @@ chorus.views.SearchDataSource = chorus.views.SearchItemBase.extend({
         return _.extend(this._super("additionalContext"), {
             stateUrl: this.model.stateIconUrl(),
             stateText: this.model.stateText(),
-            showUrl: this.model.showUrl(),
-            humanSize: I18n.toHumanSize(this.model.get("size")),
-            iconUrl: this.model.providerIconUrl()
+            url: this.model.showUrl(),
+            iconUrl: this.model.providerIconUrl(),
+            humanSize: I18n.toHumanSize(this.model.get("size"))
         });
     }
 });

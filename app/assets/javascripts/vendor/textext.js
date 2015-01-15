@@ -4121,7 +4121,7 @@
 		CSS_DOT_TAGS        = CSS_DOT + CSS_TAGS,
 		CSS_LABEL           = 'text-label',
 		CSS_DOT_LABEL       = CSS_DOT + CSS_LABEL,
-		CSS_REMOVE          = 'text-remove',
+ 		CSS_REMOVE          = 'text-remove',
 		CSS_DOT_REMOVE      = CSS_DOT + CSS_REMOVE,
 
 		/**
@@ -4252,11 +4252,10 @@
 
 			html : {
 				tags : '<div class="text-tags"/>',
-				tag  : '<div class="text-tag"><div class="text-button"><img src="/images/tags/blue_tag_triangle.png" class="arrow_left"/><span class="text-label"/><span class="transition-border"></span><a class="text-remove">x</a></div></div>'
+				tag  : '<div class="text-tag"><div class="text-button"><img src="/images/tags/blue_tag_triangle.png" class="arrow_left"/><span class="text-label"/><span class="transition-border"></span><a class="text-remove"></a></div></div>'
 			}
 		}
 		;
-
 	/**
 	 * Initialization method called by the core during plugin instantiation.
 	 *
