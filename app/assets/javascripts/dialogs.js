@@ -28,11 +28,27 @@ chorus.dialogs.Base = chorus.Modal.extend({
             addClass(this.className).
             addClass("dialog").
             addClass(this.additionalClass || "");
+            
+// new
+//         $(this.el).
+//             empty().
+//             append(header).
+//             append(content).
+//             addClass(this.className).
+//             addClass("dialog").
+//             addClass(this.additionalClass || "");
+// intending to moe the errors into the girdle node.
+
+
         this.delegateEvents();
         this.renderSubviews();
         this.renderHelps();
         this.postRender($(this.el));
         chorus.placeholder(this.$("input[placeholder], textarea[placeholder]"));
+
+/* jshint ignore:start */     
+console.log ("dialog render");  
+/* jshint ignore:end */
 
         return this;
     },
