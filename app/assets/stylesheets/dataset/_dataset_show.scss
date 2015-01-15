@@ -1,3 +1,6 @@
+@import "_browser_support";
+@import "compass/css3/transform";
+
 .dataset_show {
     .content_header {
         .has_import {
@@ -101,10 +104,13 @@
 .stale_dataset_marker {
     position: absolute;
     left: 32px;
-    
-    color: #DD3311;
-
+    color: #C64D2D;
+    font-size: 13px;
     .fa-times {
-        top: -6px; 
+        top: -5px;
+    }
+    &:hover {
+        @include transform(scale(1.1,1.1));
+        color: #DD3311;
     }
 }
