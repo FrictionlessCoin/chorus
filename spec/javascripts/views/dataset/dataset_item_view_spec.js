@@ -145,7 +145,7 @@ describe("chorus.views.DatasetItem", function() {
         });
     });
 
-    context("when the dataset has tags", function () {
+    context("when the dataset has tags", function() {
         beforeEach(function () {
             this.dataset.tags().reset([{name: "tag1"}, {name: "tag2"}]);
             this.view.render();
@@ -190,7 +190,7 @@ describe("chorus.views.DatasetItem", function() {
         itBehavesLike.ItPresentsModelWithTags();
     });
 
-    context("when the dataset is an HDFS file mask posing as dataset", function () {
+    context("when the dataset is an HDFS file mask posing as dataset", function() {
         beforeEach(function() {
             this.dataset = backboneFixtures.workspaceDataset.hdfsDataset({
                 objectName: "john_the_table"
@@ -286,13 +286,13 @@ describe("chorus.views.DatasetItem", function() {
             });
         });
 
-        context("when the dataset has tags", function () {
+        context("when the dataset has tags", function() {
             beforeEach(function () {
                 this.dataset.tags().reset([{name: "tag1"}, {name: "tag2"}]);
                 this.view.render();
             });
 
-            it("shows a list of tags", function () {
+            it("shows a list of tags", function() {
                 expect(this.view.$('.item_tag_list')).toContainTranslation("tag_list.title");
                 expect(this.view.$('.item_tag_list')).toContainText("tag1 tag2");
             });
@@ -326,10 +326,10 @@ describe("chorus.views.DatasetItem", function() {
         });
     });
 
-    context("when the dataset is stale", function () {
-        it("displays a link with an invalid icon", function () {
+    context("when the dataset is stale", function() {
+        it("displays a link with an stale/invalid marker", function() {
             this.dataset.set('stale', true);
-            expect(this.view.$('a.image img.stale_dataset_icon')).toExist();
+            expect(this.view.$('.stale_dataset_marker')).toExist();
         });
     });
 });
