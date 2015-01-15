@@ -10,7 +10,7 @@ describe "Workspaces" do
   describe "Create workspaces" do
     it "creates a public workspace" do
       visit('#/workspaces')
-      click_link "Create a Workspace"
+      click_link "Create New Workspace"
 
       within_modal do
         fill_in 'name', :with => "New Workspace"

@@ -124,7 +124,7 @@ resource "Workspaces" do
     let(:public) { false }
     let(:summary) { "Lots of good data in here" }
 
-    example_request "Create a workspace" do
+    example_request "Create New Workspace" do
       status.should == 201
     end
   end
