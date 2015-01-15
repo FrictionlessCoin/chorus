@@ -51,7 +51,7 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
 
     updateAvailableUserList: function() {
         this.$("select").empty();
-        var $tipOption = $("<option class='name'></option>").text(t('notification_recipient.members.option'));
+        var $tipOption = $("<option value=''></option>").text(t('notification_recipient.members.option'));
         this.$("select").append($tipOption);
 
         this.collection && this.collection.models.sort(function(a, b) {
