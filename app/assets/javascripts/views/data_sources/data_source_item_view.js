@@ -7,9 +7,9 @@ chorus.views.DataSourceItem = chorus.views.Base.include(
     additionalContext: function() {
         return _.extend(this.additionalContextForTags(), {
             stateUrl: this.model.stateIconUrl(),
+            stateText: this.model.stateText(),
             url: this.model.showUrl(),
-            providerUrl: this.model.providerIconUrl(),
-            stateText: this.model.stateText()
+            iconUrl: this.model.providerIconUrl()
         });
     }
 });

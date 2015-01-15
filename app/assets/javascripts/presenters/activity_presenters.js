@@ -659,7 +659,7 @@
             return self.model.get("destinationTable");
         },
 
-        // this is the one that returns a Dataset
+        // this is the one that returns Dataset
         destObjectOrNameInSchema: function(self) {
             var dataset = self.model["dataset"]();
             if (dataset.get("id")){
