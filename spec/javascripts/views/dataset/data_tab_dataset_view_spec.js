@@ -37,7 +37,7 @@ describe("chorus.views.DataTabDataset", function() {
 
     describe("toggling the column list", function () {
         beforeEach(function() {
-            this.view.$('.toggle_visibility').click();
+            this.view.$('.toggle_display').click();
             this.server.completeFetchAllFor(this.dataset.columns(), [
                 backboneFixtures.databaseColumn({name: "column_1"})
             ]);
@@ -49,13 +49,13 @@ describe("chorus.views.DataTabDataset", function() {
             });
 
             it("shows the close arrow", function() {
-                expect(this.view.$("img:eq(0)")).toHaveAttr("src", "/images/close.gif");
+                expect(this.view.$('.toggle_display')).toHaveClass("fa-caret-down");
             });
         });
 
         context("when the list is shown", function() {
             beforeEach(function () {
-                this.view.$('.toggle_visibility').click();
+                this.view.$('.toggle_display').click();
             });
 
             it("hides the columns", function() {
@@ -63,7 +63,7 @@ describe("chorus.views.DataTabDataset", function() {
             });
 
             it("shows the expand arrow", function() {
-                expect(this.view.$("img:eq(0)")).toHaveAttr("src", "/images/expand.gif");
+                expect(this.view.$('.toggle_display')).toHaveClass("fa-caret-right");
             });
         });
     });

@@ -28,8 +28,7 @@ chorus.views.DataTab = chorus.views.DatabaseSidebarList.extend({
         ctx.error = this.collection && this.collection.serverErrors && this.collection.serverErrors.message;
         if (this.collection && this.collection.statusCode === 403 && this.schemas.statusCode === 200) {
             ctx.noCredentials = true;
-            ctx.noCredentialsWarning = t('dataset.credentials.insufficient',
-                {
+            ctx.noCredentialsWarning = t('dataset.credentials.insufficient', {
                     dataSourceName: this.schema.database().dataSource().name(),
                     schemaName: this.schema.name()
                 });
@@ -63,7 +62,6 @@ chorus.views.DataTab = chorus.views.DatabaseSidebarList.extend({
         this.listview && this.listview.teardown();
         this.listview = new chorus.views.DataTabDatasetList({collection: this.collection});
         this.registerSubView(this.listview);
-
         this.listenTo(this.listview, "fetch:more", this.fetchMoreDatasets);
     },
 

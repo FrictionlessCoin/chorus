@@ -70,8 +70,7 @@
         <div class="col col-last">
             <ul class="list_horizontal">
                 <li>
-                    <span class="action_bar_pennant">{{t "dataset.content_details.edit_as_workfile"}}</span><span
-                    class="triangle_right"></span>
+                    <span class="action_bar_pennant">{{t "dataset.content_details.edit_as_workfile"}}</span><span class="triangle_right"></span>
                 </li>
                 <li><button class="preview button_action">{{t "dataset.run_sql"}}</button></li>
             </ul>
@@ -103,8 +102,8 @@
         <li><a href="#" class="select_none">{{t "actions.select_none"}}</a></li>
     </ul>
 
+	<span class="count">{{t "dataset.column_count" count=models.length}}</span>
     <input class="search" placeholder="{{t "dataset.search"}}"/>
-    <span class="count">{{t "dataset.column_count" count=models.length}}</span>
 </div>
 
 <div class="edit_chorus_view_info hidden action_bar_secondary">
