@@ -8,13 +8,13 @@
         {{/if}}
 
         <label>{{t "data_sources.dialog.description"}}</label>
-        <textarea name="description" maxlength="4095" rows="6" tabindex="2">{{description}}</textarea>
+        <textarea name="description" maxlength="4095" rows="6" >{{description}}</textarea>
         {{#if gpdbPgOrOracle}}
             {{dbDataSourceFields this}}
         {{/if}}
         {{#if gpOrPg}}
             <label>
-                <input type="checkbox" name="ssl" tabindex="1" {{#if ssl}}checked{{/if}}/>
+                <input type="checkbox" name="ssl" {{#if ssl}}checked{{/if}}/>
                 {{t "data_sources.dialog.use_ssl"}}
             </label>
         {{/if}}
@@ -30,9 +30,9 @@
         {{#if gnipDataSource}}
             <label class="gnip_host required" name="streamUrl">
                 {{t "data_sources.dialog.gnip_url"}}
-                <img src="/images/more-info.png" class="help" data-text='{{t "data_sources.dialog.gnip_help_text"}}'/>
+                <span class="fa fa-question-circle help" data-text='{{t "data_sources.dialog.gnip_help_text"}}'></span>
             </label>
-            <input class="gnip_host" type="text" name="streamUrl" value="{{streamUrl}}" maxlength="255"/>
+            <input class="gnip_host" id="gnip_host" type="text" name="streamUrl" value="{{streamUrl}}" maxlength="255"/>
 
             <label class="gnip_username required" name="username">{{t "data_sources.dialog.gnip_username"}}</label>
             <label class="gnip_password" name="password">{{t "data_sources.dialog.gnip_password"}}</label>
@@ -41,5 +41,5 @@
             <input class="gnip_password" type="password" name="password" value="" maxlength="255" autocomplete="off"/>
         {{/if}}
     </div>
-    {{formControls "data_sources.edit_dialog.save" }}
+    {{formControls "data_sources.edit_dialog.save"}}
 </form>
