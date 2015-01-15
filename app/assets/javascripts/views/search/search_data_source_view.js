@@ -10,7 +10,7 @@ chorus.views.SearchDataSource = chorus.views.SearchItemBase.extend({
         return _.extend(this._super("additionalContext"), {
             stateUrl: this.model.stateIconUrl(),
             stateText: this.model.stateText(),
-            url: this.model.showUrl(),
+            showUrl: this.model.showUrl(),
             iconUrl: this.model.providerIconUrl(),
             humanSize: I18n.toHumanSize(this.model.get("size"))
         });
