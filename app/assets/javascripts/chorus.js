@@ -253,7 +253,7 @@ window.Chorus = function chorus$Global() {
          magnifyGlassWrap.wrapAll(container);
     };
 
-    self.addClearButton = function(input) {
+//   self.addClearButton = function(input) {
 //         if ($(input).parent().is(".chorus_search_container")) return;
 // 
 //         var $input = $(input);
@@ -272,7 +272,7 @@ window.Chorus = function chorus$Global() {
 //         container.css({ display: $input.css("display") });
 //         container.insertAfter($input);
 //         container.append($input).append(clearLink);
-    };
+//    };
 
 
 
