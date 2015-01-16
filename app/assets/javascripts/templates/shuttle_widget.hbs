@@ -20,7 +20,10 @@
         <li data-id="{{id}}" class="{{#if isAdded}}added{{/if}} {{#if isNonRemovable}}non_removable{{/if}}">
             <div class="image">
                 <img class="profile" src="{{imageUrl}}"/>
-                <img class="checkmark" src="/images/checkmark.png"/>
+                <span class="fa-stack fa-lg checkmark">
+                  <span class="fa fa-circle fa-stack-2x"></span>
+                  <span class="fa fa-check fa-stack-1x fa-inverse"></span>
+                </span>
             </div>
             <div class="name" title="{{displayName}}">{{displayName}}</div>
             <a class="add" href="#">{{t "shuttle.add_entry"}}</a>
@@ -28,7 +31,6 @@
         </li>
     {{/each}}
 </ul>
-
 
 <ul class="selected">
     {{#each models}}
