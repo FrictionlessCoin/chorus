@@ -1,11 +1,18 @@
 <form>
     <div class="girdle">
-        <input type="text" name="fileName" placeholder="Name" tabindex="1" maxlength="60"></input>
+        <label>{{t "work_flows.new.filename_label"}}</label>
+        <input type="text" name="fileName" placeholder="{{t 'work_flows.new.filename_placeholder'}}" tabindex="1" maxlength="60"></input>
 
+        <label>{{t "work_flows.new.datasources_label"}}</label>
         {{#if userWillPickSchema}}
-            {{infoBlock "work_flows.new_dialog.info"}}
+            {{formInfoBlock "work_flows.new_dialog.info"}}
             <div class="database_picker"></div>
         {{/if}}
+        
+        {{> legendRequired}}
+
     </div>
+    <!-- END girdle -->
+    
     {{formControlsWithDisabledSubmit "work_flows.new_dialog.add_work_flow"}}
 </form>
