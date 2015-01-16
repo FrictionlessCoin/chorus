@@ -503,7 +503,7 @@ describe("chorus global", function() {
 
     });
 
-//     describe("#addClearButton", function() {
+//     describe("#addClearButton", function() { TODO delete when final
     describe("#addSearchFieldModifications", function() {
         beforeEach(function() {
             this.input1 = $("<input></input>");

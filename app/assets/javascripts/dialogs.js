@@ -46,10 +46,6 @@ chorus.dialogs.Base = chorus.Modal.extend({
         this.postRender($(this.el));
         chorus.placeholder(this.$("input[placeholder], textarea[placeholder]"));
 
-/* jshint ignore:start */     
-console.log ("dialog render");  
-/* jshint ignore:end */
-
         return this;
     },
 
