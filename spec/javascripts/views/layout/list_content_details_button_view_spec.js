@@ -1,7 +1,5 @@
 describe("chorus.views.ListContentDetailsButtonView", function(){
 
-  
-// 	var createActionText = getTranslation("actions.create_workspace");
 	var createActionText = t("actions.create_workspace");
 
 

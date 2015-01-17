@@ -86,9 +86,7 @@ chorus.views.ResultsConsole = chorus.views.Base.extend({
     constructFileContent: function() {
         var columnNames = _.pluck(this.resource.getColumns(), "name");
         var uniqueNames = _.pluck(this.resource.getColumns(), "uniqueName");
-        return new chorus.utilities.CsvWriter(
-            columnNames, uniqueNames, this.resource.getRows(), this.options).toCsv();
-
+        return new chorus.utilities.CsvWriter(columnNames, uniqueNames, this.resource.getRows(), this.options).toCsv();
     },
 
     execute: function(task) {
@@ -103,7 +101,6 @@ chorus.views.ResultsConsole = chorus.views.Base.extend({
         this.executionStartedTime = $.now();
         this.$('.controls').addClass('hidden');
         this.$(".right").addClass("executing");
-
         this.$(".spinner").addClass("hidden").startLoading();
         _.delay(_.bind(this.showSpinner, this), 250);
         this.$(".elapsed_time").text("");
@@ -132,7 +129,6 @@ chorus.views.ResultsConsole = chorus.views.Base.extend({
     executionSucceeded: function(task) {
         this.initializeDataGrid(task);
         this.hideSpinner();
-
         if (!task.hasResults()) {
             this.collapseTable();
         }
@@ -279,4 +275,3 @@ chorus.views.ResultsConsole = chorus.views.Base.extend({
         };
     }
 });
-

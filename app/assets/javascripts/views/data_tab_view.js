@@ -88,7 +88,7 @@ chorus.views.DataTab = chorus.views.DatabaseSidebarList.extend({
         this.focusSchema = schema;
     },
 
-    displayLoadingSection: function () {
+    displayLoadingSection: function() {
         return this.schema && !(this.collection && (this.collection.loaded || this.collection.serverErrors));
     }
 });

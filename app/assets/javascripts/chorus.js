@@ -226,6 +226,7 @@ window.Chorus = function chorus$Global() {
     };
 
 // **************
+// function to add elements to the search fields
 // - magnifying glass at beginning of field
 // - clear element at end of field
 

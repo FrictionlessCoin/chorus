@@ -5,6 +5,10 @@
 .popup .girdle {
     padding: 10px $dialog-padding 0 $dialog-padding;
     border: none;
+    
+    /* development: to delete */
+/*     border: 1px dotted #C33; */
+    /* END development: to delete */
 }
 
 .dialog {
@@ -14,17 +18,19 @@
         word-break: break-all;
         height: 40px;
         line-height: 40px;
-
-        h1 {
-            font-size: 14px;
-            color: rgb(88, 89, 95);
-            @include uppercase;
-            vertical-align: middle;
-            margin: 0 $dialog-padding;
-            padding-right: 25px;
-            @include ellipsis;
-        }
+/*         padding: 0 $dialog-padding; */
     }
+
+    h1 {
+        font-size: 14px;
+        color: rgb(88, 89, 95);
+        @include uppercase;
+        vertical-align: middle;
+        margin: 0 $dialog-padding;
+        padding-right: 25px;
+        @include ellipsis;
+    }
+
 
     h2 {
         font-size: $medium-font;
