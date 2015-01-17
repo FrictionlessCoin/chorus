@@ -123,9 +123,6 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
             });
 
             it("displays the shared account subheader", function() {
-//                     expect(this.dialog.$(".sub_header .details_text").text()).toMatchTranslation("data_sources.shared_account");
-//                  TO DO delete when final
-//                  expect(this.dialog.$(".sub_header .shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
                 var subhead = this.dialog.$(".shared_account_subhead").text();
                 expect(subhead).toMatchTranslation("data_sources.shared_account");
             });

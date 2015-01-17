@@ -37,7 +37,7 @@ chorus.dialogs.Base = chorus.Modal.extend({
 //             addClass(this.className).
 //             addClass("dialog").
 //             addClass(this.additionalClass || "");
-// intending to moe the errors into the girdle node.
+// intending to move the errors into the girdle node.
 
 
         this.delegateEvents();
