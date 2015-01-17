@@ -17,13 +17,17 @@
             <a href="#" class="add_shared_account">{{t "data_sources.permissions_dialog.switch_to_shared"}}</a>
         </div>
         <div class="col col-last">
-            <ul class="list_horizontal">
-            <!-- TODO HTML needs to be fixed here. this cant be outside of the li. does it need to be li? -->
-            <img src="/images/data_sources/individual.svg" alt="" /> 
+             <!-- TODO HTML needs to be fixed here. this cant be outside of the li. does it need to be li? -->
+            <img src="/images/data_sources/individual.svg" alt="" />
+            <span class="individual_accounts_count">{{t "data_sources.sidebar.x_individual_accounts" count=accountCount}}</span>
+            <button class='add_account button_action'>{{t "data_sources.permissions_dialog.add_account"}}</button>
             
+<!-- TOBE DELETED when finalized
+            <ul class="list_horizontal">
             <li><span class="individual_accounts_count">{{t "data_sources.sidebar.x_individual_accounts" count=accountCount}}</span></li>
             <li><button class='add_account button_action'>{{t "data_sources.permissions_dialog.add_account"}}</button></li>
             </ul>
+ -->
         </div>
     {{/if}}
     </div>
