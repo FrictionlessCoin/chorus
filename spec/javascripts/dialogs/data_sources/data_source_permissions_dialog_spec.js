@@ -125,7 +125,8 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
             it("displays the shared account subheader", function() {
 //                     expect(this.dialog.$(".sub_header .details_text").text()).toMatchTranslation("data_sources.shared_account");
 //                  TO DO delete when final
-                 expect(this.dialog.$(".sub_header .shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
+//                  expect(this.dialog.$(".sub_header .shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
+                 expect(this.dialog.$(".shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
             });
 
             it("displays the account owner information", function() {
