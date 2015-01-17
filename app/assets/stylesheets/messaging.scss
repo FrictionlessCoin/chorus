@@ -1,0 +1,59 @@
+@import "_browser_support";
+@import "_common";
+@import "compass/css3/border-radius";
+
+
+$messagingBlock_left: 10px;
+$messagingBlock_top: 10px;
+            
+
+
+.empty_state {
+    color: $disabled-text;
+    p { 
+        margin-top: 10px;
+    }
+}
+
+
+
+.messaging_block {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px 15px 10px;
+    
+    background-color: $light-grey-yellow;
+    @include border-radius($default-border-radius);
+    
+    font-size: $medium-font;
+    
+    .message {
+        margin-left: 30px;
+    }
+    
+}
+
+.form_info_block {
+    color: #80888F;
+
+    p {
+        margin: 0;
+    }
+    
+    .icon {
+        &::after {
+            display: inline-block;
+            position: absolute;
+            left: $messagingBlock_left;
+            top: 14px;
+            font-family: FontAwesome;
+            font-size: 18px;
+            content: "\f05a";  /* fa-info-circle */
+		}   
+    
+    }
+    
+
+
+}
