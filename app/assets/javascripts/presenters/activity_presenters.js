@@ -13,7 +13,7 @@
 
         iconSrc: function() {
             if (this.isFailure()) {
-                return "/images/message_error_med.png";
+                return "/images/messaging/message_error_med.png";
             } else if (this.model.isSuccessfulImport()) {
                 return "/images/import_icon.png";
             } else {
