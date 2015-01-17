@@ -126,7 +126,8 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
 //                     expect(this.dialog.$(".sub_header .details_text").text()).toMatchTranslation("data_sources.shared_account");
 //                  TO DO delete when final
 //                  expect(this.dialog.$(".sub_header .shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
-                 expect(this.dialog.$(".shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
+                var subhead = this.dialog.$(".shared_account_subhead").text();
+                expect(subhead).toMatchTranslation("data_sources.shared_account");
             });
 
             it("displays the account owner information", function() {
@@ -141,7 +142,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                 expect(this.dialog.$("a.edit")).toExist();
             });
 
-            it("displays the Change owner link", function() {
+            it("displays the change owner link", function() {
                 expect(this.dialog.$("a.change_owner")).toExist();
             });
 

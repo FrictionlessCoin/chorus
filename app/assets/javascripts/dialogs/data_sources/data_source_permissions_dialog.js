@@ -345,7 +345,6 @@ chorus.dialogs.DataSourcePermissions = chorus.dialogs.Base.extend({
             this.collection.fetch();
         }, this);
 
-
         account.destroy();
     }
 });
