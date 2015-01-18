@@ -7,7 +7,6 @@ $messagingBlock_left: 10px;
 $messagingBlock_top: 10px;
             
 
-
 .empty_state {
     color: $disabled-text;
     p { 
@@ -35,7 +34,7 @@ $messagingBlock_top: 10px;
 }
 
 .form_info_block {
-    color: #80888F;
+    color: #80878F;
 
     p {
         margin: 0;
@@ -50,10 +49,6 @@ $messagingBlock_top: 10px;
             font-family: FontAwesome;
             font-size: 18px;
             content: "\f05a";  /* fa-info-circle */
-		}   
-    
+		}
     }
-    
-
-
 }
