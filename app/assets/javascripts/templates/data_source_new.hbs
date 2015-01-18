@@ -15,7 +15,10 @@
         </select>
 
         <div class="data_sources_form collapsed register_existing_greenplum">
-            <div class="description">{{t "data_sources.new_dialog.register_existing_greenplum_help_text"}}</div>
+        
+<!--             <div class="description">{{t "data_sources.new_dialog.register_existing_greenplum_help_text"}}</div> -->
+            {{formInfoBlock "data_sources.new_dialog.register_existing_greenplum_help_text"}}
+            
             <label class="required">{{t "data_sources.dialog.data_source_name"}}</label>
             <input type="text" name="name" maxlength="64" tabindex="1"/>
 
@@ -43,7 +46,9 @@
         </div>
 
         <div class="data_sources_form collapsed register_existing_postgres">
-            <div class="description">{{t "data_sources.new_dialog.register_existing_postgres_help_text"}}</div>
+<!--             <div class="description">{{t "data_sources.new_dialog.register_existing_postgres_help_text"}}</div> -->
+            {{formInfoBlock "data_sources.new_dialog.register_existing_postgres_help_text"}}
+                        
             <label class="required">{{t "data_sources.dialog.data_source_name"}}</label>
             <input type="text" name="name" maxlength="64" tabindex="1"/>
 
@@ -72,7 +77,8 @@
         </div>
 
         <div class="data_sources_form collapsed register_existing_oracle">
-            <div class="description">{{t "data_sources.new_dialog.register_existing_oracle_help_text"}}</div>
+<!--             <div class="description">{{t "data_sources.new_dialog.register_existing_oracle_help_text"}}</div> -->
+            {{formInfoBlock "data_sources.new_dialog.register_existing_oracle_help_text"}}
             <label class="required">{{t "data_sources.dialog.data_source_name"}}</label>
             <input type="text" name="name" maxlength="64" tabindex="1"/>
 
@@ -93,7 +99,9 @@
         </div>
 
         <div class="data_sources_form collapsed register_existing_jdbc">
-            <div class="description">{{t "data_sources.new_dialog.register_existing_jdbc_help_text"}}</div>
+<!--             <div class="description">{{t "data_sources.new_dialog.register_existing_jdbc_help_text"}}</div> -->
+            {{formInfoBlock "data_sources.new_dialog.register_existing_jdbc_help_text"}}
+
             <label class="required">{{t "data_sources.dialog.data_source_name"}}</label>
             <input type="text" name="name" maxlength="64" tabindex="1"/>
 
@@ -114,7 +122,9 @@
         </div>
 
         <div class="data_sources_form collapsed register_existing_hdfs">
-            <div class="description">{{t "data_sources.new_dialog.register_existing_hdfs_help_text"}}</div>
+<!--             <div class="description">{{t "data_sources.new_dialog.register_existing_hdfs_help_text"}}</div> -->
+            {{formInfoBlock "data_sources.new_dialog.register_existing_hdfs_help_text"}}
+
             <input class="hidden" type="checkbox" name="shared" checked="checked" tabindex="1"/>
 
             <label class="required">{{t "data_sources.dialog.data_source_name"}}</label>
@@ -130,7 +140,9 @@
 
         {{#if gnipConfigured}}
             <div class="data_sources_form collapsed register_existing_gnip">
-                <div class="description">{{t "data_sources.new_dialog.register_existing_gnip_help_text"}}</div>
+<!--                 <div class="description">{{t "data_sources.new_dialog.register_existing_gnip_help_text"}}</div> -->
+                {{formInfoBlock "data_sources.new_dialog.register_existing_gnip_help_text"}}
+    
                 <label class="required">{{t "data_sources.dialog.gnip_data_source_name"}}</label>
                 <input type="text" name="name" maxlength="64" tabindex="1"/>
 
@@ -150,7 +162,8 @@
             </div>
         {{/if}}
 
-        <label class="required"/><label> {{t "validation.required_field"}}</label>
+        {{> legendRequired}}
+        
     </div>
 
     <div class="form_controls">
