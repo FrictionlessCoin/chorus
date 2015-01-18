@@ -23,7 +23,7 @@
 }
 
 .form_controls {
-    margin-top: 15px;
+    margin-top: 10px;
 
     button { 
         float: right; 
@@ -45,6 +45,7 @@
 .form_controls {
     button {
         display: inline-block;
+        
         div[aria-role=progressbar] {
             top: -4px;
             left: 17px;
