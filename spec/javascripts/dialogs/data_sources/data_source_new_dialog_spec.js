@@ -19,9 +19,9 @@ describe("chorus.dialogs.DataSourcesNew", function() {
         expect(this.selectMenuStub.find(".register_existing_hdfs")).toExist();
     });
 
-    it("shows data source description", function() {
-        expect(this.dialog.$(".register_existing_greenplum .description").text()).toMatchTranslation("data_sources.new_dialog.register_existing_greenplum_help_text");
-        expect(this.dialog.$(".register_existing_hdfs .description").text()).toMatchTranslation("data_sources.new_dialog.register_existing_hdfs_help_text");
+    it("shows data source 'helpful' information", function() {
+        expect(this.dialog.$(".form_info_block .message").text()).toMatchTranslation("data_sources.new_dialog.register_existing_greenplum_help_text");
+        expect(this.dialog.$(".form_info_block .message").text()).toMatchTranslation("data_sources.new_dialog.register_existing_hdfs_help_text");
     });
 
     it("does not autocomplete password inputs", function(){
@@ -453,7 +453,7 @@ describe("chorus.dialogs.DataSourcesNew", function() {
         });
 
         it("shows gnip data source description", function() {
-            expect(this.dialog.$(".register_existing_gnip .description").text()).toMatchTranslation("data_sources.new_dialog.register_existing_gnip_help_text");
+            expect(this.dialog.$(".form_info_block .message").text()).toMatchTranslation("data_sources.new_dialog.register_existing_gnip_help_text");
         });
 
         it("shows the icon", function() {
