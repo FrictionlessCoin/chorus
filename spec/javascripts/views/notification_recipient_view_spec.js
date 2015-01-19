@@ -160,7 +160,7 @@ describe("chorus.views.NotificationRecipient", function() {
 
                 context("when the remove link is clicked", function() {
                     beforeEach(function() {
-                        this.view.$(".picked_users li:eq(0) .remove span").click();
+                        this.view.$(".picked_users li:eq(0) .remove").click();
                     });
 
                     it("should remove the user from the picked_users list", function() {
