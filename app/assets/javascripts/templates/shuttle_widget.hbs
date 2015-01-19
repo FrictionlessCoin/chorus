@@ -1,3 +1,4 @@
+
 <div class="subheader">
     <div class="shuttle_left">
         <div class="search_container">
@@ -30,8 +31,8 @@
                 </span>
             </div>
             <div class="name" title="{{displayName}}">{{displayName}}</div>
-            <a class="add" href="#" title="{{t "shuttle.add_entry"}}">
-                <span class="fa fa-plus-circle icon-add"></span>
+            <a class="add" href="#" title="{{t "actions.add"}}">
+                <span class="fa fa-plus-circle add"></span>
             <!-- {{t "shuttle.add_entry"}} -->
             </a>
             <span class="was_added">{{#if isNonRemovable}}{{nonRemovableText}}{{else}}{{t "shuttle.was_added"}}{{/if}}</span>
@@ -49,8 +50,8 @@
             {{#if isNonRemovable}}
                 <span class="was_added">{{nonRemovableText}}</span>
             {{else}}
-                <a class="remove" href="#" title="{{t "shuttle.remove_entry"}}">
-                    <span class="fa fa-times-circle icon-remove"></span>
+                <a class="remove" href="#" title="{{t 'actions.remove'}}">
+                    <span class="fa fa-times-circle remove"></span>
                     <!-- {{t "shuttle.remove_entry"}} -->
                 </a>
             {{/if}}

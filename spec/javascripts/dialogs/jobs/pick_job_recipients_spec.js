@@ -44,7 +44,7 @@ describe("chorus.dialogs.PickJobRecipients", function () {
 
             it("renders a shuttle", function() {
                 expect(this.dialog.shuttle instanceof chorus.views.ShuttleWidget).toBeTruthy();
-                expect(this.dialog.$(".shuttle .shuttle_header")).toExist();
+                expect(this.dialog.$(".shuttle.shuttle_widget")).toExist();
                 expect(this.dialog.$('.shuttle_body .available li').length).toEqual(this.dialog.available.size());
                 expect(this.dialog.$('.shuttle_body .selected .added').length).toEqual(this.dialog.chosen.size());
             });
