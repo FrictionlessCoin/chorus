@@ -4,7 +4,7 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
     useLoadingSection: true,
 
     events: {
-        "change select"    : "onUserSelected",
+        "change select"  : "onUserSelected",
         "click a.remove" : "onRemoveUserClicked"
     },
 
@@ -40,7 +40,8 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
     onRemoveUserClicked : function(e) {
         e && e.preventDefault();
 
-        var $li = $(e.target).parent();
+        // element clicked is the remove icon, so need to step up to the <li>
+        var $li = $(e.target).parent().parent();
         var user = this.selectedUsers.get($li.data("id"));
 
         this.collection.add(user);
@@ -76,8 +77,9 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
         _.each(this.selectedUsers.models, function(user) {
             var id = user.get("id");
             var $span = $("<span class='name'></span>").text(user.displayName());
-            var $remove = $('<a href="#" class="remove"/>').append('<span class="fa fa-times-circle" title="{{t "actions.remove"}}"></span>');
-
+            var removeTitleText = t ("actions.remove");
+            var removeIconHTML = "<span class='fa fa-times-circle' title="+ removeTitleText + "></span>";
+            var $remove = $('<a href="#" class="remove"/>').append(removeIconHTML);
             var $li = $("<li></li>").append($span).append($remove).attr("data-id", id.toString());
 
             this.$(".picked_users").append($li);
