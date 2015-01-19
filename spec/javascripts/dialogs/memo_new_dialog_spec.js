@@ -329,7 +329,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                         expect(table1Row).toExist();
                         expect(table2Row).toExist();
 
-                        table2Row.find("a.remove").click();
+                        table2Row.find(".remove").click();
 
                         table1Row = this.dialog.$(".dataset_details:contains('table1')");
                         table2Row = this.dialog.$(".dataset_details:contains('table2')");
