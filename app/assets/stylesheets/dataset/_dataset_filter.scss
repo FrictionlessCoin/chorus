@@ -44,7 +44,7 @@ $filterRow-padding-bottom: 0px;
 .dataset_filter,
 .kaggle_filter {
     padding-top: $filterRow-padding-top;
-    padding-bottom: $filterRow-padding-top;
+    padding-bottom: $filterRow-padding-bottom;
     height: $filterRow-height - ($filterRow-padding-top + $filterRow-padding-bottom);
     border-bottom: 0;
 
