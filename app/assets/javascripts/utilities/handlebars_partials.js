@@ -12,7 +12,7 @@ Handlebars.registerPartial("activity", window.HandlebarsTemplates["activity"]);
 Handlebars.registerPartial("adminBadge", window.HandlebarsTemplates["components/admin_badge"]);
 Handlebars.registerPartial("developerBadge", window.HandlebarsTemplates["components/developer_badge"]);
 
-Handlebars.registerPartial("datasourceIcon", window.HandlebarsTemplates["datasource_icon"]);
+Handlebars.registerPartial("datasourceIcon", window.HandlebarsTemplates["components/datasource_icon"]);
 
 Handlebars.registerPartial("drawerMenu", window.HandlebarsTemplates["components/drawer_menu"]);
 Handlebars.registerPartial("usernameMenu", window.HandlebarsTemplates["components/username_menu"]);
