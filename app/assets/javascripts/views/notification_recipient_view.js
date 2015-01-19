@@ -79,7 +79,7 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
             var $span = $("<span class='name'></span>").text(user.displayName());
             var removeTitleText = t ("actions.remove");
             var removeIconHTML = "<span class='fa fa-times-circle remove' title="+ removeTitleText + "></span>";
-            var $remove = $('<a href="#" class="removeLink"/>').append(removeIconHTML);
+            var $remove = $('<a href="#" class="removeWidget"/>').append(removeIconHTML);
             var $li = $("<li></li>").append($span).append($remove).attr("data-id", id.toString());
 
             this.$(".picked_users").append($li);
