@@ -224,7 +224,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                         expect(sqlRow).toExist();
                         expect(cppRow).toExist();
 
-                        sqlRow.find("a.remove").click();
+                        sqlRow.find(".remove").click();
 
                         sqlRow = this.dialog.$(".file_details:contains('sql')");
                         cppRow = this.dialog.$(".file_details:contains('cpp')");
