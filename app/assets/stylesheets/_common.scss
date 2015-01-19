@@ -104,7 +104,7 @@ $page-margin-bottom: 60px;
 $summary-line-height: 19px;
 
 
-// GLOBAL BORDERs
+// GLOBAL BORDERS
 $default-border-width: 1px;
 $default-border-radius: 3px;
 
@@ -204,6 +204,18 @@ $dialog-padding : 15px;
 $separator-space: 4px;
 
 $caret-margin: 5px;		// space between the text and the caret glyph
+
+
+// General application sizes
+
+$selectlist-width-small:  100px;
+$selectlist-width-medium: 210px;
+$selectlist-width-large:  300px;
+
+$input-width-small:  120px;
+$input-width-medium: 250px;
+$input-width-large:  350px;
+
 
 
 // z-indices
