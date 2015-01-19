@@ -3,6 +3,18 @@ chorus.handlebarsHelpers.template = {
         return new Handlebars.SafeString(window.HandlebarsTemplates[templateName](context));
     },
 
+    // generalized fragment for some interface actions
+    // addWidget = icon (+) for adding an item in a list
+    // removeWidget = icon (x) for removing an item from a list
+
+    addWidget: function(t) {
+        return Handlebars.helpers.renderTemplate("components/widget_add", {text: t});
+    },
+    removeWidget: function(t) {
+        return Handlebars.helpers.renderTemplate("components/widget_remove", {text: t});
+    },
+
+
     formControls:function(submitText, cancelText) {
         if(cancelText && cancelText.hash) {
             cancelText = "actions.cancel";
@@ -21,8 +33,8 @@ chorus.handlebarsHelpers.template = {
         return Handlebars.helpers.renderTemplate("components/info_block", {info: infoTranslation});
     },
 
-    formInfoBlock: function(text) {
-        return Handlebars.helpers.renderTemplate("components/form_info_block", {text: text});
+    formInfoBlock: function(t) {
+        return Handlebars.helpers.renderTemplate("components/form_info_block", {text: t});
     },
 
     renderTemplateIf: function(conditional, templateName, context) {

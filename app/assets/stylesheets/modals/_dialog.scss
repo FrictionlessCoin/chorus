@@ -142,6 +142,8 @@
     }
 }
 
+
+/* replace and delete this one with the one following it for more simplicity*/
 .icon-add,
 .icon-remove {
     &.fa {
@@ -149,7 +151,14 @@
     }
 }
 
+.add,
+.remove {
+    &.fa {
+        font-size: 16px;
+    }
+}
 
+/* *** */
 
 /* dialog widths */
 div.dialog {
