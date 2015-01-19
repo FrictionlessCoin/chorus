@@ -43,7 +43,7 @@ describe("chorus.dialogs.VisualizationNotesNew", function() {
                 expect(this.dialog.$(".options_area")).not.toHaveClass("hidden");
                 expect(this.dialog.$(".options_area .row.file_details.visualization .name")).toHaveText("hello-frequency.png");
                 expect(this.dialog.$(".icon").attr("src")).toBe("images/workfiles/icon/img.png");
-                expect(this.dialog.$("a.removeWidget")).toHaveClass("hidden");
+                expect(this.dialog.$(".removeWidget")).toHaveClass("hidden");
             });
         });
 
