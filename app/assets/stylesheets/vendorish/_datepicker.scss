@@ -1,3 +1,5 @@
+@import "_common";
+
 /*
     Unminified development version of the datepicker stylesheet. Please use the
     minified version in production - remember to run a find/replace on the
@@ -89,7 +91,7 @@
     All other rules are "em" based and inherit from the font-size set here.
     */
 
-    font-weight: 500;
+    font-weight: normal;
     font-size: 14px;
     line-height: normal;
     
@@ -97,7 +99,6 @@
     -webkit-user-select:none;
        -moz-user-select:none;
         -ms-user-select:none;
-         -o-user-select:none;
             user-select:none;
     /*
     Set the fade in/out animation time here. This is used for browsers that
@@ -108,7 +109,6 @@
     -webkit-transition:opacity .75s ease-in-out;
        -moz-transition:opacity .75s ease-in-out;
         -ms-transition:opacity .75s ease-in-out;
-         -o-transition:opacity .75s ease-in-out;
             transition:opacity .75s ease-in-out;
     }
 
@@ -185,22 +185,22 @@
     }
 
 /* IE6 & 7 fed "normal" png images */
-.oldie .date-picker-control:link,
-.oldie .date-picker-control:visited {
+/* .oldie .date-picker-control:link, */
+/* .oldie .date-picker-control:visited { */
     /*
     IE7 gets a non-base64 encoded image sprite of the base64 encoded image
     declared above. That's all you have to do for IE7 support as it inherits
     the background-position declarations used to reposition the sprite
     */
-    *background-image:url(http://www.yourdomain.com/the/path/to/the/images/datepicker-sprite.png);
+/*     *background-image:url(http://www.yourdomain.com/the/path/to/the/images/datepicker-sprite.png); */
     /*
     IE6 gets the filter treatment and an individual image for each animation
     state. This pattern is repeated for all other image-based rules within the
     stylesheet
     */
-    _background-image:none;
-    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-normal.png');
-    }
+/*     _background-image:none; */
+/*     _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-normal.png'); */
+/*     } */
 
 /* If the datepicker has a valid date then use a different icon for the
     activation button to let the user know. It's a little detail but it's the
@@ -211,10 +211,10 @@
     }
 
 /* Again, IE6 gets a "normal" png image from the server. Rinse, repeat. */
-.oldie .date-picker-dateval:link,
-.oldie .date-picker-dateval:visited {
-    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-selected.png');
-    }
+/* .oldie .date-picker-dateval:link, */
+/* .oldie .date-picker-dateval:visited { */
+/*     _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-selected.png'); */
+/*     } */
 
 /* Hover states etc for the activation button */
 .date-picker-button-active:link,
@@ -231,7 +231,7 @@
 .oldie .date-picker-control:focus,
 .oldie .date-picker-control:hover,
 .oldie .date-picker-control:active {
-    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-focused.png');
+/*     _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-focused.png'); */
     }
 
 /* Disabled activation button */
@@ -244,12 +244,12 @@
     }
 
 /* IE 6 disabled activation button */
-.oldie .date-picker-control-disabled:link,
-.oldie .date-picker-control-disabled:visited,
-.oldie .date-picker-control-disabled:hover,
-.oldie .date-picker-control-disabled:active {
-    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-disabled.png');
-    }
+/* .oldie .date-picker-control-disabled:link, */
+/* .oldie .date-picker-control-disabled:visited, */
+/* .oldie .date-picker-control-disabled:hover, */
+/* .oldie .date-picker-control-disabled:active { */
+/*     _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='http://www.yourdomain.com/the/path/to/the/images/datepicker-disabled.png'); */
+/*     } */
 
 .date-picker-control-disabled:hover span,
 .date-picker-control-disabled:active span {
@@ -283,20 +283,20 @@
 /* The "month, year" display */
 .date-picker .month-display,
 .date-picker .year-display {
-    display:inline;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    font-weight:normal;
-    font-size:1.2em;
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 1.2em;
     }
 
 /* Generic button class for Next & Previous (both month & year) buttons */
 .date-picker .prev-but,
 .date-picker .next-but {
-    font-weight:normal;
-    font-size:2.4em;
+    font-weight: normal;
+    font-size: 2.4em;
     font-family: georgia, times new roman, palatino, times, bookman, serif;
-    cursor:pointer;
+    cursor: pointer;
     }
 .date-picker .prev-but,
 .date-picker .next-but,
@@ -304,7 +304,6 @@
     -webkit-transition:all .2s ease-in-out;
        -moz-transition:all .2s ease-in-out;
         -ms-transition:all .2s ease-in-out;
-         -o-transition:all .2s ease-in-out;
             transition:all .2s ease-in-out;
     }
 
@@ -330,16 +329,16 @@
 
 /* Today button */
 .date-picker .today-but {
-    text-align:center;
-    margin:0 auto;
-    font-weight:normal;
-    font-size:1em;
-    width:100%;
-    text-decoration:none;
-    padding-top:0.3em;
-    text-transform:uppercase;
-    vertical-align:middle;
-    cursor:pointer
+    text-align: center;
+    margin: 0 auto;
+    font-weight: normal;
+    font-size: 1em;
+    width: 100%;
+    text-decoration: none;
+    padding-top: 0.3em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer
     }
     
 /* Disabled buttons */ 
@@ -364,7 +363,6 @@
     -webkit-transform:scale(1);
        -moz-transform:scale(1);
         -ms-transform:scale(1);
-         -o-transform:scale(1);
             transform:scale(1);
     */
     text-shadow:0 -1px 1px rgba(255,255,255,.8);
@@ -390,13 +388,14 @@
 .oldie .date-picker .date-picker-hover.day-disabled,
 .oldie .date-picker .date-picker-unused,
 .oldie .date-picker .month-out {
-    *background-image:url(http://www.yourdomain.com/the/path/to/the/images/datepicker-gradient.gif);
+/*     *background-image:url(http://www.yourdomain.com/the/path/to/the/images/datepicker-gradient.gif); */
     /* Remove from IE6 as it has a bug that never caches images on dynamically
     created elements which results in one http request being made for each
     cell of each table rendered by the script.
     */
     _background-image:none;
     }
+
 .date-picker table {
     table-layout:auto;
     empty-cells:show;
@@ -419,35 +418,35 @@
 
 /* Create a "Lifted Corners" effect on the table. Ripped straight from @necolas
     http://nicolasgallagher.com/css-drop-shadows-without-images/ */
-.date-picker:before,
-.date-picker:after {
-    content:"";
-    position:absolute;
-    z-index:-2;
-    bottom:17px;
-    left:10px;
-    width:50%;
-    height:20%;
-    max-width:300px;
-    max-height:100px;
-    -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-       -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-            box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-    -webkit-transform:rotate(-3deg);
-       -moz-transform:rotate(-3deg);
-        -ms-transform:rotate(-3deg);
-         -o-transform:rotate(-3deg);
-            transform:rotate(-3deg);
-    }
-.date-picker:after {
-    right:10px;
-    left:auto;
-    -webkit-transform:rotate(3deg);
-       -moz-transform:rotate(3deg);
-        -ms-transform:rotate(3deg);
-         -o-transform:rotate(3deg);
-            transform:rotate(3deg);
-    }
+/* .date-picker:before, */
+/* .date-picker:after { */
+/*     content:""; */
+/*     position:absolute; */
+/*     z-index:-2; */
+/*     bottom:17px; */
+/*     left:10px; */
+/*     width:50%; */
+/*     height:20%; */
+/*     max-width:300px; */
+/*     max-height:100px; */
+/*     -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7); */
+/*        -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7); */
+/*             box-shadow:0 15px 10px rgba(0, 0, 0, 0.7); */
+/*     -webkit-transform:rotate(-3deg); */
+/*        -moz-transform:rotate(-3deg); */
+/*         -ms-transform:rotate(-3deg); */
+/*             transform:rotate(-3deg); */
+/*     } */
+
+/* .date-picker:after { */
+/*     right:10px; */
+/*     left:auto; */
+/*     -webkit-transform:rotate(3deg); */
+/*        -moz-transform:rotate(3deg); */
+/*         -ms-transform:rotate(3deg); */
+/*             transform:rotate(3deg); */
+/*     } */
+
 .oldie .date-picker:before,
 .oldie .date-picker:after {
     display:none;
@@ -549,7 +548,6 @@
     -webkit-transition: all .2s ease;    
        -moz-transition: all .2s ease;    
         -ms-transition: all .2s ease;    
-         -o-transition: all .2s ease;    
             transition: all .2s ease;    
     */
     }
@@ -561,7 +559,6 @@
     /* -webkit-transform:scale(1.25); */
        -moz-transform:scale(1.25);
         -ms-transform:scale(1.25);
-         -o-transform:scale(1.25);
             transform:scale(1.25);
     }
 
@@ -672,7 +669,6 @@
     -webkit-animation:fd-dp-pulse 1.5s infinite alternate;
        -moz-animation:fd-dp-pulse 1.5s infinite alternate;
         -ms-animation:fd-dp-pulse 1.5s infinite alternate;
-         -o-animation:fd-dp-pulse 1.5s infinite alternate;
     }
 
 /* The "selected date" style */
@@ -737,7 +733,6 @@
     -webkit-transform:scale(1);
        -moz-transform:scale(1);
         -ms-transform:scale(1);
-         -o-transform:scale(1);
             transform:scale(1);
     */
     text-shadow:none;
