@@ -28,7 +28,7 @@ describe("chorus.dialogs.WorkspaceEditMembers", function() {
 
         it("renders a shuttle", function() {
             expect(this.dialog.shuttle instanceof chorus.views.ShuttleWidget).toBeTruthy();
-            expect(this.dialog.$(".shuttle .shuttle_header")).toExist();
+            expect(this.dialog.$(".shuttle.shuttle_widget")).toExist();
         });
 
         it("passes the workspace owner as an un-removable item in the shuttle widget", function() {
