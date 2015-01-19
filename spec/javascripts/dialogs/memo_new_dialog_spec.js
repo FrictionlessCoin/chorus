@@ -339,7 +339,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
 
                     it("removes only that dataset from the collection", function() {
                         var table1Row = this.dialog.$(".dataset_details:contains('table1')");
-                        table1Row.find("a.remove").click();
+                        table1Row.find(".remove").click();
                         expect(this.dialog.model.datasets.get("1")).toBeUndefined();
                         expect(this.dialog.model.datasets.get("2")).not.toBeUndefined();
                     });
