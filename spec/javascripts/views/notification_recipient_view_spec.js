@@ -35,12 +35,12 @@ describe("chorus.views.NotificationRecipient", function() {
             expect(this.view.getPickedUsers()).toEqual([]);
         });
 
-        context("when the user fetch completes", function() {
+        context("> when the user fetch completes", function() {
             beforeEach(function() {
                 this.server.completeFetchAllFor(this.users, this.users.models);
             });
 
-            it("should display a dropdown containing all elligible recipients", function() {
+            it("? should display a dropdown containing all elligible recipients", function() {
                 expect(this.view.$("select")).not.toHaveClass("hidden");
                 expect(this.view.$("select option").length).toBe(4);
 
@@ -56,11 +56,11 @@ describe("chorus.views.NotificationRecipient", function() {
                 expect(this.view.$("select").val()).toBe("");
             });
 
-            it("does not display the logged in user as an elligible recipient", function() {
+            it("does not display the logged in user as an eligible recipient", function() {
                 expect(this.view.$("option[value=" + this.loggedInUser.get("id") + "]")).not.toExist();
             });
 
-            context("when a user is selected", function() {
+            context("> when a user is selected", function() {
                 function itHasOnlyTheFirstUser() {
                     it("has an entry with that user in the picked_users list", function() {
                         expect(this.view.$(".picked_users li").length).toBe(1);
@@ -106,7 +106,7 @@ describe("chorus.views.NotificationRecipient", function() {
                     expect(this.view.$("select option").length - 1).toBe(this.oldSelectableUserCount - 1);
                 });
 
-                context("adding another user", function() {
+                context("> adding another user", function() {
                     beforeEach(function() {
                         this.view.$("select").val(this.user2.id).change();
                     });
@@ -123,7 +123,7 @@ describe("chorus.views.NotificationRecipient", function() {
                         expect(this.view.getPickedUsers()).toContain(this.user2.id.toString());
                     });
 
-                    context("removing the most recently added user", function() {
+                    context(">removing the most recently added user", function() {
                         beforeEach(function() {
                             this.view.$(".picked_users li:eq(1) .remove").click();
                         });
@@ -160,7 +160,7 @@ describe("chorus.views.NotificationRecipient", function() {
 
                 context("when the remove link is clicked", function() {
                     beforeEach(function() {
-                        this.view.$(".picked_users li:eq(0) .remove").click();
+                        this.view.$(".picked_users li:eq(0) .remove span").click();
                     });
 
                     it("should remove the user from the picked_users list", function() {
