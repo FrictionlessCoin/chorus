@@ -5,7 +5,7 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
 
     events: {
         "change select"  : "onUserSelected",
-        "click a.remove" : "onRemoveUserClicked"
+        "click .remove"  : "onRemoveUserClicked"
     },
 
     makeModel: function() {
@@ -78,8 +78,8 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
             var id = user.get("id");
             var $span = $("<span class='name'></span>").text(user.displayName());
             var removeTitleText = t ("actions.remove");
-            var removeIconHTML = "<span class='fa fa-times-circle' title="+ removeTitleText + "></span>";
-            var $remove = $('<a href="#" class="remove"/>').append(removeIconHTML);
+            var removeIconHTML = "<span class='fa fa-times-circle remove' title="+ removeTitleText + "></span>";
+            var $remove = $('<a href="#" class="removeLink"/>').append(removeIconHTML);
             var $li = $("<li></li>").append($span).append($remove).attr("data-id", id.toString());
 
             this.$(".picked_users").append($li);
