@@ -52,7 +52,7 @@ var datePickerController = (function datePickerController() {
 
             for(i = 0; i < languageInfo.length; i++) {
                 script          = document.createElement('script');
-                script.type     = "text/javascript";
+                //script.type     = "text/javascript";
                 script.src      = loc + languageInfo[i] + ".js";
                 script.charSet  = "utf-8";
 
