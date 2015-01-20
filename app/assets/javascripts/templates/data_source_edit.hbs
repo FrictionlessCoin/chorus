@@ -40,6 +40,10 @@
             <input class="gnip_username" type="text" name="username" value="{{username}}" maxlength="255"/>
             <input class="gnip_password" type="password" name="password" value="" maxlength="255" autocomplete="off"/>
         {{/if}}
+
+        {{> legendRequired}}
     </div>
+    <!-- END girdle -->
+        
     {{formControls "data_sources.edit_dialog.save"}}
 </form>
