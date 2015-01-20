@@ -35,15 +35,17 @@
 
         margin-bottom: $dialog-padding;
 
-        .description {
-          background: transparent url("/images/icon_info_mediumgrey.png") top left no-repeat;
-          min-height: 47px;
-          padding: 5px 0 0 54px;
-          margin: 8px 0;
-          @include dialog-label;
-          line-height: 16px;
-          border-bottom: 1px solid $border-color;
-        }
+/*         rule retired with new design */
+/*         to be deleted when final */
+/*         .description { */
+/*           background: transparent url("/images/messaging/icon_info_mediumgrey.png") top left no-repeat; */
+/*           min-height: 47px; */
+/*           padding: 5px 0 0 54px; */
+/*           margin: 8px 0; */
+/*           @include dialog-label; */
+/*           line-height: 16px; */
+/*           border-bottom: 1px solid $border-color; */
+/*         } */
 
         label[name=host], input[name=host],
         label[name=database], input[name=database],
