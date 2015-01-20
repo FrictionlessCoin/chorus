@@ -79,7 +79,7 @@ describe("chorus.views.CreateChorusViewSidebar", function() {
             context("removing the join", function() {
                 beforeEach(function() {
                     spyOn(this.chorusView, "removeJoin");
-                    this.view.$(".deleteIcon").click();
+                    this.view.$(".delete").click();
                 });
 
                 it("pops up an alert", function() {
