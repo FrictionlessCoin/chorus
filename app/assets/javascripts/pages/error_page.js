@@ -3,7 +3,7 @@ chorus.pages.Error = chorus.pages.Bare.extend({
     additionalClass: "logged_in_layout",
 
     events: {
-        "click button.submit": "navigateToHome"
+        "click .link_home": "navigateToHome"
     },
 
     subviews: {
