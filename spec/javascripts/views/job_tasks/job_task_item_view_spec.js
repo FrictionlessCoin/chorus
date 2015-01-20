@@ -24,7 +24,7 @@ describe("chorus.views.JobTaskItem", function () {
         expect(this.view.$("img")).toHaveAttr("src", "/images/workfiles/large/sql.png");
 
         this.model.set('action', 'import_source_data');
-        expect(this.view.$("img")).toHaveAttr("src", "/images/jobs/import_icon.png");
+        expect(this.view.$("img")).toHaveAttr("src", "/images/jobs/task-import.png");
     });
 
     it("includes the correct task translation", function () {
