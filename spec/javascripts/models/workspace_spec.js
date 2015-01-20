@@ -335,7 +335,7 @@ describe("chorus.models.Workspace", function() {
 
         it("returns the correct URL when the workspace is archived and is private", function() {
             this.model.set({archivedAt: "2012-05-08 21:40:14", "public": false});
-            expect(this.model.picklistImageUrl()).toMatchUrl('/images/workspaces/workspace_archived_private_small.png');
+            expect(this.model.picklistImageUrl()).toMatchUrl('/images/workspaces/workspace_private_archived_small.png');
         });
 
         it("returns the correct URL when the workspace is not archived and is private", function() {

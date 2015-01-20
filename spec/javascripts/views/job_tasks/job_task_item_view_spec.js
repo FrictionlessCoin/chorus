@@ -18,13 +18,13 @@ describe("chorus.views.JobTaskItem", function () {
 
     it("includes the correct task icon", function() {
         this.model.set('action', 'run_work_flow');
-        expect(this.view.$("img")).toHaveAttr("src", "/images/jobs/afm-task.png");
+        expect(this.view.$("img")).toHaveAttr("src", "/images/jobs/task-afm.png");
 
         this.model.set('action', 'run_sql_workfile');
         expect(this.view.$("img")).toHaveAttr("src", "/images/workfiles/large/sql.png");
 
         this.model.set('action', 'import_source_data');
-        expect(this.view.$("img")).toHaveAttr("src", "/images/jobs/import_icon.png");
+        expect(this.view.$("img")).toHaveAttr("src", "/images/jobs/task-import.png");
     });
 
     it("includes the correct task translation", function () {
