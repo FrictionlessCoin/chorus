@@ -62,7 +62,6 @@ describe("chorus.pages.DatabaseIndexPage", function() {
         it("should have set up search correctly", function() {
             expect(this.page.$(".list_content_details .count")).toContainTranslation("entity.name.Database", {count: 2});
             expect(this.page.$("input.search")).toHaveAttr("placeholder", t("database.search_placeholder"));
-            expect(this.page.$(".list_content_details .explore")).toContainTranslation("actions.explore");
 
             this.page.$("input.search").val("bar").trigger("keyup");
 
