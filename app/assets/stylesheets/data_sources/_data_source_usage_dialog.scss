@@ -1,4 +1,22 @@
 .data_source_usage {
+    .dialog_content #content {
+        max-height: 380px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+        /* special case for when scrollbar is invoked */
+        margin-right: -$dialog-padding;
+        padding-right: $dialog-padding;
+        
+
+/*         border-top: $border-canon; */
+        border-bottom: $border-canon;
+    }
+    
+    .sub_header {
+        font-weight: $semibold;
+    }
+
     li {
         border-bottom: $border-canon;
         margin-top: 5px;
@@ -84,8 +102,9 @@
         background-color: $progress-bar-full-background-color;
     }
 
-    .sub_content {
-        overflow: auto;
-        max-height: 380px;
-    }
+/* retiring this class */ /* TODO to be removed when final */
+/*     .sub_content { */
+/*         overflow: auto; */
+/*         max-height: 380px; */
+/*     } */
 }
