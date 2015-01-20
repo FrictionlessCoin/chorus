@@ -5,7 +5,7 @@ chorus.views.CreateChorusViewSidebar = chorus.views.Sidebar.extend({
     events: {
         "click button.create": "createChorusView",
         "click a.remove": "removeColumnClicked",
-        "click span.deleteIcon": "removeJoinClicked",
+        "click span.delete": "removeJoinClicked",
         "click a.preview": "previewSqlLinkClicked",
         "click a.add_join": "launchManageJoinTableDialog"
     },
