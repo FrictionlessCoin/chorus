@@ -1,0 +1,49 @@
+@import "_common";
+
+/* establish css values for all the set css values */
+/* in order to display them in the style guide */
+/*  */
+/* this is basically a mirror of common.scss */
+
+$pacific-blue:      $pacific-blue;
+$bright-turquoise:  $bright-turquoise;
+$pattens-blue:      $pattens-blue;
+$alice-blue:        $alice-blue;  
+$greyish-blue:      $greyish-blue;
+$greyish-blue-v2:   $greyish-blue-v2;
+$light-sky-blue:    $light-sky-blue;
+$bluer-lavender:    $bluer-lavender;
+
+
+.bright-grey:       $bright-grey;
+.greyish-yellow:    $greyish-yellow;
+.light-grey-yellow: $light-grey-yellow;
+.light-gray:        $light-gray:;
+.shadow-gray:		$shadow-gray;
+.charcoal:          $charcoal;
+.black:             $black;
+.core-white:		$core-white;
+
+
+//transparent variants
+.shadow-color:		$shadow-color;
+
+
+// Tints & Shades of Brand Colors
+// Brand
+$brand:             $brand;
+$brand-light:       $brand-light;
+$brand-tint:        $brand-tint;
+$brand-shade:       $brand-shade;
+$brand-dark:        $brand-dark;
+
+
+
+
+
+// Semantic Colors
+.ok:                $ok;
+.alert:             $alert;
+.needs-attention:   $needs-attention;
+
+

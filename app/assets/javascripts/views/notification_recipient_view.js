@@ -77,6 +77,7 @@ chorus.views.NotificationRecipient = chorus.views.Base.extend({
         _.each(this.selectedUsers.models, function(user) {
             var id = user.get("id");
             var $span = $("<span class='name'></span>").text(user.displayName());
+            // generated HTML for remove must match the removewidget template partial
             var removeTitleText = t ("actions.remove");
             var removeIconHTML = "<span class='fa fa-times-circle remove' title="+ removeTitleText + "></span>";
             var $remove = $('<a href="#" class="removeWidget"/>').append(removeIconHTML);
