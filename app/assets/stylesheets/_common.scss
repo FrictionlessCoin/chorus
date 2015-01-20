@@ -54,9 +54,10 @@ $accent-shade: rgb(227, 241, 252);  /* #E3F1FC */
 
 // Semantic colors AKA Messaging
 $ok: $fiji-green;
+$informational: $pacific-blue;
 $error: $fire-engine-red;
-$alert: $fire-engine-red;
 $needs-attention: $pumpkin;
+$alert: $pumpkin;
 
 
 // Background colors
@@ -155,21 +156,34 @@ $content-header-link-color: $color-text4;
 $required-marker-color: $error;
 
 
-// Notification colors 
-// AKA Messaging
-$error-background-color: $fire-engine-red;
-$error-color: #FFFFFF;
-$error-text-color: #FFFFFF;
-$error-tooltiptext-color: #FFFFFF;
+// MESSAGING colors 
+// AKA Notifications
+/* $error-background-color: #EF9A8F; */
+$error-background-color: #F4DCD8;
+$error-text-color: #661111;
+$error-tooltiptext-color: $core-white;
+$error-icon-color: #991111;
 
+$notification: $bright-turquoise;
 $notification-error-dark: #d43a0b;
 $notification-error-light: #ffd6d6;
-$notification: $bright-turquoise;
 
 $alert-color: $needs-attention;
 $alert-background-color: $needs-attention;
-$alert-marker-color: #B24E11;
-$alert-text-color: $core-white;
+$alert-icon-color: #B24E11;
+/* $alert-text-color: $core-white; */
+
+$warning-color: $needs-attention;
+$warning-background-color: $needs-attention;
+$warning-icon-color: #B24E11;
+/* $warning-text-color: $core-white; */
+
+$informational-color: $needs-attention;
+$informational-background-color: $needs-attention;
+
+$success-color: $ok;
+$success-background-color: $ok;
+$success-icon-color: $ok;
 
 
 // Dimensions
@@ -187,10 +201,14 @@ $margin-x : 10px;
 $guts-padding: 7px;
 $guts-padding-bottom: 15px;
 $user-detail-image-width: 150px;
+
+/* small size icons, such as for workfiles */
 $icon-image-width : 35px;
 $icon-image-height : 35px;
+/* regular size icons, such as for workfiles */
 $large-image-width : 45px;
-$large-image-height : 45px;
+$large-image-height : 50px;
+
 $activity-gutter: 15px;
 
 $breadcrumbs-height: 32px;
@@ -198,6 +216,7 @@ $help-pill-width: 34px;
 $texteditor-min-height: 300px;
 
 $default-dialog-width: 500px;
+$default-dialog-width-wide: 940px;
 /* $dialog-padding= interior padding from edge for dialog content */
 $dialog-padding : 15px;
 

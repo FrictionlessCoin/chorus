@@ -4,9 +4,7 @@
 $text-padding-y: 4px;
 $big-gutter: (2 * $activity-gutter);
 $media-gutter: 10px;
-
 $system-action-color: #7C7D7D;
-
 $refresh-activity-gutter: $activity-gutter - 5;
 
 .media, .media > .bd {
@@ -59,6 +57,24 @@ $refresh-activity-gutter: $activity-gutter - 5;
         padding: $refresh-activity-gutter $refresh-activity-gutter ($activity-gutter - 3) $refresh-activity-gutter;
         position: relative;
         overflow: visible;
+
+        .fa.failure {
+            position: relative;
+            font-size:34px;
+            top: 4px;
+            left: 2px;
+            color: $error-icon-color;
+        }
+
+        .fa.success {
+            position: relative;
+            font-size:34px;
+            top: 4px;
+            left: 2px;
+            color: $success-icon-color;
+        }
+
+
     }
 }
 

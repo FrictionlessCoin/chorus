@@ -1,54 +1,165 @@
+$alert-border-radius: 3px;
+
+$alert-icon-large: 22px;
+$alert-icon-medium: 16px;
+$alert-icon-small: 12px;
+
+
+@mixin alert-error-icon {
+    font-family: FontAwesome;
+    content: "\f06a";   /* fa-exclamation-circle */
+}
+
+@mixin alert-warning-icon {
+    font-family: FontAwesome;
+    content: "\f071";   /* fa-exclamation-triangle */
+}
+
+@mixin alert-success-icon {
+    font-family: FontAwesome;
+    content: "\f058";   /* fa-check-circle */
+}
+
+@mixin alert-informational-icon {
+    font-family: FontAwesome;
+    content: "\f06a";   /* fa-exclamation-circle */
+}
+
+
+
+@mixin alert-marker {
+	&::after {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		position: relative;
+		right: 19px;
+		top: 1px;
+		color: $alert-icon-color;
+		font-size: $alert-icon-medium;
+		@include alert-error-icon;
+	}
+}
+
 .errors,
 .sql_errors,
 .dataset_errors,
 .warning {
     @include after-clearfix;
-    background-color: $error-background-color;
-    vertical-align: middle;
-    font-weight: normal;
-    line-height: 16px;
 
+    font-weight: normal;
+
+    .message-block {
+
+        /* ***** */
+        /* if "> errorDiv" is not within .girdle, then need to match side margins of .girdle */
+        /* otherwise, only top and bottom */
+        /* ***** */
+
+        margin: 10px $dialog-padding 10px $dialog-padding;
+        border: 1px solid $error-icon-color;
+        @include border-radius ($alert-border-radius);
+        background-color: $error-background-color;   
+    }
+    
     ul {
-        float: left;
+/*         position: relative; */
         text-align: left;
-        max-width: 85%;
-        
+
+
+/* reference numbers to be made into mixin */
+/* dialog */
+/* text */
+/* > margin-left: 35 */
+/* icon */
+/* > margin-left: -25 ( -1 * (textmargin - 10)) */
+/* > size: medium */
+/*  */
+/* in-page */
+/* text */
+/* > margin-left: 40 */
+/* icon */
+/* > margin-left: -30 ( -1 * (textmargin - 10)) */
+/* > size: large */
+
+
+
         li {
-            padding: 10px 10px 10px 16px;
-            color: $error-color;
-            font-size: 14px;
+            position: relative;
+            padding: 10px 10px 13px 0px;
+            margin-left: 35px;
+            color: $error-text-color;
+            font-size: $medium-font;
+            vertical-align: top;
+
+            &::before {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                position: relative;
+                left: -25px;
+                top: 2px;
+                color: $error-icon-color;
+                font-size: $alert-icon-large;
+                @include alert-error-icon;
+            }
 
         }
     }
 
-    .action {
-        font-weight: normal;
-        display: inline-block;
-        float: right;
-        margin: 0 10px;
-        font-size: 14px;
-        color: white;
-        padding-top: 10px;
-    }
+/*     .action { */
+/*         font-weight: normal; */
+/*         display: inline-block; */
+/*         float: right; */
+/*         margin: 0 10px; */
+/*         font-size: $medium-font; */
+/*         color: white; */
+/*         padding-top: 10px; */
+/*     } */
+
+}
+
+.error_block {
+
 }
 
 .warning {
     background-color: $needs-attention;
 }
 
+/* user input: named error BUT is classed as alert */
+
+.has_error {
+    padding-right: 20px;
+}
+
+
+/* TODO */
+/* need to figure out how to use the FA glyph for all form fields */
+/* cant seem to find a way to use it as the background */
+/* so how then... */
+
 input.has_error,
 textarea.has_error,
 .text-core .text-wrap textarea.has_error,
 .text-core .text-wrap input.has_error {
-    border: 2px solid $error-background-color;
-    background-image: url("/images/messaging/error-exclamation.png");
-    background-repeat: no-repeat;
-    background-position: 99%;
-    padding-right: 20px;
+    border: 2px solid $alert-background-color;
+    @include border-radius(1px);
+    
+/*     background-image: url("/images/messaging/error-exclamation.png"); */
+/*     background-repeat: no-repeat; */
+/*     background-position: 99%; */
+/*     padding-right: 20px; */
+}
+
+.inputError {
+    @include alert-marker;
 }
 
 .cleditorMain.has_error {
-    border: 2px solid $error-background-color !important;
+    border: 2px solid $alert-background-color !important;
+    @include border-radius(1px);
+    
     background-image: url("/images/messaging/error-exclamation.png");
     background-repeat: no-repeat;
     background-position: 99%;
@@ -71,6 +182,6 @@ textarea.has_error,
 }
 
 .bad_activity {
-  background: red !important;
-  font-size: 20px !important;
+    background: $error-background-color !important;
+    font-size: 20px !important;
 }
