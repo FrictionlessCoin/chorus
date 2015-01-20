@@ -149,7 +149,7 @@ $label-width: 72px;
         }
 
         .user_lists {
-            margin-left: 80px;
+            margin-left: $label-width;
 
             .dropdown {
                 margin-top: 10px;
@@ -158,18 +158,11 @@ $label-width: 72px;
         }
 
         .picked_users {
+            line-height: 20px;
             .name {
                 @include ellipsis;
                 max-width: 200px;
                 display: inline-block;
-            }
-
-            .remove {
-                float: right;
-            }
-
-            .name, .remove {
-                line-height: 20px;
                 vertical-align: middle;
             }
         }
