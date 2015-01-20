@@ -1,23 +1,10 @@
 <form>
     <div class="girdle">
         <div class="dialog_content">{{t translationKeys.body translationValues}}</div>
-        <input
-                type="text"
-                id="db_username"
-                name="dbUsername"
-                maxlength=256
-                placeholder='{{t "data_sources.account.username"}}'
-                tabindex="1"
-                value={{dbUsername}}
-                ></input>
-        <input
-                type="password"
-                name="dbPassword"
-                maxlength=256
-                placeholder='{{t "data_sources.account.password"}}'
-                tabindex="1"
-                autocomplete="off"
-                ></input>
+        <input type="text" id="db_username" name="dbUsername" maxlength="256" placeholder='{{t "data_sources.account.username"}}' tabindex="1" value="{{dbUsername}}"></input>
+        <input type="password" name="dbPassword" maxlength="256" placeholder='{{t "data_sources.account.password"}}' tabindex="1" autocomplete="off"></input>
     </div>
+    <!-- END girdle -->
+    
     {{formControls "data_sources.account.button.save" translationKeys.cancel }}
 </form>

@@ -1,7 +1,7 @@
 <form action="/workspaces/{{workspace.id}}/workfiles" enctype="multipart/form-data" method="post">
     <div class="girdle">
     
-        {{ uploadWidgetFor "workfile[versions_attributes][0][contents]" }}
+        {{uploadWidgetFor "workfile[versions_attributes][0][contents]"}}
         <div class="comment hidden">
             <input type="text" name="workfile[description]" placeholder='{{t "workfiles.import_placeholder"}}' tabindex="1" maxlength="256"/>
         </div>

@@ -2,7 +2,7 @@
     <div class="girdle">
         <div class="where">{{t "dataset.import.where" canonicalName=canonicalName}}</div>
 
-        {{ uploadWidgetFor "csv[contents]" }}
+        {{uploadWidgetFor "csv[contents]"}}
 
         <div class="import_controls hidden">
             <div class="row new_table">
@@ -31,5 +31,7 @@
             </div>
         </div>
     </div>
+    <!-- END girdle -->
+    
     {{formControlsWithDisabledSubmit "dataset.import.upload_file"}}
 </form>
