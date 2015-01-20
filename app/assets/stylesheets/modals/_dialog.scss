@@ -7,7 +7,7 @@
     border: none;
     
     /* development: to delete */
-/*     border: 1px dotted #C33; */
+    border: 1px dotted #C33;
     /* END development: to delete */
 }
 
@@ -18,7 +18,7 @@
         word-break: break-all;
         height: 40px;
         line-height: 40px;
-/*         padding: 0 $dialog-padding; */
+        padding: 0 $dialog-padding;
     }
 
     h1 {
@@ -26,11 +26,10 @@
         color: rgb(88, 89, 95);
         @include uppercase;
         vertical-align: middle;
-        margin: 0 $dialog-padding;
+        margin: 0;
         padding-right: 25px;
         @include ellipsis;
     }
-
 
     h2 {
         font-size: $medium-font;
@@ -91,13 +90,14 @@
 
     &.with_sub_header {
         .sub_header {
-            padding: 5px 15px;
+            padding: 0 0 5px 0;
             border-bottom: $border-canon;
         }
 
-        .sub_content {
-            padding: 10px $dialog-padding;
-        }
+/* retiring this class */ /* to be removed when final */
+/*         .sub_content { */
+/*             padding: 10px $dialog-padding; */
+/*         } */
 
         .loading_section {
             padding: 20px;
