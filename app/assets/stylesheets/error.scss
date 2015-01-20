@@ -8,17 +8,37 @@
     position: relative;
     top: 140px;
 
-    border: $border-canon;
-    
     width: $default-dialog-width;
-    
+
     margin-left: auto;
     margin-right: auto;
 
-    .title {
-        padding: 10px;
+    padding: $dialog-padding;
+ 
+    background-color: $core-white;
+    border: $border-canon;
+
+    font-size: $medium-font;
+    font-weight: $semibold;
+    line-height: 16px;
+    color: $default-font-color;
+    
+    .heading {
+        padding: 10px 10px 15px 20px;
         background-color: $error-background-color;
-        color: $error-color;
+        color: $error-text-color;
+        
+        &::before {
+            display: inline-block;
+            position: relative;
+            left: -10px;
+            top: 3px;
+            color: $error-icon-color;
+            font-size: 22px;
+            font-family: FontAwesome;
+            content: "\f06a";   /* fa-exclamation-circle */
+        }
+            
     }
 
     .content{
@@ -27,16 +47,13 @@
         }
     }
 
-    .controls {
-        padding: 25px;
+    .text_tip {
+        margin-top: 30px;
+         border: 1px solid #e3e3e1;
+    }
 
-        button {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            font-size: 12px;
-            font-weight: $semibold;
-        }
+    .choices {
+        margin-top: 15px;
     }
 
 }

@@ -1,14 +1,31 @@
 
-
 <div id="header"/>
 
 <div class="error_box">
-    <div class="title">{{title}}</div>
-    <div class="content">
-        <div class="text">{{text}}</div>
-        {{#if message}}<div class="text">{{message}}</div>{{/if}}
+
+    <div class="message-block">
+        <div class="heading">{{title}}</div>
+        <div class="content">
+            <div class="text">{{text}}</div>
+            {{#if message}}
+                <div class="text">{{message}}</div>
+            {{/if}}
+        </div>
     </div>
-    <div class="controls">
-        <button class="submit button_modalish">{{t "actions.home"}}</button>
+    
+
+    <div class="text_tip">
+        <div>
+            <h4>{{t "application.message.choicenext.title"}}</h4>
+            <p>
+                {{t "application.message.choicenext.text"}}
+            </p>
+        </div>
+        
+        <div class="choices">
+            <p><a href="/#" class="link_backwards1">{{t "application.message.choicenext.link.back"}}</a></p>
+            <p><a href="/#" class="link_home">{{t "application.message.choicenext.link.home"}}</a></p>
+        </div>
     </div>
+                
 </div>
