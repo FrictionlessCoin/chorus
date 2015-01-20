@@ -54,7 +54,7 @@ describe("chorus.views.DatasetContentDetails", function() {
 
             expect(searchOptions.input).toBe(searchInput);
             expect(searchOptions.list).toBe(this.$columnList);
-            expect(this.view.$(".explore")).toContainTranslation("actions.explore");
+
         });
 
         context("when in Edit Chorus View mode", function() {
@@ -928,9 +928,9 @@ describe("chorus.views.DatasetContentDetails", function() {
             this.view.render();
         });
 
-        it('renders the page', function() {
-            expect(this.view.$el).toContainText('Explore'); // hella random text
-        });
+//         it('renders the page', function() {
+//             expect(this.view.$el).toContainText('Explore'); // hella random text
+//         });
     });
 
     describe('when the statistics have loaded', function() {
