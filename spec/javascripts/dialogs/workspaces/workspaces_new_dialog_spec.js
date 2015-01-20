@@ -1,6 +1,6 @@
-describe("chorus.dialogs.WorkspacesNew", function() {
+describe("chorus.dialogs.WorkspaceNew", function() {
     beforeEach(function() {
-        this.dialog = new chorus.dialogs.WorkspacesNew();
+        this.dialog = new chorus.dialogs.WorkspaceNew();
     });
 
     it("does not re-render when the model changes", function() {
