@@ -5,7 +5,7 @@ describe("chorus.pages.ForbiddenPage", function() {
     });
 
     it("has the translations for the title", function() {
-        expect(this.page.$('.title')).toContainTranslation("forbidden.title");
+        expect(this.page.$('.heading')).toContainTranslation("forbidden.title");
     });
 
     it("has the translations for the textbox content", function() {

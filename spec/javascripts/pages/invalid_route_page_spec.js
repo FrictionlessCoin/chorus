@@ -5,7 +5,7 @@ describe("chorus.pages.InvalidRoutePage", function() {
     });
 
     it("has the translations for the title", function() {
-        expect(this.page.$('.title')).toContainTranslation("invalid_route.title");
+        expect(this.page.$('.heading')).toContainTranslation("invalid_route.title");
     });
 
     it("has the translations for the textbox content", function() {

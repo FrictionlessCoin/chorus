@@ -5,7 +5,7 @@ describe("chorus.pages.UnauthorizedPage", function() {
     });
 
     it("has the translations for the title", function() {
-        expect(this.page.$('.title')).toContainTranslation("unauthorized.title");
+        expect(this.page.$('.heading')).toContainTranslation("unauthorized.title");
     });
 
     it("has the translations for the textbox content", function() {

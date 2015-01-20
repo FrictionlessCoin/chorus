@@ -5,7 +5,7 @@ describe("chorus.pages.NotLicensedPage", function() {
     });
 
     it("has the translations for the title", function() {
-        expect(this.page.$('.title')).toContainTranslation("not_licensed.title");
+        expect(this.page.$('.heading')).toContainTranslation("not_licensed.title");
     });
 
     it("has the translations for the textbox content", function() {
