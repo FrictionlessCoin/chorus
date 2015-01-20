@@ -1,10 +1,10 @@
-chorus.dialogs.WorkspacesNew = chorus.dialogs.Base.include(
+chorus.dialogs.WorkspaceNew = chorus.dialogs.Base.include(
         chorus.Mixins.DialogFormHelpers
     ).extend({
-    constructorName: "WorkspacesNew",
+    constructorName: "WorkspaceNew",
 
-    templateName:"workspaces_new",
-    title:"Create a New Workspace",
+    templateName: "workspace_new_dialog",
+    title: t("workspace.create_new_title"),
 
     persistent:true,
 

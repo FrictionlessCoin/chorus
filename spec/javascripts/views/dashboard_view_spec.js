@@ -98,7 +98,7 @@ describe("chorus.views.Dashboard", function(){
             });
 
             it("has a create workspace link in the content details", function() {
-                expect(this.view.$(".workspace_list .content_details [data-dialog=WorkspacesNew]")).toExist();
+                expect(this.view.$(".workspace_list .content_details [data-dialog=WorkspaceNew]")).toExist();
             });
 
             it("has a 'browse all' link in the content details", function() {
