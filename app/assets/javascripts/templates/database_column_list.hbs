@@ -1,5 +1,5 @@
 {{#each models}}
-    <li {{#if model.selected}}class="selected"{{/if}} data-cid={{model.cid}}>
+    <li {{#if model.selected}}class="selected"{{/if}} data-cid='{{model.cid}}'>
         <div class="text right">
             <div class="main">
                 {{#if ../view.showDatasetName}}
@@ -9,6 +9,7 @@
             </div>
             <div class="summary">{{description}}</div>
         </div>
-        <div class="type {{typeClass}}"><span class="left"/><span class="type_name">{{typeString}}</span><span class="right"/></div>
+<!--         <div class="type {{typeClass}}"><span class="left"/><span class="type_name">{{typeString}}</span><span class="right"/></div> -->
+        <div class="type {{typeClass}}"><span class="type_name">{{typeString}}</span></div>
     </li>
 {{/each}}
