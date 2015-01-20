@@ -1,8 +1,10 @@
 .collection_list {
 
 $list-item-height: 40px;
-$dialog-list-item-left-padding: 15px;
-$dialog-list-item-right-padding: 15px;
+/* $dialog-list-item-left-padding: 15px; */
+$dialog-list-item-left-padding: 0px;
+/* $dialog-list-item-right-padding: 15px; */
+$dialog-list-item-right-padding: 0px;
 
     max-height: (($list-item-height + $default-border-width) * 10) + $list-item-height;
     overflow: auto;
