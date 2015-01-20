@@ -12,14 +12,14 @@
 
         <div class="options">
             <div class="on_demand row">
-                <input type="radio" id="onDemand" name="jobType" value="on_demand" {{#if runsOnDemand}}checked="checked"{{/if}}/>
-                <label for="onDemand">{{t "job.dialog.on_demand"}}</label>
+                <input type="radio" id="onDemandField" name="jobType" value="on_demand" {{#if runsOnDemand}}checked="checked"{{/if}}/>
+                <label for="onDemandField">{{t "job.dialog.on_demand"}}</label>
             </div>
 
 
             <div class="on_schedule row">
-                <input type="radio" id="onSchedule" name="jobType" value="on_schedule" {{#unless runsOnDemand}}checked="checked"{{/unless}}/>
-                <label for="onSchedule">{{t "job.dialog.on_schedule"}}</label>
+                <input type="radio" id="onScheduleField" name="jobType" value="on_schedule" {{#unless runsOnDemand}}checked="checked"{{/unless}}/>
+                <label for="onScheduleField">{{t "job.dialog.on_schedule"}}</label>
             </div>
 
             <fieldset class="interval_options {{#if runsOnDemand}}hidden{{/if}}">
@@ -61,8 +61,8 @@
                         {{timeZonesSelect}}
                     </div>
                     <div class="end_date_container">
-                        <input type="checkbox" id="end_date_enabled" class="end_date_enabled" {{#if endRun}}checked='checked'{{/if}}/>
-                        <label for="end_date_enabled">{{t "job.dialog.end_date_enabled"}}</label>
+                        <input type="checkbox" id="end_date_enabledField" class="end_date_enabled" {{#if endRun}}checked='checked'{{/if}}/>
+                        <label for="end_date_enabledField">{{t "job.dialog.end_date_enabled"}}</label>
                         <div class="end_date_widget" disabled="disabled">
                             <div class='end_date'></div>
                         </div>
@@ -96,6 +96,11 @@
                 </label>
             </div>
         {{/each}}
+
+        {{> legendRequired}}
+ 
     </div>
+    <!-- END girdle -->
+
     {{formControlsWithDisabledSubmit submitTranslation}}
 </form>
