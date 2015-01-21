@@ -1,7 +1,12 @@
 <form>
     <div class="girdle">
-        <textarea name="commitMessage" placeholder="{{t "workfile.new_version_dialog.commmit_message"}}" maxlength="256"
-                  tabindex="1" maxlength="256">{{body}}</textarea>
+        <label for="commitMessageField">{{t "workfile.new_version_dialog.commmit_message_label"}}</label>
+        <div class="form_description">
+            {{t "workfile.new_version_dialog.commmit_message_description"}}
+        </div>
+        <textarea name="commitMessage" id="commitMessageField" maxlength="256" tabindex="1" maxlength="256">{{body}}</textarea>
     </div>
+    <!-- END girdle -->
+    
     {{formControls "workfile.new_version_dialog.button.save"}}
 </form>
