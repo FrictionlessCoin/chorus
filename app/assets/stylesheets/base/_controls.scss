@@ -24,8 +24,11 @@
 
 .form_controls {
     margin-top: 10px;
+    padding-right: $dialog-padding;
+    padding-left:  $dialog-padding;
 
     button { 
+        /* TODO revise all button to be sequenced in list as they will appear */
         float: right; 
         margin-right: 10px;
     }
