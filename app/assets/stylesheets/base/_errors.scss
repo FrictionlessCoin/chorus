@@ -71,6 +71,6 @@ textarea.has_error,
 }
 
 .bad_activity {
-  background: red !important;
-  font-size: 20px !important;
+    background: $error-background-color !important;
+    font-size: 20px !important;
 }
