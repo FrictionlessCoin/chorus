@@ -52,9 +52,8 @@ chorus.views.Filter = chorus.views.Base.extend({
             $comparator.append(el);
         }, this);
 
-
         _.defer(function() {
-            chorus.styleSelect($comparator, { menuWidth: 240 });
+            chorus.styleSelect($comparator, {menuWidth: 240});
         });
 
         this.selectComparator();

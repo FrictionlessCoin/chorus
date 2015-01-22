@@ -23,6 +23,12 @@ div.login {
         top: $card-top;  
     }
     
+    .form_controls {
+		margin-top: 15px;
+		padding-right: 0px;
+		padding-left: 0px;
+    }
+    
     .card {
         margin-left: auto;
         margin-right: auto;
@@ -56,23 +62,22 @@ div.login {
                 margin: 0px;
             }
         }
+	}
+	.logo.alpine {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: $image-fudge;
+		height: 50px;
+	}
 
-        .logo.alpine {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: $image-fudge;
-            height: 50px;
-        }
+	.logo.pivotal {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: $image-fudge;
+	}
 
-        .logo.pivotal {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: $image-fudge;
-        }
-
-    }
 
     .login_footer {        
         margin-left: auto;
