@@ -293,10 +293,10 @@
 /* Generic button class for Next & Previous (both month & year) buttons */
 .date-picker .prev-but,
 .date-picker .next-but {
-    font-weight: normal;
-    font-size: 2.4em;
-    font-family: georgia, times new roman, palatino, times, bookman, serif;
-    cursor: pointer;
+    font-weight:normal;
+    font-size:2.4em;
+    font-family: georgia, times new roman, palatino, times, serif;
+    cursor:pointer;
     }
 .date-picker .prev-but,
 .date-picker .next-but,
@@ -320,7 +320,6 @@
     -webkit-transform:scale(1.6);
        -moz-transform:scale(1.6);
         -ms-transform:scale(1.6);
-         -o-transform:scale(1.6);
             transform:scale(1.6);
     
     text-shadow:0 2px 1px rgba(0,0,0,.4);
@@ -377,7 +376,7 @@
 .date-picker .date-picker-unused,
 .date-picker .month-out {
     background-color:#fff;
-    background-image:url(data:image/gif;base64,R0lGODlhJgBbAMQAAAAAAP////7+/v39/fz8/Pv7+/r6+vn5+fj4+Pf39/b29vX19fT09PPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5f///wAAAAAAAAAAACH5BAEAABwALAAAAAAmAFsAAAX/4CaOZGmeaKqubOu+cCzPWm3feK7vfO//wCAvQywaj8ikcslsOp/QJWZKrVqv2Kx2y+16v9qLeEwum8/otHqttrjf8Lh8Tq/b7/aKfs/v+/+AgYKDhIWGgRSJiouMjY6PkJGSkROVlpeYmZqbnJ2enRKhoqOkpaanqKmqqRGtrq+wsbKztLW2tRC5uru8vb6/wMHCwQ/FxsfIycrLzM3OzQ7R0tPU1dbX0Q3a29zd3t/g4eLj4gzm5+jp6uvs7e7v7gvy8/T19vf4+fr7+gr+/wADChxIsKDBgwYTKFzIsKHDhxAjSpwoEYHFixgzatzIsaPHjx4PiBxJsqTJkyhTi6pcybKly5QGYsqcSbOmzZs4c+rMWaCnz59AgwodSrSo0aIEkipdyrSp06dQo0qdSrUq1AFYs2rdyrWr169gw4odS/argLNo06pdy7at27dw48qd6zaA3bt48+rdy7ev37+AAwseTLiw4cOIEytezLix48eQI0ueTLmy5cuYM2vezLmz58+gQ4tOHAIAOw==);
+/*     background-image:url(data:image/gif;base64,R0lGODlhJgBbAMQAAAAAAP////7+/v39/fz8/Pv7+/r6+vn5+fj4+Pf39/b29vX19fT09PPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5f///wAAAAAAAAAAACH5BAEAABwALAAAAAAmAFsAAAX/4CaOZGmeaKqubOu+cCzPWm3feK7vfO//wCAvQywaj8ikcslsOp/QJWZKrVqv2Kx2y+16v9qLeEwum8/otHqttrjf8Lh8Tq/b7/aKfs/v+/+AgYKDhIWGgRSJiouMjY6PkJGSkROVlpeYmZqbnJ2enRKhoqOkpaanqKmqqRGtrq+wsbKztLW2tRC5uru8vb6/wMHCwQ/FxsfIycrLzM3OzQ7R0tPU1dbX0Q3a29zd3t/g4eLj4gzm5+jp6uvs7e7v7gvy8/T19vf4+fr7+gr+/wADChxIsKDBgwYTKFzIsKHDhxAjSpwoEYHFixgzatzIsaPHjx4PiBxJsqTJkyhTi6pcybKly5QGYsqcSbOmzZs4c+rMWaCnz59AgwodSrSo0aIEkipdyrSp06dQo0qdSrUq1AFYs2rdyrWr169gw4odS/argLNo06pdy7at27dw48qd6zaA3bt48+rdy7ev37+AAwseTLiw4cOIEytezLix48eQI0ueTLmy5cuYM2vezLmz58+gQ4tOHAIAOw==); */
     background-repeat:repeat-x;
     background-position:0 0;
     }
@@ -437,7 +436,6 @@
 /*         -ms-transform:rotate(-3deg); */
 /*             transform:rotate(-3deg); */
 /*     } */
-
 /* .date-picker:after { */
 /*     right:10px; */
 /*     left:auto; */
@@ -447,10 +445,10 @@
 /*             transform:rotate(3deg); */
 /*     } */
 
-.oldie .date-picker:before,
-.oldie .date-picker:after {
-    display:none;
-    }
+/* .oldie .date-picker:before, */
+/* .oldie .date-picker:after { */
+/*     display:none; */
+/*     } */
 
 /* Common TD & TH styling */
 .date-picker td,
@@ -544,11 +542,11 @@
 .date-picker td {
     /* 
     Uncomment this if you want a transition on the cursor cells scale effect
-    
-    -webkit-transition: all .2s ease;    
-       -moz-transition: all .2s ease;    
-        -ms-transition: all .2s ease;    
-            transition: all .2s ease;    
+
+    -webkit-transition: all .2s ease;
+       -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+            transition: all .2s ease;
     */
     }
 
@@ -642,9 +640,9 @@
     height: 0;
 	line-height: 1;
 	position: relative;
-	top:-0.2em;	
+	top:-0.2em;
 	vertical-align: baseline !important;
-	vertical-align: top;  
+	vertical-align: top;
     }
 .date-picker .date-picker-day-header,
 .date-picker .month-display,
@@ -660,7 +658,6 @@
     overflow:hidden;
 	-moz-outline:0 none;
          outline:0 none;
-	-o-highlight:0 none;
     }
 
 /* The "pulse" animation on focused button and datepicker cursor */
@@ -755,10 +752,6 @@ body.fd-drag-active {
     to{box-shadow:0 0 6px rgba(10, 130, 170, 0.5)}
 }
 @-ms-keyframes fd-dp-pulse {
-    from{box-shadow:0 0 2px rgba(100, 130, 170, 0.8)}
-    to{box-shadow:0 0 6px rgba(10, 130, 170, 0.5)}
-}
-@-o-keyframes fd-dp-pulse {
     from{box-shadow:0 0 2px rgba(100, 130, 170, 0.8)}
     to{box-shadow:0 0 6px rgba(10, 130, 170, 0.5)}
 }
