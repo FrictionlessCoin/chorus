@@ -8,7 +8,7 @@ $filterRow-padding-bottom: 0px;
 .filter_wizard {
 
     .filter_content {
-        padding: 0 10px;
+        padding: 0 $dialog-padding;
         background-color: $body-background-color;
     }
     
