@@ -75,7 +75,7 @@ describe("chorus.dialogs.ConfigureImportSourceDataTask", function () {
 
                     it("should show the selected dataset in the link, ellipsized", function () {
                         expect(this.dialog.datasetsChosen).toHaveBeenCalled();
-                        expect(this.dialog.$(".source a.dataset_picked")).toContainText("myDatasetWithAReally...");
+                        expect(this.dialog.$(".source a.dataset_picked")).toContainText("myDatasetWithAReally…");
                     });
                 });
             });
@@ -150,7 +150,7 @@ describe("chorus.dialogs.ConfigureImportSourceDataTask", function () {
 
                         it("should show the selected dataset in the link, ellipsized", function () {
                             expect(this.dialog.datasetsChosen).toHaveBeenCalled();
-                            expect(this.dialog.$(".destination a.dataset_picked")).toContainText("myDatasetWithAReally...");
+                            expect(this.dialog.$(".destination a.dataset_picked")).toContainText("myDatasetWithAReally…");
                         });
 
                         it("stores the dataset id on the dialog", function () {

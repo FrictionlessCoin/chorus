@@ -133,7 +133,7 @@ describe("chorus.views.FunctionTab", function () {
                     });
 
                     it("ellipsizes the comments if they are long", function () {
-                        expect(this.functionQtip.find(".comment")).toContainText('...');
+                        expect(this.functionQtip.find(".comment")).toContainText('…');
                     });
 
                     it("has a link that opens a dialog showing the function info", function () {

@@ -207,7 +207,7 @@ chorus.models = {
             length = length || 20;
 
             var name = this.name() || "";
-            return (name.length < length) ? name : name.slice(0, length) + "...";
+            return (name.length < length) ? name : name.slice(0, length) + "…";
         },
 
         // TODO: use the helper in the template, not in the model

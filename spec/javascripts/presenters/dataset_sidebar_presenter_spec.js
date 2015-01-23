@@ -25,7 +25,7 @@ function itBehavesLikeAGpdbDataset(presenter) {
 describe("chorus.presenters.DatasetSidebar", function() {
     describe("ellipsize", function() {
         it("ellipsizes a long string", function() {
-            expect(chorus.presenters.DatasetSidebar.prototype.ellipsize("Hello my name is very long")).toBe("Hello my nam...");
+            expect(chorus.presenters.DatasetSidebar.prototype.ellipsize("Hello my name is very long")).toBe("Hello my nam…");
         });
 
         it("doesn't ellipsize a short string", function() {

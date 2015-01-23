@@ -39,8 +39,8 @@ chorus.pages.HdfsShowFilePage = chorus.pages.Base.extend({
         return [
             { label: t("breadcrumbs.home"), url: "#/" },
             { label: t("breadcrumbs.data_sources"), url: "#/data_sources" },
-            { label: this.hdfsDataSource.loaded ? dataSourceCrumb : "..." , url: "#/hdfs_data_sources/" + this.hdfsDataSource.id + "/browse"},
-            { label: this.model.loaded ? fileNameCrumb : "..."}
+            { label: this.hdfsDataSource.loaded ? dataSourceCrumb : "…" , url: "#/hdfs_data_sources/" + this.hdfsDataSource.id + "/browse"},
+            { label: this.model.loaded ? fileNameCrumb : "…"}
         ];
     },
 
@@ -71,7 +71,7 @@ chorus.pages.HdfsShowFilePage = chorus.pages.Base.extend({
     ellipsizePath: function() {
         var folders = this.path.split('/');
         if (folders.length > 3) {
-            return "/" + folders[1] + "/.../" + folders[folders.length - 1];
+            return "/" + folders[1] + "/…/" + folders[folders.length - 1];
         } else {
             return this.path;
         }
