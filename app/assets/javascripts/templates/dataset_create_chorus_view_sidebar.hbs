@@ -16,22 +16,20 @@
             <span class="title">{{t "dataset.chorusview.sidebar.joins"}}</span>
             {{#each joins}}
                 <div class="join" data-cid={{destinationColumn.dataset.cid}}>
-                    <span class="aliased_name"><span
-                            class="letter">{{sourceColumn.dataset.aliasedName}}</span></span><span class="column"
-                                                                                                   title="{{sourceColumn.attributes.name}}">{{sourceColumn.attributes.name}}</span>
+                    <span class="aliased_name"><span class="letter">{{sourceColumn.dataset.aliasedName}}</span></span>
+                    <span class="column" title="{{sourceColumn.attributes.name}}">{{sourceColumn.attributes.name}}</span>
                     =
-                    <span class="aliased_name"><span
-                            class="letter">{{destinationColumn.dataset.aliasedName}}</span></span><span class="column"
-                                                                                                        title="{{destinationColumn.attributes.name}}">{{destinationColumn.attributes.name}}</span>
-                    <img class="delete" src="images/trashcan.png"/>
+                    <span class="aliased_name"><span class="letter">{{destinationColumn.dataset.aliasedName}}</span></span>
+                    <span class="column" title="{{destinationColumn.attributes.name}}">{{destinationColumn.attributes.name}}</span>
+                    <span class="fa fa-trash deleteIcon" title='{{t "actions.delete"}}'></span>    
                 </div>
             {{/each}}
         </div>
     {{/if}}
 
     <div class="dataset">
-        <span class="aliased_name"><span class="letter">{{resource.aliasedName}}</span></span><span
-            class="label">{{t "dataset.statistics.dataset"}}:</span>
+        <span class="aliased_name"><span class="letter">{{resource.aliasedName}}</span></span>
+        <span class="label">{{t "dataset.statistics.dataset"}}:</span>
         <span class="name" title="{{objectName}}">{{objectName}}</span>
     </div>
 
@@ -41,7 +39,6 @@
                 <li data-cid='{{cid}}'>
                     <div class="sidebar_row">
                         <a href="#" class="remove">{{t "dataset.chorusview.sidebar.remove"}}</a>
-
                         <div class="name" title="{{attributes.name}}">{{attributes.name}}</div>
                     </div>
                 </li>
@@ -65,7 +62,6 @@
                     <li data-cid='{{cid}}'>
                         <div class="sidebar_row">
                             <a href="#" class="remove">{{t "dataset.chorusview.sidebar.remove"}}</a>
-
                             <div class="name" title="{{attributes.name}}">{{attributes.name}}</div>
                         </div>
                     </li>

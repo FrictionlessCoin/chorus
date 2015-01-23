@@ -43,7 +43,7 @@ chorus.pages.WorkspaceIndexPage = chorus.pages.Base.extend({
     },
 
     buildPrimaryActions: function() {
-        var actions = [{name: 'create_workspace', target: chorus.dialogs.WorkspacesNew}];
+        var actions = [{name: 'create_workspace', target: chorus.dialogs.WorkspaceNew}];
         this.primaryActionPanel = new chorus.views.PrimaryActionPanel({actions: actions});
     }
 });

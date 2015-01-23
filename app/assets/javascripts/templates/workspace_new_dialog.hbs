@@ -1,0 +1,16 @@
+<form action="/workspace/" class="new_workspace">
+    <div class="girdle">
+        
+        <div>
+            <label for="workspaceNameField" class="required">{{t "workspace.settings.name"}}</label>
+            <input type="text" id="workspaceNameField" name="name" placeholder="Name" tabindex="1" maxlength="256"/>
+        </div>
+        
+        <label for="workspacePublic"><input type="checkbox" id="workspacePublic" name="public" tabindex="2"/>{{t "workspaces.make_public"}}</label>
+        
+    </div>
+    <!-- END girdle -->
+    
+    {{formControlsWithDisabledSubmit "workspaces.button.create"}}
+
+</form>

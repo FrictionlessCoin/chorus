@@ -22,7 +22,7 @@ describe("chorus.alerts.Base", function() {
         });
 
         it("displays the icon", function() {
-            expect(this.alert.$("img")).toHaveAttr("src", "/images/message_icon.png");
+            expect(this.alert.$("img")).toHaveAttr("src", "/images/messaging/message_icon.png");
         });
 
         it("displays the default cancel text on the cancel button", function() {

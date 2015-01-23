@@ -148,7 +148,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
             expect(eventSpy.preventDefault).toHaveBeenCalled();
         });
 
-        describe("when the 'attach workfile' link is clicked", function() {
+        describe("> when the 'attach workfile' link is clicked", function() {
             beforeEach(function() {
                 this.dialog.$('.show_options').click();
                 this.modalSpy = stubModals();
@@ -156,12 +156,12 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                 this.dialog.$("a.add_workfile").click();
             });
 
-            it("launches the workfile picker dialog", function() {
+            it("> launches the workfile picker dialog", function() {
                 expect(this.modalSpy).toHaveModal(chorus.dialogs.WorkfilesAttach);
                 expect(this.modalSpy.lastModal().options.workspaceId).toBe(22);
             });
 
-            describe("when workfiles are selected", function() {
+            describe("> when workfiles are selected", function() {
                 beforeEach(function() {
                     this.workfile1 = backboneFixtures.workfile.sql({ id: 1, fileName: "greed.sql", fileType: "sql" });
                     this.workfile2 = backboneFixtures.workfile.text({ id: 2, fileName: "generosity.cpp", fileType: "cpp" });
@@ -190,9 +190,9 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                     expect(this.dialog.model.workfiles.at(2)).toBe(this.workfile3);
                 });
 
-                context("when the 'attach workfile' link is clicked again", function() {
+                context("> when the 'attach workfile' link is clicked again", function() {
                     beforeEach(function() {
-                        this.dialog.$("a.add_workfile").click();
+                        this.dialog.$(".add_workfile").click();
                     });
 
                     it("does not pre-select any of the workfiles", function() {
@@ -216,15 +216,15 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                     });
                 });
 
-                describe("when a workfile remove link is clicked", function() {
-                    it("removes only that workfile", function() {
+                describe("> when a workfile remove link is clicked", function() {
+                    it("> removes only that workfile", function() {
                         var sqlRow = this.dialog.$(".file_details:not('.hidden'):contains('sql')");
                         var cppRow = this.dialog.$(".file_details:contains('cpp')");
 
                         expect(sqlRow).toExist();
                         expect(cppRow).toExist();
 
-                        sqlRow.find("a.remove").click();
+                        sqlRow.find(".remove").click();
 
                         sqlRow = this.dialog.$(".file_details:contains('sql')");
                         cppRow = this.dialog.$(".file_details:contains('cpp')");
@@ -232,9 +232,9 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                         expect(cppRow).toExist();
                     });
 
-                    it("removes only that workfile from the collection", function() {
+                    it("> removes only that workfile from the collection", function() {
                         var sqlRow = this.dialog.$(".file_details:contains('sql')");
-                        sqlRow.find("a.remove").click();
+                        sqlRow.find(".remove").click();
                         expect(this.dialog.model.workfiles.get("1")).toBeUndefined();
                         expect(this.dialog.model.workfiles.get("2")).not.toBeUndefined();
                     });
@@ -247,7 +247,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
 
                         it("does not remove the desktop file", function() {
                             var sqlRow = this.dialog.$(".file_details:contains('sql')");
-                            sqlRow.find("a.remove").click();
+                            sqlRow.find(".remove").click();
 
                             expect(this.dialog.model.uploadObj).toBe(this.uploadObj);
                         });
@@ -329,7 +329,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
                         expect(table1Row).toExist();
                         expect(table2Row).toExist();
 
-                        table2Row.find("a.remove").click();
+                        table2Row.find(".remove").click();
 
                         table1Row = this.dialog.$(".dataset_details:contains('table1')");
                         table2Row = this.dialog.$(".dataset_details:contains('table2')");
@@ -339,7 +339,7 @@ describe("chorus.dialogs.MemoNewDialog", function() {
 
                     it("removes only that dataset from the collection", function() {
                         var table1Row = this.dialog.$(".dataset_details:contains('table1')");
-                        table1Row.find("a.remove").click();
+                        table1Row.find(".remove").click();
                         expect(this.dialog.model.datasets.get("1")).toBeUndefined();
                         expect(this.dialog.model.datasets.get("2")).not.toBeUndefined();
                     });

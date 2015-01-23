@@ -1,4 +1,4 @@
-<form>
+<!-- <form> -->
 <div class="girdle">
 
 <div class="sub_header">
@@ -9,18 +9,25 @@
         </div>
         <div class="col col-last">
             <img src="/images/data_sources/shared.svg" alt="" />
-            <span class="shared_accounts">{{t "data_sources.shared_account"}}</span>
+            <!-- <span class="details_text">{{t "data_sources.shared_account"}}</span> -->
+            <span class="shared_account_subhead">{{t "data_sources.shared_account"}}</span>
         </div>
     {{else}}
         <div class="col col-ext">
             <a href="#" class="add_shared_account">{{t "data_sources.permissions_dialog.switch_to_shared"}}</a>
         </div>
         <div class="col col-last">
-            <ul class="list_horizontal">
+
             <img src="/images/data_sources/individual.svg" alt="" />
+            <span class="individual_accounts_count">{{t "data_sources.sidebar.x_individual_accounts" count=accountCount}}</span>
+            <button class='add_account button_action'>{{t "data_sources.permissions_dialog.add_account"}}</button>
+            
+<!-- TOBE DELETED when finalized
+            <ul class="list_horizontal">
             <li><span class="individual_accounts_count">{{t "data_sources.sidebar.x_individual_accounts" count=accountCount}}</span></li>
             <li><button class='add_account button_action'>{{t "data_sources.permissions_dialog.add_account"}}</button></li>
             </ul>
+ -->
         </div>
     {{/if}}
     </div>
@@ -79,4 +86,4 @@
 <!-- END girdle -->
 
 {{> closeWindowFormControls }}
-</form>
+<!-- </form> -->

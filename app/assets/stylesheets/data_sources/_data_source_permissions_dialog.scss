@@ -18,13 +18,13 @@ $link-padding: 6px;
         }
 
         .individual_accounts_count {
-            /* background : url("/images/data_sources/individual.png") no-repeat left 8px; */ /* to be deleted when final */
+            /* background : url("/images/data_sources/individual.png") no-repeat left 8px; */ /* TODO to be deleted when final */
             display: inline-block;
-            padding-left: 23px;
+            padding-left: 5px;
         }
 
-        .shared_accounts {
-/*             background : url("/images/data_sources/shared.png") no-repeat left 6px; */ /* to be deleted when final */
+        .shared_account_subhead {
+            /*             background : url("/images/data_sources/shared.png") no-repeat left 6px; */ /* TODO to be deleted when final */
             display: inline-block;
             padding-left: 5px;
         }

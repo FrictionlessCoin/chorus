@@ -228,7 +228,7 @@ describe("chorus.pages.WorkspaceShowPage", function() {
                 });
 
                 it("changes the icon", function() {
-                    expect(this.page.$(".activity_list_header .title img").attr("src")).toBe("/images/workspaces/private_workspace_large.png");
+                    expect(this.page.$(".activity_list_header .title img").attr("src")).toBe("/images/workspaces/workspace_private_large.png");
                 });
             });
         });

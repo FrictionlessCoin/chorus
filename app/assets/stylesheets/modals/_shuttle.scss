@@ -3,17 +3,25 @@ $shuttle-list-item-height: 40px;
 .shuttle_widget {
     background-color: $body-background-color;
 
-    .shuttle_header {
+    .subheader {
         border-bottom: $border-canon;
         position: relative;
         height: 35px;
 
-        .search_container {
+        .shuttle_left, 
+        .shuttle_right {
+            position: absolute;
+            width: 50%;
+            vertical-align: middle;
+            line-height: 25px;
+        }
+        
+        .shuttle_left {
             left: 0;
             border-right: $border-canon;
         }
-
-        .summary {
+        
+        .shuttle_right {
             left: 50%;
         }
 
@@ -34,14 +42,30 @@ $shuttle-list-item-height: 40px;
             width: 70%;
         }
 
-        .object_name {
-            color: $color-text3;
+/*         > div { */
+/*             padding: 4px 0; */
+/*         } */
+
+/*     } */
+        
+        .selected_title,
+        .selected_count {
+            font-weight: $semibold;
         }
+
+/* to be removed when final         */
+/*         .selected_title { */
+/*             color: $color-text3; */
+/*         } */
 
         .selected_count {
             padding-left: 5px;
         }
 
+    }
+
+    .fa-stack .fa-check {
+        top: -1px;
     }
 
     .shuttle_body {
@@ -108,6 +132,8 @@ $shuttle-list-item-height: 40px;
             border-right: $border-canon;
 
             li {
+                padding-right: 10px;
+
                 .checkmark {
                     display: none;
                     position: absolute;
@@ -118,6 +144,10 @@ $shuttle-list-item-height: 40px;
                 }
 
                 &.added {
+                    /* css to 'remove' a user from the available list when added */
+                    /* display: none; */
+
+                   /*  when above is enabled, remove the following 4 */
                     .checkmark {
                         display: inherit;
                     }
@@ -145,6 +175,12 @@ $shuttle-list-item-height: 40px;
 
             li {
                 display: none;
+                padding-left: 10px;
+                
+                /* fix for the girdle border */
+                margin-right: -1 * ($dialog-padding - 5);
+                padding-right: $dialog-padding;
+                
                 &.added {
                     display: block;
                 }

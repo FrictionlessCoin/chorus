@@ -12,17 +12,17 @@ describe("chorus.views.DataTabDataset", function() {
     });
 
     it("renders the appropriate icon", function() {
-        expect(this.view.$("img:eq(1)")).toHaveAttr("src", "/images/sandbox_table_small.png");
+        expect(this.view.$("img:eq(0)")).toHaveAttr("src", "/images/sandbox_table_small.png");
         this.view.model.set("objectType", "VIEW");
         this.view.render();
-        expect(this.view.$("img:eq(1)")).toHaveAttr("src", "/images/sandbox_view_small.png");
+        expect(this.view.$("img:eq(0)")).toHaveAttr("src", "/images/sandbox_view_small.png");
     });
 
     it("renders the name of the dataset", function() {
         expect(this.view.$(".name")).toContainText("1234");
     });
 
-    context("when clicking the name link within the li", function () {
+    context("when clicking the name link within the li", function() {
         it("toggles the column list", function() {
             this.view.$('.name a').click();
             this.server.completeFetchAllFor(this.dataset.columns(), [
@@ -35,7 +35,7 @@ describe("chorus.views.DataTabDataset", function() {
         });
     });
 
-    describe("toggling the column list", function () {
+    describe("toggling the column list", function() {
         beforeEach(function() {
             this.view.$('.toggle_display').click();
             this.server.completeFetchAllFor(this.dataset.columns(), [

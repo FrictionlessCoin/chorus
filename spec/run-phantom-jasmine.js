@@ -90,6 +90,7 @@ page.onResourceReceived = function() {
                     },
 
                     specStarted: function (spec) {
+                    	console.log("start> "+chorus.currentSpec);
                         this.specStartTime = (new Date()).getTime();
                     },
 

@@ -62,13 +62,13 @@ chorus.pages.Base = chorus.pages.Bare.extend({
     subviews: {
         "#header": "header",
         "#main_content": "mainContent",
-        "#breadcrumbs": "breadcrumbs",
         "#page_sub_header": "subHeader",
+        "#breadcrumbs": "breadcrumbs",
+        "#sub_nav": "subNav",
         "#sidebar .primary_action_panel": "primaryActionPanel",
         "#sidebar .multiple_selection": "multiSelectSidebarMenu",
         "#sidebar .sidebar_content.primary": "sidebar",
-        "#sidebar .sidebar_content.secondary": "secondarySidebar",
-        "#sub_nav": "subNav"
+        "#sidebar .sidebar_content.secondary": "secondarySidebar"
     },
 
     // Load a workspace for a page into page.workspace, fetch and set as a requiredResource based on options

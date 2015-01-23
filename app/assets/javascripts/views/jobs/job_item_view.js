@@ -45,6 +45,5 @@ chorus.views.JobItem = chorus.views.Base.extend({
     launchLastRunJobResultDetails: function (e) {
         e && e.preventDefault();
         new chorus.dialogs.JobResultDetail({job: this.model}).launchModal();
-
     }
 });
