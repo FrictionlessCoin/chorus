@@ -123,6 +123,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
             });
 
             it("displays the shared account subheader", function() {
+
                 var subhead = this.dialog.$(".shared_accounts").text();
                 expect(subhead).toMatchTranslation("data_sources.shared_account");
             });

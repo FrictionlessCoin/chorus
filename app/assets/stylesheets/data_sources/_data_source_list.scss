@@ -24,13 +24,18 @@
 
     .datasource_images {
         position: relative;
+
     }
         
     img.state {
-        position: absolute;
-        left: 26px;
-        width: 12px;
-        height: auto;
+        /*         position: absolute; */
+        /*         left: 26px; */
+        /*         width: 12px; */
+        /*         height: auto; */
+        position: relative;
+        float: left;
+        margin-right: 5px;
+        top: 10px;
     }
 
     img.provider {

@@ -156,7 +156,6 @@ $content-header-link-color: $color-text4;
 $required-marker-color: $error;
 
 
-
 // MESSAGING colors 
 // AKA Notifications
 /* $error-background-color: #EF9A8F; */
@@ -172,7 +171,7 @@ $notification-error-light: #ffd6d6;
 $alert-color: $needs-attention;
 $alert-background-color: $needs-attention;
 $alert-icon-color: #B24E11;
-/* $alert-text-color: $core-white; */
+$alert-text-color: $core-white;
 
 $warning-color: $needs-attention;
 $warning-background-color: $needs-attention;
@@ -657,6 +656,7 @@ $lozenge-color-selected-dark: $brand-dark;
 	}
 }
 
+
 /* generates caret with FA */
 @mixin triangle-glyph($pointing_direction) {
 	
@@ -741,13 +741,13 @@ $lozenge-color-selected-dark: $brand-dark;
         &:hover .lozenge {
             //background: $lozenge-color-selected;
         }
-
         .lozenge {
             //background: $lozenge-color-selected;
             color: #FFFFFF;
         }
     }
 }
+
 
 @mixin pill-tab-colors ($normal, $hover, $selected) {
     .lozenge {

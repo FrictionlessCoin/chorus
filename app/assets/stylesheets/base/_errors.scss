@@ -26,7 +26,6 @@ $alert-icon-small: 12px;
 }
 
 
-
 @mixin alert-marker {
 	&::after {
 		display: inline-block;
@@ -63,7 +62,7 @@ $alert-icon-small: 12px;
     }
     
     ul {
-/*         position: relative; */
+        /* position: relative; */
         text-align: left;
 
 
@@ -103,10 +102,11 @@ $alert-icon-small: 12px;
                 font-size: $alert-icon-large;
                 @include alert-error-icon;
             }
-
         }
+
     }
 
+}
 /*     .action { */
 /*         font-weight: normal; */
 /*         display: inline-block; */
@@ -117,22 +117,14 @@ $alert-icon-small: 12px;
 /*         padding-top: 10px; */
 /*     } */
 
-}
 
-.error_block {
-
-}
+.error_block {}
 
 .warning {
     background-color: $needs-attention;
 }
 
-/* user input: named error BUT is classed as alert */
-
-.has_error {
-    padding-right: 20px;
-}
-
+/* user input: named error BUT in meaning is as alert */
 
 /* TODO */
 /* need to figure out how to use the FA glyph for all form fields */
@@ -157,6 +149,7 @@ textarea.has_error,
 }
 
 .cleditorMain.has_error {
+
     border: 2px solid $alert-background-color !important;
     @include border-radius(1px);
     
