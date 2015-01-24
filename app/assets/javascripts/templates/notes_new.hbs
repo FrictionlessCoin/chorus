@@ -17,9 +17,9 @@
                 </span>
                 {{#if allowWorkspaceAttachments}}
                     <span class="separator">|</span>
-                <a href="#" class="add_workfile">{{t "notes.new_dialog.work_file"}}</a>
-                <span class="separator">|</span>
-                <a href="#" class="add_dataset">{{t "notes.new_dialog.dataset"}}</a>
+                    <a href="#" class="add_workfile">{{t "notes.new_dialog.work_file"}}</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="add_dataset">{{t "notes.new_dialog.dataset"}}</a>
                 {{/if}}
             </span>
             </div>
@@ -34,9 +34,12 @@
 
         <div class="notification_recipients hidden"/>
     </div>
+    <!-- END girdle -->
+    
     <div class="form_controls">
         <button type="submit" class="submit modalish" tabindex=2>{{submitButton}}</button>
         <button type="button" class="cancel_upload hidden modalish" tabindex=3>{{t "notes.new_dialog.cancel_upload"}}</button>
         <button type="button" class="cancel modalish" tabindex=3>{{t "actions.cancel"}}</button>
     </div>
+
 </form>

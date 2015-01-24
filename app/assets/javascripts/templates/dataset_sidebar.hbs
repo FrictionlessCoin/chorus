@@ -2,14 +2,14 @@
     <div class="last_import low_light">
         {{#if importFailed}}
             <div class="icon">
-                <img src="/images/message_error_small.png" />
+                <img src="/images/messaging/message_error_small.png" />
             </div>
         {{/if}}
 
         {{#if importInProgress}}
             <div class="icon">
                 <!-- in-progress indicator -->
-                <i class="fa fa-circle-o-notch fa-spin"></i>
+                <span class="fa fa-circle-o-notch fa-spin"></span>
             </div>
             <div class="import_in_progress right">
                 {{inProgressText}}

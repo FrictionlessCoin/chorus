@@ -1,13 +1,16 @@
 <form action="#">
-    <div class="preview_bar action_bar_secondary">
-        <button class="edit button_action">{{t "dataset.verify_chorus_view.edit"}}</button>
-        <button class="preview button_action">{{t "dataset.data_preview"}}</button>
-    </div>
-    <div class="results_console"></div>
+    <div class="girdle">
+        <div class="preview_bar action_bar_secondary">
+            <button class="edit button_action">{{t "dataset.verify_chorus_view.edit"}}</button>
+            <button class="preview button_action">{{t "dataset.data_preview"}}</button>
+        </div>
+        <div class="results_console"></div>
 
-    <div class="sql">
-        <textarea class="text_editor">{{query}}</textarea>
+        <div class="sql">
+            <textarea class="text_editor">{{query}}</textarea>
+        </div>
     </div>
+    <!-- END girdle -->
 
     {{formControls "dataset.verify_chorus_view.assign_name"}}
 </form>

@@ -5,18 +5,18 @@
 
 <label name="host" class="required">{{t "data_sources.dialog.hadoop_host"}}</label>
 <label name="port" class="port required">{{t "data_sources.dialog.port"}}</label>
-<input type="text" name="host" value="{{host}}"/>
-<input type="text" class="port" name="port" value="{{port}}"/>
+<input type="text" name="host" value="{{host}}" tabindex="1"/>
+<input type="text" class="port" name="port" value="{{port}}" tabindex="1"/>
 
 <label name="jobTrackerHost">{{t "data_sources.dialog.hadoop_job_tracker_host"}}</label>
 <label name="jobTrackerPort" class="port">{{t "data_sources.dialog.port"}}</label>
-<input type="text" name="jobTrackerHost" value="{{jobTrackerHost}}"/>
-<input type="text" class="port" name="jobTrackerPort" value="{{jobTrackerPort}}"/>
+<input type="text" name="jobTrackerHost" value="{{jobTrackerHost}}" tabindex="1"/>
+<input type="text" class="port" name="jobTrackerPort" value="{{jobTrackerPort}}" tabindex="1"/>
 
 <label class="username required" name="username">{{t "data_sources.dialog.hadoop_account"}}</label>
 <label class="group_list required" name="groupList">{{t "data_sources.dialog.hadoop_group_list"}}</label>
-<input class="username" type="text" name="username"   value="{{username}}" maxlength="255"/>
-<input class="group_list" type="text" name="groupList" value="{{groupList}}" maxlength="255"/>
+<input class="username" type="text" name="username"   value="{{username}}" maxlength="255" tabindex="1"/>
+<input class="group_list" type="text" name="groupList" value="{{groupList}}" maxlength="255" tabindex="1"/>
 
 <div class="connection_parameters_container">
     <a class="connection_parameters">{{t "data_sources.dialog.connection_parameters" parameterCount}}</a>

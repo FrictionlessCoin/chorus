@@ -1,8 +1,8 @@
 <form>
     <div class="girdle">
-        <div class="pbs pts"><label class="required">{{t "workspace.settings.name"}}</label></div>
+        <div class="pbs pts"><label for="workspaceNameField" class="required">{{t "workspace.settings.name"}}</label></div>
 
-        <input type="text" name="name" maxlength="256" value="{{name}}" tabindex="1"/>
+        <input type="text" name="name" id="workspaceNameField" maxlength="256" value="{{name}}" tabindex="1"/>
         <label>
             <input type="checkbox" id="public_checkbox" name="public"
                 {{#if public}}

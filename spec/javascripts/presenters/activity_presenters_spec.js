@@ -22,7 +22,7 @@ describe("chorus.presenters.Activity", function() {
     function itHasTheErrorIcon() {
         describe("the icon", function() {
             it("shows the error icon", function() {
-                expect(this.presenter.iconSrc()).toBe("/images/message_error_med.png");
+                expect(this.presenter.iconSrc()).toBe("/images/messaging/message_error_med.png"); // to FIX
             });
 
             it("links to the user's profile", function() {
@@ -38,7 +38,7 @@ describe("chorus.presenters.Activity", function() {
     function itHasTheImportIcon() {
         describe("the icon", function() {
             it("shows the error icon", function() {
-                expect(this.presenter.iconSrc()).toBe("/images/import_icon.png");
+                expect(this.presenter.iconSrc()).toBe("/images/jobs/task-import.png");
             });
 
             it("links to dataset", function() {

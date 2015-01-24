@@ -3,7 +3,7 @@ chorus.dialogs.EditWorkspace = chorus.dialogs.Base.include(
     ).extend({
         constructorName: "EditWorkspace",
 
-        templateName: "edit_workspace_dialog",
+        templateName: "workspace_edit_dialog",
         title: t("workspace.settings.title"),
         persistent: true,
 

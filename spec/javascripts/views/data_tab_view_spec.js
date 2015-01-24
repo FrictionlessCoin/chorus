@@ -2,7 +2,7 @@ describe("chorus.views.DataTab", function () {
     beforeEach(function () {
         spyOn(chorus.PageEvents, "trigger").andCallThrough();
 
-        chorus.page = { workspace:backboneFixtures.workspace({name:"new_workspace"}) };
+        chorus.page = { workspace:backboneFixtures.workspace({name:"workspace_new"}) };
         this.schema = chorus.page.workspace.sandbox().schema();
         spyOn(chorus.views.DataTabDatasetList.prototype, "rebuildDatasetViews").andCallThrough();
         this.view = new chorus.views.DataTab({schema:this.schema});

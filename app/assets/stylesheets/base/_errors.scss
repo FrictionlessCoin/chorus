@@ -41,7 +41,7 @@ textarea.has_error,
 .text-core .text-wrap textarea.has_error,
 .text-core .text-wrap input.has_error {
     border: 2px solid $error-background-color;
-    background-image: url("/images/error-exclamation.png");
+    background-image: url("/images/messaging/error-exclamation.png");
     background-repeat: no-repeat;
     background-position: 99%;
     padding-right: 20px;
@@ -49,7 +49,7 @@ textarea.has_error,
 
 .cleditorMain.has_error {
     border: 2px solid $error-background-color !important;
-    background-image: url("/images/error-exclamation.png");
+    background-image: url("/images/messaging/error-exclamation.png");
     background-repeat: no-repeat;
     background-position: 99%;
     padding-right: 20px;
@@ -64,13 +64,13 @@ textarea.has_error,
     color: white;
 }
 
-.ie9, .ie8, .ie7, .ie6 {
+.ie9, .ie8, .ie7 {
     textarea.has_error {
         background-position: 93%;
     }
 }
 
 .bad_activity {
-  background: red !important;
-  font-size: 20px !important;
+    background: $error-background-color !important;
+    font-size: 20px !important;
 }

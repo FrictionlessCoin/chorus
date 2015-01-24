@@ -28,6 +28,18 @@ chorus.dialogs.Base = chorus.Modal.extend({
             addClass(this.className).
             addClass("dialog").
             addClass(this.additionalClass || "");
+            
+// new
+//         $(this.el).
+//             empty().
+//             append(header).
+//             append(content).
+//             addClass(this.className).
+//             addClass("dialog").
+//             addClass(this.additionalClass || "");
+// intending to move the errors into the girdle node.
+
+
         this.delegateEvents();
         this.renderSubviews();
         this.renderHelps();

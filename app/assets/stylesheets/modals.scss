@@ -3,25 +3,29 @@
 @import "compass/css3/opacity";
 
 @import "vendorish/_facebox"; //keep facebox first
+
+
 @import "modals/alert";
-@import "modals/pick_items";
-@import "modals/collection_list";
 @import "modals/dialog";
-@import "modals/function_info";
-@import "modals/data_source_account";
-@import "modals/import_now";
+@import "modals/change_password_dialog";
+@import "modals/collection_list";
 @import "modals/configure_job";
 @import "modals/configure_milestone";
+@import "modals/create_database_view_dialog";
 @import "modals/create_job_task";
+@import "modals/data_source_account";
+@import "modals/edit_tags";
+@import "modals/function_info";
+@import "modals/import_now";
+@import "modals/job_result_detail";
+@import "modals/manage_join_tables";
 @import "modals/note";
+@import "modals/pick_items";
+@import "modals/publish_to_tableau_dialog";
+@import "modals/show_image";
 @import "modals/shuttle";
 @import "modals/sql_preview";
-@import "modals/workspace_members_more";
 @import "modals/visualization";
-@import "modals/manage_join_tables";
-@import "modals/create_database_view_dialog";
-@import "modals/publish_to_tableau_dialog";
+@import "modals/workspace_members_more";
+
 @import "modals/compose_kaggle_message";
-@import "modals/edit_tags";
-@import "modals/change_password_dialog";
-@import "modals/job_result_detail";
