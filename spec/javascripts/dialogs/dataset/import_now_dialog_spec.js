@@ -130,7 +130,7 @@ describe("chorus.dialogs.ImportNow", function() {
 
                         it("should show the selected dataset in the link, ellipsized", function() {
                             expect(this.dialog.datasetsChosen).toHaveBeenCalled();
-                            expect(this.dialog.$(".existing_table a.dataset_picked")).toContainText("myDatasetWithAReally...");
+                            expect(this.dialog.$(".existing_table a.dataset_picked")).toContainText("myDatasetWithAReally…");
                         });
 
                         it("stores the un-ellipsized dataset name on the dialog", function() {
