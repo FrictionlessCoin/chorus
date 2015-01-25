@@ -243,9 +243,9 @@ describe User do
   end
 
   describe "image" do
-    it "is /image/default-user.png by default" do
+    it "is /image/general/default-user.png by default" do
       user = FactoryGirl.build :user, :image => nil
-      user.image.url.should == "/images/default-user.png"
+      user.image.url.should == "/images/general/default-user.png"
     end
   end
 
