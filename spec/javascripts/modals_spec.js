@@ -102,12 +102,23 @@ describe("chorus.Modal", function() {
 
                 it("with no arguments uses window.height", function() {
                     this.modal.resize();
-                    // calculate modal height by total window height - 2 * top.position
+
+                    // calculate modal height by total window height - (2 * top.position)
+                    // top position defined to = 40px
                     var windowHeight = $(window).height() - 80 + "px";
 
+                    //var dialogHeaderHeight = 40;
+                    //var dialogBottomHeight = 50;
+                    //var dialogInnerSpacing = 25; // sum of interior vertical padding
+                    //var dialogExpectedHeight = ( $(window).height() - 80 ) - (dialogHeaderHeight + dialogBottomHeight + dialogInnerSpacing);
+                    //dialogExpectedHeight += "px";
+                    
                     var lastCall = $.fn.css.lastCall();
-                    expect(lastCall.args).toEqual(["max-height", windowHeight]);
-                    expect(lastCall.object.selector).toBe("#facebox .popup");
+                    //expect(lastCall.args).toEqual(["max-height", dialogExpectedHeight]);
+                    //expect(lastCall.args).toContain(["max-height", dialogExpectedHeight]);
+                    expect(cssCalls()).toContain(["max-height",windowHeight]);
+                    
+                    expect(lastCall.object.selector).toBe("#dialog_content .girdle");
                 });
 
                 it("has a max-height smaller than the window's height by twice the dialog's distance from the top of the window", function() {
