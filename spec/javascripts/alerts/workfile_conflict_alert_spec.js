@@ -15,9 +15,6 @@ describe("chorus.alerts.WorkfileConflict", function() {
             expect(this.alert.title).toBe(this.message);
         });
 
-        it("should not displays the error div", function() {
-            expect(this.alert.$(".errors")).toBeEmpty();
-        });
 
 
         it("should show the last workfile save time", function() {

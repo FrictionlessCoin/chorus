@@ -550,11 +550,15 @@ describe("chorus.views.ResultsConsoleView", function() {
                         expect(this.view.$('.sql_errors')).not.toHaveClass('hidden');
                     });
 
-                    it("should show 'View Details' and 'Close' links", function() {
+                    it("should show 'View Details' link", function() {
                         expect(this.view.$('.sql_errors .view_details')).toExist();
-                        expect(this.view.$('.sql_errors .close_errors')).toExist();
                     });
 
+// TODO: delete when final
+//                     it("should show 'Close' link", function() {
+//                         expect(this.view.$('.sql_errors .close_errors')).toExist();
+//                     });
+                    
                     it("should hide the execution content area", function() {
                         expect(this.view.$(".result_table")).toHaveClass("hidden");
                         expect(this.view.$(".bottom_gutter")).toHaveClass("hidden");

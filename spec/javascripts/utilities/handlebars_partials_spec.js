@@ -7,7 +7,7 @@ describe("handlebars partials", function () {
 
             it("renders a hidden empty div", function() {
                 var el = Handlebars.VM.invokePartial(Handlebars.partials.errorDiv, "errorDiv", this.context, Handlebars.helpers, Handlebars.partials);
-                expect(el).toMatch('<div class="errors hidden"></div>');
+                expect(el.html()).toContain('<div class="errors hidden">');
             });
         });
 

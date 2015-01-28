@@ -26,22 +26,23 @@ describe("errors", function() {
             expect($("#jasmine_content li").length).toBe(2);
         });
 
-        it("has a close link", function() {
-            expect($("#jasmine_content a.close_errors")).toExist();
-        });
-
-        describe("clicking the close link", function() {
-            beforeEach(function() {
-                $("#jasmine_content a.close_errors").click();
-            });
-
-            it("removes the error div content", function() {
-                expect($("#jasmine_content .errors")).toBeEmpty();
-            });
-
-            it("adds the hidden class", function() {
-                expect($("#jasmine_content .errors")).toHaveClass("hidden");
-            });
-        });
+// TODO: delete when final
+//         it("has a close link", function() {
+//             expect($("#jasmine_content a.close_errors")).toExist();
+//         });
+//
+//         describe("clicking the close link", function() {
+//             beforeEach(function() {
+//                 $("#jasmine_content a.close_errors").click();
+//             });
+// 
+//             it("removes the error div content", function() {
+//                 expect($("#jasmine_content .errors")).toBeEmpty();
+//             });
+// 
+//             it("adds the hidden class", function() {
+//                 expect($("#jasmine_content .errors")).toHaveClass("hidden");
+//             });
+//         });
     });
 });
