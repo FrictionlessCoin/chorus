@@ -3,10 +3,12 @@
 /* general rules for forms in the application */
 
 .legend_for_required {
-    margin-top: 15px;
+    position: relative;
+    top: 10px;
+/*     margin-top: 15px; */
     font-size: $small-font;
+    color: #777;
 }
-
 
 
 /* section of buttons at bottom of form */
