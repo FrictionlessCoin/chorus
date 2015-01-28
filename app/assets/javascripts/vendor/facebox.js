@@ -99,7 +99,6 @@
     </div>'
     },
 
-// <i class="close_image oi" data-glyph="x">
 
     loading: function() {
       init()

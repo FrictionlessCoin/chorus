@@ -23,8 +23,8 @@ json.promoted_by do
   json.last_name user.last_name
   json.image do
     if user.image_file_name == nil
-      json.original '/images/default-user.png'
-      json.icon  '/images/default-user.png'
+      json.original '/images/general/default-user.png'
+      json.icon  '/images/general/default-user.png'
     else
       json.original user.image_file_name
       json.icon user.image_file_name
