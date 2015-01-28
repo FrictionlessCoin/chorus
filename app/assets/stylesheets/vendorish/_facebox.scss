@@ -1,12 +1,16 @@
+@import "compass/css3/border-radius";
+
 #facebox {
     position: fixed;
     top: 0;
     left: 0;
     z-index: $dialog-z-index;
-    text-align: left;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    overflow-y: hidden;
     overflow-x: hidden;
-    border-radius: 3px;
+    
+    text-align: left;
+    @include border-radius(3px);
 
     .popup {
         position: relative;
@@ -48,12 +52,13 @@
     }
 }
 
-.dialog_facebox, .alert_facebox {
-    img {
-        border: 0;
-        margin: 0;
-    }
-}
+/* .dialog_facebox, */
+/* .alert_facebox { */
+/*     img { */
+/*         border: 0; */
+/*         margin: 0; */
+/*     } */
+/* } */
 
 #facebox_overlay {
     position: fixed;
@@ -69,6 +74,5 @@
 }
 
 .facebox_overlayBG {
-   /*  background-color: #000; */
     z-index: $dialog-overlay-z-index;
 }

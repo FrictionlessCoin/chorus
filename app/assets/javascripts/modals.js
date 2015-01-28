@@ -34,10 +34,26 @@ chorus.Modal = chorus.views.Base.extend({
         var $window = $(window);
 
         if (!windowHeight) windowHeight = $window.height();
-
+        
+        //position the dialog vertically in the window
         $facebox.css('top', this.verticalPosition + 'px');
+        //calculate max height based on current window
         var popupHeight = windowHeight - this.verticalPosition*2;
         $popup.css("max-height", popupHeight + "px");
+        
+        //calculate max height for interior content
+        var headerHeight = $("#dialog_header").height();
+        var bottomHeight = $("#dialog_bottom").height();
+        // now figure out any height inside the girdle
+        var girdleHeight = $(".girdle").height();
+        var girdleVerticalPadding = $(".girdle").innerHeight() - girdleHeight;
+
+        var maxContentHeight = popupHeight - (headerHeight + bottomHeight);
+        maxContentHeight = maxContentHeight- girdleVerticalPadding;
+        
+        var $dialogMainContent = $("#dialog_content .girdle");
+        $dialogMainContent.css("max-height", maxContentHeight + "px");
+
     },
 
     preRender: function() {
@@ -46,7 +62,6 @@ chorus.Modal = chorus.views.Base.extend({
         $(window).resize(this.resize);
 
         this.preventScrollingBody();
-
         return result;
     },
 

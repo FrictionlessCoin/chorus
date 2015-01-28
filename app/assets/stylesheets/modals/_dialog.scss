@@ -1,25 +1,38 @@
+@import "compass/css3/box-sizing";
+
 /* general dialog styles */
 
 /* .girdle wraps the content of the dialog popup */
 /* and sets the overall margins for the content area */
 .popup .girdle {
-    padding: 10px $dialog-padding 0 $dialog-padding;
+    padding: 10px $dialog-padding $dialog-padding $dialog-padding;
     border: none;
-    
+
+    @include box-sizing(border-box);
+    overflow-y: auto;
+
     /* development: to delete */
     border: 1px dotted #C33;
     /* END development: to delete */
 }
 
+#dialog_header {
+    background-color: $dialog-header-background;
+    border-bottom: 1px solid $border-color;
+    height: 40px;
+    line-height: 40px;
+    /*  padding: 0 $dialog-padding; */
+    
+    word-break: break-all;
+}
+
+#dialog_content {
+    .girdle {}
+}
+
+
 .dialog {
-    .dialog_header {
-        border-bottom: 1px solid $border-color;
-        background-color: $dialog-header-background;
-        word-break: break-all;
-        height: 40px;
-        line-height: 40px;
-        padding: 0 $dialog-padding;
-    }
+    .dialog_header {}
 
     h1 {
         font-size: 14px;
@@ -185,11 +198,6 @@ div.dialog {
 .dialog.show_image {
     width: 100%;
     min-width: 600px;
-
-    .dialog_header {
-        height: 35px;
-        border: none;
-    }
 
     .workspace_row {
         background-color: $dialog-header-background;

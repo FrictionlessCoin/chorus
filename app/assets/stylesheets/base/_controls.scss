@@ -9,8 +9,12 @@
 /* * */
 /* .form_controls= the 'footer' section at bottom of dialogs with the buttons */
 /* * */
-.popup .form_controls {
+
+.popup #dialog_bottom {
     height: 50px;
+}
+
+.popup .form_controls {
     background-color: $dialog-header-background;
     border-top: $border-canon;
 
@@ -20,28 +24,6 @@
     }
 
     .links { margin-left: 14px; float: left; }
-}
-
-.form_controls {
-    margin-top: 10px;
-    padding-right: $dialog-padding;
-    padding-left:  $dialog-padding;
-
-    button { 
-        /* TODO revise all button to be sequenced in list as they will appear */
-        float: right; 
-        margin-right: 10px;
-    }
-
-    label {
-        line-height: $button-height;
-
-        &.required:after {
-          margin-right: 3px;
-        }
-    }
-
-    @include after-clearfix;
 }
 
 .controls,
