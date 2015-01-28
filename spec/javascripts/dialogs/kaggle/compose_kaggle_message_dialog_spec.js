@@ -216,12 +216,13 @@ describe("chorus.dialogs.ComposeKaggleMessage", function () {
                     expect(_.isEmpty(this.dialog.model.serverErrors)).toBeTruthy();
                 });
 
-                it("clears any errors on the model when the close_errors bar is closed", function () {
-                    this.dialog.model.serverErrors = { name:"wrong name" };
-                    this.dialog.showErrors();
-                    this.dialog.$("a.close_errors").click();
-                    expect(_.isEmpty(this.dialog.model.serverErrors)).toBeTruthy();
-                });
+// TODO to be deleted when final
+//                 it("clears any errors on the model when the close_errors bar is closed", function () {
+//                     this.dialog.model.serverErrors = { name:"wrong name" };
+//                     this.dialog.showErrors();
+//                     this.dialog.$("a.close_errors").click();
+//                     expect(_.isEmpty(this.dialog.model.serverErrors)).toBeTruthy();
+//                 });
             });
 
             describe("when the save fails", function () {

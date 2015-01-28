@@ -5,10 +5,21 @@ describe("handlebars partials", function () {
                 this.context = {};
             });
 
-            it("renders a hidden empty div", function() {
+            it("renders a hidden empty div (1)", function() {
                 var el = Handlebars.VM.invokePartial(Handlebars.partials.errorDiv, "errorDiv", this.context, Handlebars.helpers, Handlebars.partials);
                 expect(el.html()).toContain('<div class="errors hidden">');
             });
+
+            it("renders a hidden empty div (2)", function() {
+                var el = Handlebars.VM.invokePartial(Handlebars.partials.errorDiv, "errorDiv", this.context, Handlebars.helpers, Handlebars.partials);
+                expect(el.view.$("div.errors.hidden")).toExist();
+            });
+
+            it("renders a hidden empty div (3)", function() {
+                var el = Handlebars.VM.invokePartial(Handlebars.partials.errorDiv, "errorDiv", this.context, Handlebars.helpers, Handlebars.partials);
+                expect(el.$("div.errors")).toHaveClass("hidden");
+            });
+
         });
 
         context("when context.serverErrors has fields", function() {
