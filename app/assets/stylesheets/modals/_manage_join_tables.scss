@@ -1,4 +1,5 @@
-.pick_dataset_with_action, .import_datasets_picker_list {
+.pick_dataset_with_action,
+.import_datasets_picker_list {
     .list {
         .text {
             .main {
@@ -8,7 +9,9 @@
     }
 }
 
-.pick_dataset_with_action, .import_datasets_picker_list, .workfile_picker_list {
+.pick_dataset_with_action,
+.import_datasets_picker_list,
+.workfile_picker_list {
     .search {
         padding: 5px 10px;
         border-bottom: $border-canon;
@@ -112,10 +115,10 @@
         overflow-y: auto;
     }
 
-    .list {
-        margin-right: 20px;
-        border-right: 1px solid $border-color-dark;
-    }
+/*     .list { */
+/*         margin-right: 20px; */
+/*         border-right: 1px solid $border-color-dark; */
+/*     } */
 
     .sub_header {
         .chorus_search_container {
@@ -129,6 +132,7 @@
             display: inline-block;
             max-width: 165px;
             @include ellipsis;
+            font-weight: $semibold;
         }
     }
 
@@ -146,11 +150,6 @@
         }
     }
 
-    .form_controls {
-        button.cancel {
-            float: left;
-        }
-    }
 }
 
 .join_schemas.components_menu {
