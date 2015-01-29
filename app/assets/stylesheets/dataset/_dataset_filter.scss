@@ -1,9 +1,14 @@
 $remove-circle-color: $charcoal;
 
+/* $filterRow-margin-top: 3px;         *//* TODO: delete when final */
+$filterRow-height: 40px;
+$filterRow-padding-top: 3px;
+$filterRow-padding-bottom: 0px;
+       
 .filter_wizard {
 
     .filter_content {
-        padding: 0 10px;
+        padding: 0 $dialog-padding;
         background-color: $body-background-color;
     }
     
@@ -19,13 +24,13 @@ $remove-circle-color: $charcoal;
 
         .brackets_top {
             height:50%;
-            border-left: $border-canon;
-            border-bottom: $border-canon;
+            border-left: $dark-border-canon;
+            border-bottom: $dark-border-canon;
         }
 
         .brackets_bottom {
             height:50%;
-            border-left: $border-canon;
+            border-left: $dark-border-canon;
         }
     }
 
@@ -36,19 +41,23 @@ $remove-circle-color: $charcoal;
     }
 }
 
-.dataset_filter, .kaggle_filter {
-    height: 40px;
+.dataset_filter,
+.kaggle_filter {
+    padding-top: $filterRow-padding-top;
+    padding-bottom: $filterRow-padding-bottom;
+    height: $filterRow-height - ($filterRow-padding-top + $filterRow-padding-bottom);
     border-bottom: 0;
 
-    .remove {
+/* TODO: delete when final */
+/*     .remove { */
 /*         display: inline-block; */
 /*         margin-top: 4px; */
 /*         vertical-align: top; */
-	    color: $remove-circle-color;
-    }
+/* 	    color: $remove-circle-color; */
+/*     } */
 
     select, .ui-selectmenu-button .ui-button {
-        width: 215px;
+        width: $selectlist-width-medium;
         margin-right: 10px;
     }
 
@@ -58,15 +67,15 @@ $remove-circle-color: $charcoal;
 
     input[type=text] {
         width: 25%;
-        max-width: 250px;
+        max-width: $input-width-medium;
         display: inline-block;
         margin-right: 10px;
         vertical-align: top;
-        margin-top: 4px;
     }
 
     .filter.date input {
         width: 80px;
     }
 
+    .removeWidget {}
 }

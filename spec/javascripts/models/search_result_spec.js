@@ -196,7 +196,7 @@ describe("chorus.models.SearchResult", function() {
     describe("#shortName", function() {
         it("returns a short name", function() {
             this.model.set({ query: "the longest query in the world" });
-            expect(this.model.displayShortName()).toBe("the longest query in...");
+            expect(this.model.displayShortName()).toBe("the longest query in…");
         });
     });
 

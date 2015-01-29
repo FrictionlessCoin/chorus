@@ -361,7 +361,7 @@
     },
 
     truncate: function(str, length, truncateStr){
-      str += ''; truncateStr = truncateStr || '...';
+      str += ''; truncateStr = truncateStr || '…';
       length = ~~length;
       return str.length > length ? str.slice(0, length) + truncateStr : str;
     },
@@ -373,7 +373,7 @@
      */
     prune: function(str, length, pruneStr){
       str += ''; length = ~~length;
-      pruneStr = pruneStr != null ? ''+pruneStr : '...';
+      pruneStr = pruneStr != null ? ''+pruneStr : '…';
 
       var pruned, borderChar, template = str.replace(/\W/g, function(ch){
         return (ch.toUpperCase() !== ch.toLowerCase()) ? 'A' : ' ';

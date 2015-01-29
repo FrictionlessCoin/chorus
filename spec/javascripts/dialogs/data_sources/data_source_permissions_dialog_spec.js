@@ -123,7 +123,8 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
             });
 
             it("displays the shared account subheader", function() {
-                expect(this.dialog.$(".sub_header .shared_accounts").text()).toMatchTranslation("data_sources.shared_account");
+                var subhead = this.dialog.$(".shared_account_subhead").text();
+                expect(subhead).toMatchTranslation("data_sources.shared_account");
             });
 
             it("displays the account owner information", function() {
@@ -138,7 +139,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                 expect(this.dialog.$("a.edit")).toExist();
             });
 
-            it("displays the Change owner link", function() {
+            it("displays the change owner link", function() {
                 expect(this.dialog.$("a.change_owner")).toExist();
             });
 
@@ -156,7 +157,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                     expect(this.dialog.$("div.name")).toHaveClass("hidden");
                 });
 
-                describe("when the user fetch completes", function() {
+                describe("> when the user fetch completes", function() {
                     beforeEach(function() {
                         this.dialog.users.reset([
                             backboneFixtures.user({ firstName: "jim", lastName: "aardvark", id: '222' }),
@@ -426,7 +427,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                     });
                 });
 
-                describe("when the save fails", function() {
+                describe("> when the save fails", function() {
                     beforeEach(function() {
                         this.accountBeingEdited.serverErrors = { fields: { a: { BLANK: {} } } };
                         this.accountBeingEdited.trigger('saveFailed');
@@ -436,7 +437,7 @@ describe("chorus.dialogs.DataSourcePermissions", function() {
                         expect(this.liBeingEdited).toHaveClass("editing");
                     });
 
-                    it("displays error messages", function() {
+                    it("> displays error messages", function() {
                         expect(this.dialog.$(".errors li:first-child").text().trim()).toBe("A can't be blank");
                     });
 

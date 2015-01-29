@@ -777,7 +777,7 @@ describe("chorus.models.Base", function() {
         });
 
         it("ellipsizes long names", function() {
-            expect(this.model.shortName(3)).toBe("Som...");
+            expect(this.model.shortName(3)).toBe("Som…");
         });
     });
 

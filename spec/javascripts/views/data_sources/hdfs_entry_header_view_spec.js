@@ -24,7 +24,7 @@ describe("chorus.views.HdfsEntryHeader", function() {
         });
         this.view.render();
 
-        expect(this.view.$('.title-text')).toContainText(this.dataSource.name() + ": /foo/.../baz");
+        expect(this.view.$('.title-text')).toContainText(this.dataSource.name() + ": /foo/…/baz");
     });
 
     it("does not show tags for folders in the root", function() {

@@ -26,7 +26,7 @@ class Mailer < ActionMailer::Base
   private
 
   def logo(license)
-    File.read(Rails.root.join('public', 'images', %(#{license.branding}-logo.png)))
+    File.read(Rails.root.join('public', 'images', 'branding', %(#{license.branding}-logo.png)))
   end
 
   def safe_deliver(mail)

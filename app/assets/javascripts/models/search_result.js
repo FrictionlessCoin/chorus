@@ -140,7 +140,7 @@
             length = length || 20;
 
             var name = this.get("query") || "";
-            return (name.length < length) ? name : name.slice(0, length) + "...";
+            return (name.length < length) ? name : name.slice(0, length) + "…";
         },
 
         workspace: function() {

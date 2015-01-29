@@ -53,9 +53,12 @@ chorus.pages.SearchIndexPage = chorus.pages.Base.extend({
     },
 
     title: function() {
-        return t("search.index.title", {
-            query: this.model.displayShortName()
-        });
+        //  rely on css to ellipsity the display, rather than the code
+        return t("search.index.title", {query: this.model.get("query")} );
+        
+        //         return t("search.index.title", {
+        //             query: this.model.displayShortName()
+        //         });
     },
 
     resourcesLoaded: function() {

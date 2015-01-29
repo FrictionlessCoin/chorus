@@ -71,8 +71,8 @@ describe("chorus.views.ShuttleWidget", function() {
         });
 
         it("renders the non-removable text in the appropriate place", function() {
-            expect(this.view.$("ul.selected li.non_removable span").text()).toBe(this.nonRemovableText);
-            expect(this.view.$("ul.available li.non_removable span").text()).toBe(this.nonRemovableText);
+            expect(this.view.$("ul.selected li.non_removable span.was_added").text()).toBe(this.nonRemovableText);
+            expect(this.view.$("ul.available li.non_removable span.was_added").text()).toBe(this.nonRemovableText);
         });
 
         describe("clicking the add link", function() {

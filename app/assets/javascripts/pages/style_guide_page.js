@@ -212,15 +212,15 @@ chorus.pages.StyleGuidePage.SiteElementsView = chorus.views.Bare.extend({
             lastName: "Danger",
             admin: true,
             id: "InitialUser1",
-            image: { icon: "/images/default-user.png"},
+            image: { icon: "/images/general/default-user.png"},
             tags: tagList,
             title: "Chief Data Scientist",
             email: "searchquery@jacobibeier.com",
             dept: "Corporation Corp., Inc.",
             notes: "One of our top performers",
             completeJson: true});
-        this.models.otherUser = new chorus.models.User({ username: "edcadmin", firstName: "Laurie", lastName: "Blakenship", admin: true, id: "InitialUser2", image: { icon: "/images/default-user.png"}});
-        this.models.thirdUser = new chorus.models.User({ username: "edcadmin", firstName: "George", lastName: "Gorilla", admin: false, id: "InitialUser3", image: { icon: "/images/default-user.png"}});
+        this.models.otherUser = new chorus.models.User({ username: "edcadmin", firstName: "Laurie", lastName: "Blakenship", admin: true, id: "InitialUser2", image: { icon: "/images/general/default-user.png"}});
+        this.models.thirdUser = new chorus.models.User({ username: "edcadmin", firstName: "George", lastName: "Gorilla", admin: false, id: "InitialUser3", image: { icon: "/images/general/default-user.png"}});
 
         this.models.hdfsFile = new chorus.models.HdfsEntry({"name": "foo.cpp", isDir: false, hdfsDataSource: this.models.hdfsDataSource.attributes, contents: ["a,b,1", "b,c,2", "d,e,3"], tags: tagList, size: 1024, completeJson: true});
         this.models.hdfsDir = new chorus.models.HdfsEntry({name: "TestExpression", path: '/arbitrary/path', isDir: true, hdfsDataSource: this.models.hdfsDataSource.attributes, tags: tagList, count: 4, completeJson: true});

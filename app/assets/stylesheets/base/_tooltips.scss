@@ -71,7 +71,7 @@ $more-info-color: #888888;
 }
 
 .tooltip-function {
-    @include tooltip($error-text-color, #282828, #282828);
+    @include tooltip($error-tooltiptext-color, #282828, #282828);
 
     .ui-tooltip-content {
         font-size: $small-font;

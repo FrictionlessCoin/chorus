@@ -156,6 +156,10 @@ $notification-token-width: $header-margin * 2;
                 }
 
                 &.advisor_now a img {
+                    position: relative;
+                    width: 83px;
+                    top: 6px;
+                    
                     margin-bottom: 0px;
                     padding-right: 15px;
                 }

@@ -1,9 +1,5 @@
 @mixin checkmark {
-
-    /*      background-repeat: no-repeat; */
-    /*      background-image: url("/images/check.png"); */
     display: inline-block;
-    
     position: absolute;
     top: 10px;
     left: -12px;
@@ -119,7 +115,7 @@ a .chosen {
             }
 
             a {
-                font-weight: 400;
+                font-weight: normal;
                 color: #000000 !important;
             }
 

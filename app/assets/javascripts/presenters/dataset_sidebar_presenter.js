@@ -56,7 +56,7 @@ chorus.presenters.DatasetSidebar = chorus.presenters.Base.extend({
     },
 
     realWorkspace: function() {
-        // this.workspace gets overriden by options hash passed by pages.
+        // this.workspace gets overriden by options hash passed by pages
         return this.options.searchPage ? null : this.resource.workspace();
     },
 
@@ -99,7 +99,6 @@ chorus.presenters.DatasetSidebar = chorus.presenters.Base.extend({
             tableLink = destination.id ? this._linkToModel(destination) : destination.name();
         } else {
             importStringKey = "import.in_progress_into";
-
         }
 
         return Handlebars.helpers.unsafeT(importStringKey, { tableLink: tableLink });
@@ -234,6 +233,6 @@ chorus.presenters.DatasetSidebar = chorus.presenters.Base.extend({
     ellipsize: function (name) {
         if (!name) return "";
         var length = 15;
-        return (name.length < length) ? name : name.slice(0, length-3).trim() + "...";
+        return (name.length < length) ? name : name.slice(0, length-3).trim() + "…";
     }
 });

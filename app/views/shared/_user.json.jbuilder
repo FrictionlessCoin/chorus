@@ -5,11 +5,11 @@ json.set! title do
   json.last_name  user.last_name
   json.image do
     if user.image_file_name == nil
-      json.original '/images/default-user-icon.png'
-      json.icon  '/images/default-user-icon.png'
+      json.original '/images/general/default-user.png'
+      json.icon  '/images/general/default-user.png'
     else
-      json.original user.image_file_name
-      json.icon user.image_file_name
+      json.original user.image.url(:original)
+      json.icon user.image.url(:icon)
     end
     if user.image_content_type == nil
       json.entity_type 'image'

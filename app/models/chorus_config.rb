@@ -150,7 +150,6 @@ class ChorusConfig
         'Cloudera CDH4',
         'Cloudera CDH5',
         'Hortonworks HDP 2.1',
-        'Hortonworks HDP2',
         'MapR',
         'MapR4'
     ]

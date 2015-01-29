@@ -13,7 +13,7 @@ chorus.Mixins.HdfsViews = {
         var path = dir + this.hdfsEntry.name();
         var folders = path.split('/');
         if(folders.length > 3) {
-            return "/" + folders[1] + "/.../" + folders[folders.length - 1];
+            return "/" + folders[1] + "/…/" + folders[folders.length - 1];
         } else {
             return path;
         }

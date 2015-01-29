@@ -39,7 +39,7 @@ describe("chorus.pages.WorkspaceIndexPage", function() {
                 expect(this.page.mainContent.contentDetails.options.multiSelect).toBeTruthy();
             });
 
-            itBehavesLike.aPageWithPrimaryActions([{name: 'create_workspace', target: chorus.dialogs.WorkspacesNew}]);
+            itBehavesLike.aPageWithPrimaryActions([{name: 'create_workspace', target: chorus.dialogs.WorkspaceNew}]);
 
             describe("when the workspace:selected event is triggered on the list view", function() {
                 beforeEach(function() {

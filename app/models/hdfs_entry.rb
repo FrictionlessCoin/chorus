@@ -75,7 +75,7 @@ class HdfsEntry < ActiveRecord::Base
   end
 
   def self.list(path, hdfs_data_source)
-    query_service = Hdfs::QueryService.for_data_source(hdfs_data_source, current_user.username)
+    query_service = Hdfs::QueryService.for_data_source(hdfs_data_source, current_user ? current_user.username : '')
     current_entries = query_service.list(path).map do |result|
       hdfs_entry = hdfs_data_source.hdfs_entries.find_or_initialize_by_path(result["path"])
       hdfs_entry.stale_at = nil if hdfs_entry.stale?
@@ -107,7 +107,7 @@ class HdfsEntry < ActiveRecord::Base
 
 
   def self.statistics(path, hdfs_data_source)
-    query_service = Hdfs::QueryService.for_data_source(hdfs_data_source, current_user.username)
+    query_service = Hdfs::QueryService.for_data_source(hdfs_data_source, current_user ? current_user.username : '')
     stats = query_service.details(path)
     HdfsEntryStatistics.new stats
   end
@@ -117,7 +117,7 @@ class HdfsEntry < ActiveRecord::Base
   end
 
   def contents
-    query_service = Hdfs::QueryService.for_data_source(hdfs_data_source, current_user.username)
+    query_service = Hdfs::QueryService.for_data_source(hdfs_data_source, current_user ? current_user.username : '')
     query_service.show(path)
   rescue StandardError => e
     raise HdfsContentsError.new(e)

@@ -14,9 +14,8 @@ chorus.models.Workspace = chorus.models.Base.extend({
     defaultIconUrl:function (size) {
         var iconSize = size || "large";
         var activeIcon = this.isActive() ? "" : "_archived";
-        var publicIcon = this.isPublic() ? "" : "private_";
-
-        return "/images/workspaces/" + publicIcon + "workspace" + activeIcon + "_"+ iconSize +".png";
+        var publicIcon = this.isPublic() ? "" : "_private";
+        return "/images/workspaces/" + "workspace" + publicIcon + activeIcon + "_"+ iconSize +".png";
     },
 
     initialize: function() {

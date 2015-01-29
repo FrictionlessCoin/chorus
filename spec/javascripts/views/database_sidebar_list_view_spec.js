@@ -76,8 +76,8 @@ describe("chorus.views.DatabaseSidebarList", function() {
                     });
 
                     it("shows a check mark next to the current schema", function() {
-                        expect(this.view.$("li:contains('righteous_tables')")).toContain('.check');
-                        expect(this.view.$("li:contains('awesome_tables')")).not.toContain('.check');
+                        expect(this.view.$("li:contains('righteous_tables')")).toContain('.fa-check');
+                        expect(this.view.$("li:contains('awesome_tables')")).not.toContain('.fa-check');
                     });
 
                     it("shows the names of all of the workspace's database's schemas", function() {

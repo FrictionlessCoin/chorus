@@ -427,7 +427,7 @@ describe("chorus.dialogs.DataSourceEdit", function() {
             });
 
             it("display the correct error", function() {
-                expect(this.dialog.$(".errors").text()).toContain("A can't be blank");
+                expect(this.dialog.$(".errors")).toContainText("A can't be blank");
             });
 
             itRecoversFromError();

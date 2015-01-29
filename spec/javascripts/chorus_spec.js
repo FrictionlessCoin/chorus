@@ -153,22 +153,22 @@ describe("chorus global", function() {
     });
 
     describe("#toast", function() {
-        it("accepts a translation string", function() {
+        it("> accepts a translation string", function() {
             chorus.toast("test.mouse");
             expect(Messenger().post).toHaveBeenCalledWith({message: t("test.mouse")});
         });
 
-        it("accepts a translation string with arguments", function() {
+        it("> accepts a translation string with arguments", function() {
             chorus.toast("test.with_param", {param: "Dennis"});
             expect(Messenger().post).toHaveBeenCalledWith({message: "Dennis says hi"});
         });
 
-        it("accepts toastOpts in the options hash", function() {
+        it("> accepts toastOpts in the options hash", function() {
             chorus.toast("test.with_param", { param: "Nobody", toastOpts: {hideAfter: 0, foo: "bar"}});
             expect(Messenger().post).toHaveBeenCalledWith({message: "Nobody says hi", hideAfter: 0, foo: "bar"});
         });
 
-        it("accepts a message and does not translate it with flag skipTranslation", function() {
+        it("> accepts a message and does not translate it with flag skipTranslation", function() {
             chorus.toast("No translation for me", { skipTranslation: true });
             expect(Messenger().post).toHaveBeenCalledWith({message: "No translation for me"});
         });
@@ -375,13 +375,13 @@ describe("chorus global", function() {
             });
         });
 
-        context("when called multiple times on the same element", function() {
+        context("> when called multiple times on the same element", function() {
             beforeEach(function() {
                 chorus.search({ input: this.input1, list: this.list});
                 chorus.search({ input: this.input1, list: this.list});
             });
 
-            it("doesn't change the dom more than once", function() {
+            it("> doesn't change the dom more than once", function() {
                 var wrapper = this.container.find(".chorus_search_container");
                 expect(wrapper).not.toContain(".chorus_search_container");
             });
@@ -503,7 +503,7 @@ describe("chorus global", function() {
 
     });
 
-    describe("#addClearButton", function() {
+    describe("#addSearchFieldModifications", function() {
         beforeEach(function() {
             this.input1 = $("<input></input>");
             this.container = $("<div></div>").append(this.input1);
@@ -512,13 +512,13 @@ describe("chorus global", function() {
             this.clearLink = this.container.find("a.chorus_search_clear");
         });
 
-        it("adds a little 'x' to the right of the search input", function() {
+        it("> adds a little 'x' to the right of the search input", function() {
             this.input1.val("nit").trigger("textchange");
             expect(this.clearLink).toExist();
-            expect(this.clearLink.find("span").attr("class")).toBe("search_clear");
+            expect(this.clearLink.find("span").attr("class")).toBe("fa fa-times search_clear");
         });
 
-        it("hides the 'x' when the input is blank", function() {
+        it("> hides the 'x' when the input is blank", function() {
             expect(this.clearLink).toHaveClass("hidden");
 
             this.input1.val("foo").trigger("textchange");

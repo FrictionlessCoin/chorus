@@ -1,12 +1,12 @@
 <div class="warning{{#unless warning}} hidden{{/unless}}">
     {{#if warning}}{{renderErrors warning}}{{/if}}
 </div>
-{{> errorDiv }}
+{{> errorDiv}}
 
 <div class="login_content">
     <div class="card">
         <form class="login" action="/auth/login/" method="post">
-            <img class="logo {{branding}}" src="images/{{logo}}"/>
+            <img class="logo {{branding}}" src="images/branding/{{logo}}"/>
             <div class="content">
                 <label for="username">{{t "login.username"}}</label>
                 <input type="text" name="username" id="username" maxlength="256" autocomplete="off"/>

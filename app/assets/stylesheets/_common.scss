@@ -54,6 +54,7 @@ $accent-shade: rgb(227, 241, 252);  /* #E3F1FC */
 
 // Semantic colors AKA Messaging
 $ok: $fiji-green;
+$informational: $pacific-blue;
 $error: $fire-engine-red;
 $alert: $fire-engine-red;
 $needs-attention: $pumpkin;
@@ -104,7 +105,7 @@ $page-margin-bottom: 60px;
 $summary-line-height: 19px;
 
 
-// GLOBAL BORDERs
+// GLOBAL BORDERS
 $default-border-width: 1px;
 $default-border-radius: 3px;
 
@@ -160,10 +161,12 @@ $required-marker-color: $error;
 $error-background-color: $fire-engine-red;
 $error-color: #FFFFFF;
 $error-text-color: #FFFFFF;
+$error-tooltiptext-color: #FFFFFF;
+$error-icon-color: #991111;
 
+$notification: $bright-turquoise;
 $notification-error-dark: #d43a0b;
 $notification-error-light: #ffd6d6;
-$notification: $bright-turquoise;
 
 $alert-color: $needs-attention;
 $alert-background-color: $needs-attention;
@@ -186,8 +189,11 @@ $margin-x : 10px;
 $guts-padding: 7px;
 $guts-padding-bottom: 15px;
 $user-detail-image-width: 150px;
+
+/* small size icons, such as for workfiles */
 $icon-image-width : 35px;
 $icon-image-height : 35px;
+/* regular size icons, such as for workfiles */
 $large-image-width : 45px;
 $large-image-height : 45px;
 $activity-gutter: 15px;
@@ -197,12 +203,25 @@ $help-pill-width: 34px;
 $texteditor-min-height: 300px;
 
 $default-dialog-width: 500px;
+$default-dialog-width-wide: 940px;
 /* $dialog-padding= interior padding from edge for dialog content */
 $dialog-padding : 15px;
 
 $separator-space: 4px;
 
 $caret-margin: 5px;		// space between the text and the caret glyph
+
+
+// General application sizes
+
+$selectlist-width-small:  100px;
+$selectlist-width-medium: 210px;
+$selectlist-width-large:  300px;
+
+$input-width-small:  120px;
+$input-width-medium: 250px;
+$input-width-large:  350px;
+
 
 
 // z-indices

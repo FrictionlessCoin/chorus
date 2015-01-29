@@ -1,4 +1,5 @@
 $cell-width: 150px;
+
 .table_import_csv.dialog {
     .grid {
       height: 300px;
@@ -48,7 +49,7 @@ $cell-width: 150px;
         }
 
         label.delimiter {
-            font-size: 12px;
+            font-size: $small-font;
             font-weight: normal;
             color: $color-text2;
             padding-right: 5px;
@@ -90,7 +91,7 @@ $cell-width: 150px;
     .import_data_grid {
       .type {
         line-height: 16px;
-        font-size: 12px;
+        font-size: $small-font;
         padding: 0px;
         overflow: visible;
         z-index: $data-grid-column-header-z-index;
@@ -112,8 +113,8 @@ $cell-width: 150px;
             height: 16px;
             display: inline-block;
             border: none;
-            color: white;
-            margin-left: 12px;
+            color: $core-white;
+            margin-left: 5px;
             left: 0;
             right: 0;
           }
@@ -158,7 +159,7 @@ $cell-width: 150px;
       }
 
       .column_mapping {
-        font-size: 12px;
+        font-size: $small-font;
 
         a {
           @include ellipsis;
@@ -218,7 +219,7 @@ $cell-width: 150px;
         }
 
         .automap {
-            font-size: 12px;
+            font-size: $small-font;
             font-weight: $semibold;
             padding-left: 10px;
         }
@@ -314,7 +315,7 @@ $cell-width: 150px;
   }
   .column_name {
     display: block;
-    padding: 10px;
+    padding: 5px;
     font-size: $default-font-size;
   }
 }

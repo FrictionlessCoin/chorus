@@ -64,7 +64,7 @@ chorus.pages.HdfsEntryIndexPage = chorus.pages.Base.include(
         return [
             { label: t("breadcrumbs.home"), url: "#/" },
             { label: t("breadcrumbs.data_sources"), url: "#/data_sources" },
-            { label: this.dataSource.loaded ? modelCrumb : "..." }
+            { label: this.dataSource.loaded ? modelCrumb : "…" }
         ];
     },
 

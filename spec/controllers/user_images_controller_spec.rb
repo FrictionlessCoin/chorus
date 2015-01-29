@@ -20,7 +20,7 @@ describe UserImagesController do
       end
 
       it "updates the user's image" do
-        default_image_path = "/images/default-user-icon.png"
+        default_image_path = "/images/general/default-user.png"
         user.image.url.should == default_image_path
         post :create, :user_id => user.id, :files => files
         user.reload
