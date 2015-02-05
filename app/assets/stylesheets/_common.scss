@@ -19,10 +19,10 @@ $pacific-blue:      rgb(0, 160, 229);
 $bright-turquoise:  rgb(21, 214, 203);
 $pattens-blue:      rgb(240, 245, 250);
 $alice-blue:        rgb(240, 247, 254);
-$greyish-blue:      rgb(221, 236, 250);
-$greyish-blue-v2:   rgb(248, 251, 253);
+$greyish-blue:      rgb(221, 236, 250);  /* #DDECFA latest version*/
+$greyish-blue-v2:   rgb(248, 251, 253);  /* #F8FBFD older version */
 $light-sky-blue:    rgb(148, 215, 244);
-$bluer-lavender:    rgb(225,237,250);
+$bluer-lavender:    rgb(222,234,249);
 
 $bright-grey:       rgb(88, 89, 95);
 $greyish-yellow:    rgb(204, 204, 200);
@@ -30,6 +30,8 @@ $light-grey-yellow: rgb(243, 243, 241);
 $light-gray:        rgb(234, 238, 241);
 $shadow-gray:		darken($light-gray, 11%);
 $charcoal:          #464646;
+$black:             #000000;
+$core-white:		#FFFFFF;
 
 //transparent variants
 $shadow-color:		rgba($shadow-gray, .7);
@@ -50,7 +52,7 @@ $accent-tint: rgb(250, 252, 253);
 $accent-shade: rgb(227, 241, 252);  /* #E3F1FC */
 //$accent-dark: unused;
 
-// Semantic Colors
+// Semantic colors AKA Messaging
 $ok: $fiji-green;
 $alert: $fire-engine-red;
 $needs-attention: $pumpkin;
@@ -60,7 +62,7 @@ $needs-attention: $pumpkin;
 $list-hover-color: $accent;
 $list-checked-color: $accent-shade;
 $list-striping-color: $accent-tint;
-$body-background-color: white;
+$body-background-color: #FFFFFF;
 $shaded-background-color: $light-gray;
 $subheader-background-color: $pattens-blue;
 $dialog-header-background: $greyish-blue;
@@ -94,7 +96,8 @@ $summary-line-height: 19px;
 $default-border-width: 1px;
 $default-border-radius: 3px;
 
-/* global margin for left and right sides of all pages */
+
+// GLOBAL margin for left and right page margins
 $page-margin-left: 25px;
 $page-margin-right: 25px;
 /* global margin for bottom of all pages */
@@ -172,6 +175,9 @@ $breadcrumbs-height: 32px;
 $help-pill-width: 34px;
 $texteditor-min-height: 300px;
 $default-dialog-width: 500px;
+
+$caret-margin: 5px;		// space between the text and the caret glyph
+
 
 // z-indices
 $guts-z-index: 0;
@@ -255,7 +261,7 @@ $spacingHelpers: ($emRatio*$baseLineHeight/3, $emRatio*$baseLineHeight/2, $emRat
 /* buttons */
 $button-height : 26px;
 $button-border-color: $border-color;
-$button-background-color : white;
+$button-background-color : #FFFFFF;
 
 $button-border-color-highlighted: $green;
 

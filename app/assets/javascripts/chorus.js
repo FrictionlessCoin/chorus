@@ -230,7 +230,7 @@ window.Chorus = function chorus$Global() {
 
         var $input = $(input);
         var clearLink = $("<a href='#'/>")
-            .append("<i class='oi search_clear' data-glyph='x'></i>")
+            .append('<span class="fa fa-times search_clear"></span>')
             .addClass("chorus_search_clear hidden")
             .bind('click', function(e) {
                 e.preventDefault();

@@ -93,7 +93,7 @@
         <div class="content"> \
         </div> \
         <div class="header"> \
-          <a href="#" class="close"><i class="close_image oi" data-glyph="x"></i></a> \
+          <a href="#" class="close"><span class="fa fa-times close_image"></span></a> \
         </div> \
       </div> \
     </div>'
