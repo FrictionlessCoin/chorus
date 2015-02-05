@@ -202,7 +202,7 @@ $notification-token-width: $header-margin * 2;
                 font-size: 15px;
                 top: 2px;
             }
-            
+
             input {
                 @include placeholder {
                     color: $brand-tint;
@@ -210,6 +210,12 @@ $notification-token-width: $header-margin * 2;
 
                 height: $icon-box-width;
                 background-color: $brand-shade;
+
+                /* interim 5.2 fix for magnifying glass in header. TOBE replaced in 5.3+ */
+                background-image: url("/images/search-icon-header.png");
+                background-repeat: no-repeat;
+                background-position: 6px 8px;
+
                 border: none;
                 color: white;
                 font-weight: normal;

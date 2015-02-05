@@ -8,7 +8,7 @@ input.chorus_search {
     margin: 0;
     
     padding: 2px 20px 2px 25px;
-    background: url("/images/search-icon.png") no-repeat 9px 3px;
+    background: url("/images/search-icon.png") no-repeat 7px 4px;
     outline: none;
     background-color: #FBFBFB;
 
@@ -33,13 +33,6 @@ input.chorus_search {
 a.chorus_search_clear {
     position: absolute;
     top: 1px;
-    /* margin-top: -14px; */
     right: 8px;
-    /* line-height: 12px; */
     color: $gray;
-
-/*     i { */
-/*         font-size: 9px; */
-/*         color: $gray; */
-/*     } */
 }
